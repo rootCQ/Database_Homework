@@ -1,0 +1,58 @@
+Message-ID: <be6e2076fee2b58c5ee22f4560b3708f@localhost>
+Date: Sun, 06 Mar 2016 15:25:12 +0100
+Subject: =?utf-8?Q?=E9=87=8D=E7=BD=AE=E5=AF=86=E7=A0=81?=
+ =?utf-8?Q?=EF=BC=9A_=E6=A9=98=E5=AD=90=E7=91=9C=E4=BC=BD?=
+From: =?utf-8?Q?=E6=A9=98=E5=AD=90=E7=91=9C=E4=BC=BD?=
+ <information_centre@yeah.net>
+To: 569114212@qq.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1457274312_caa4ad21b71f9b8ea0c9d621e19060f1_=_"
+
+
+--_=_swift_v4_1457274312_caa4ad21b71f9b8ea0c9d621e19060f1_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello admin,
+
+Follow the link below to reset your password:
+
+http:/=
+/localhost/Zend Studio/CourseManagement/frontend/web/index.php?r=3Dsite%2Fr=
+eset-password&token=3D3XsLnl05RnMwA_htJ6q5s8aalhHQgvfK_1457273444
+
+--_=_swift_v4_1457274312_caa4ad21b71f9b8ea0c9d621e19060f1_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"password-reset">
+    <p>=E6=82=A8=E5=A5=BD=EF=BC=8C adm=
+in,</p>
+
+    <p>=E8=AF=B7=E7=82=B9=E5=87=BB=E4=B8=8B=E9=9D=A2=E9=93=
+=BE=E6=8E=A5=E8=BF=9B=E8=A1=8C=E9=87=8D=E7=BD=AE=E5=AF=86=E7=A0=81:</p>
+=
+
+    <p><a href=3D"http://localhost/Zend Studio/CourseManagement/frontend=
+/web/index.php?r=3Dsite%2Freset-password&amp;token=3D3XsLnl05RnMwA_htJ6q5s8=
+aalhHQgvfK_1457273444">http://localhost/Zend Studio/CourseManagement/fronte=
+nd/web/index.php?r=3Dsite%2Freset-password&amp;token=3D3XsLnl05RnMwA_htJ6q5=
+s8aalhHQgvfK_1457273444</a></p>
+</div>
+    </body>
+</html>
+
+
+--_=_swift_v4_1457274312_caa4ad21b71f9b8ea0c9d621e19060f1_=_--
