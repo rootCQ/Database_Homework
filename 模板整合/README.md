@@ -19,6 +19,7 @@
 - git status 查看状态新替换的文件变绿才能push，
   - 如果是红色，使用git add <文件名>
 - git diff 比较文件、分支、提交之间的差异
+- git commit -m ""   提交并附带message
 - git push origin master直接提交到master分支(懒)
 
 
