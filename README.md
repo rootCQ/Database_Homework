@@ -15,5 +15,8 @@
 
 - 在git push代码的时候尽量先push到Dev（开发分支上）之后在合并到master分支，方便管理代码和版本控制。
 - 在本地创建代码仓库的时候先clone远程仓库，并在本地修改正确之后再推送到远程仓库
-- 本地上传到远程dev分支的命令为git  push origin/dev  <本地分支名>
-- 本地上传到远程master分支的命令为git push origin/master <本地分支名>
+- [本地上传到远程分支的方法](https://blog.csdn.net/csj731742019/article/details/82773581)
+
+- [git创建远程分支和本地分支](https://blog.csdn.net/csj731742019/article/details/82773581)
+- [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424)
+
