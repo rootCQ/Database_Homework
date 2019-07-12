@@ -11,3 +11,9 @@
 
 - 上传的模板导入demo启动问题，注意一下数据库的配置，在mani_local .php 中进行配置，前台的模板是我自己找的，后台是上课老师演示的。			—— 李伟  0712
 
+## 分支管理说明
+
+- 在git push代码的时候尽量先push到Dev（开发分支上）之后在合并到master分支，方便管理代码和版本控制。
+- 在本地创建代码仓库的时候先clone远程仓库，并在本地修改正确之后再推送到远程仓库
+- 本地上传到远程dev分支的命令为git  push origin dev
+- 本地上传到远程master分支的命令为git push origin master 
