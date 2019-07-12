@@ -1,6 +1,32 @@
 #  互联网数据库开发
 
+## 模板整合到本地
+
+#### 已更改，直接pull origin master或者clone即可本地运行
+
+1. 将statics文件夹一整个复制粘贴到/advanced/frontend/web/中
+2. 将AppAsset.php复制粘贴到/advanced/frontend/assets/中替换原文件(建议原文件先备份以免无法恢复)
+3. main.php复制粘贴到/advanced/frontend/views/layouts/中替换原文件(建议原文件先备份以免无法恢复)
+
+## Github使用
+
+上传的PDF教程相比廖雪峰教程更简洁易懂一些，快速入门
+
+> 教程里面有github alias的用法，可以快捷键操作git
+
+总结了下最常用的命令：
+
+- 更新本地仓库
+  - 初次使用整个clone：git clone https://github.com/rootCQ/Database_Homework.git
+  - 后面直接 git pull origin master
+- git checkout -b dev 创建并转到分支dev
+- git status 查看状态新替换的文件变绿才能push，
+  - 如果是红色，使用git add <文件名>
+- git diff 比较文件、分支、提交之间的差异
+- git push origin master直接提交到master分支(懒)
+
 ## 模板怎么导入
+
 1. 首先对模板的index.HTML文件进行分析，抽取所有的css路径以及js路径，以及一些在文件内部定义的script定义
 2. 将css文件路径以及js文件路径，在appset.php 文件中声明
 3. 修改layout文件，将给文件化的script定义以及需要挪用的HTML框架代码替换掉body模块
