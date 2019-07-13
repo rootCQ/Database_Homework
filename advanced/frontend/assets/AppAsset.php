@@ -40,8 +40,7 @@ class AppAsset extends AssetBundle
         'css4/style.css',
         'css4/responsive.css',
         'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
-
-
+        'clock/clock.css'
 
 
 
@@ -105,8 +104,8 @@ class AppAsset extends AssetBundle
         'js4/lightbox.min.js',
         'js4/jquery.easing.1.3.min.js',
         'js4/main.js',
-        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
-
+        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
+        'clock/clock.js',
 
 
     ];
