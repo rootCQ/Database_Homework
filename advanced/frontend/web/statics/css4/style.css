@@ -72,19 +72,18 @@ a:hover { color: #7a3995 }
     opacity: 1;
 }
 .imgg{
-    width:1080px;
+    width:1110px;
     height:625px;
 }
 .imgo{
-    width:1080px;
+    width:1110px;
     height:625px;
     filter:alpha(Opacity=80);
     -moz-opacity:0.5;
     opacity: 0.9;
-    z-index:100; 
-    background-color:#ffffff;
+    z-index:99; 
+    background-color:#fff;
 }
-
 .mainmenu ul.navbar-nav li:hover a,
 .mainmenu ul.navbar-nav li.active a { color: #fff }
 .mainmenu { margin-top: 12px }

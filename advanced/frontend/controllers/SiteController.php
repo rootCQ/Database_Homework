@@ -63,14 +63,6 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-                'backColor'=>0x000000,
-                'maxLength'=>6,
-                'minLength'=>5,
-                'padding'=>5,
-                'height'=>40,
-                'width'=>130,
-                'foreColor'=>0xffffff,
-                'offset'=>4,
             ],
         ];
     }
@@ -82,7 +74,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        //$this->layout="main_layout";
         return $this->render('index');
     }
 
@@ -93,7 +84,6 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        //$this->layout='main';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -267,13 +257,4 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
-
-    /**
-     * 自定义测试代码片段
-     */
-    public function actionSay($message="hello")
-    {
-        return  $this->render('say',['message'=>$message]);
-    }
-
 }

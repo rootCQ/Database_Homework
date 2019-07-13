@@ -40,16 +40,17 @@ AppAsset::register($this);
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
-			        <a href="index.php"><img src="statics/img/100nk.png" height="150" width="150" alt="" title="" /></a>
+			        <a href="index.php"><img src="statics/img/100nk.png" height="70px" width="220px" alt="" title="" /></a>
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="index.php"><img src="statics/img/home.ico"height="25" width="25" alt="">Home</a></li>
-			          <li class="menu-has-children"><a href=""><img src="statics/img/news.ico"height="20" width="20" alt="">News</a>
+			          <li class="menu-has-children"><a href="#"><img src="statics/img/news.ico"height="20" width="20" alt="">News <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			            <ul>
-			              <li><a href="blog-home.html">News List</a></li>
+			              <li><a href="index.php">News List</a></li>
 			              <li><a href="blog-single.html">News Page</a></li>
-			            </ul>
+                        </ul>
+			          </li>	
 			          </li>				          					          		          
                       <li><a href="contact.html"><img src="statics/img1/core-img/bag.svg"height="20" width="20" alt="">Souvenirs</a></li>
                       <li><a href="about.php"><img src="statics/img/about.ico"height="20" width="20" alt="">About</a></li>
