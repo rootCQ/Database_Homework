@@ -36,6 +36,10 @@ class AppAsset extends AssetBundle
         'fonts3/ionicons/css/ionicons.min.css',
         'fonts3/fontawesome/css/font-awesome.min.css',
         'fonts3/flaticon/font/flaticon.css',
+        'css4/lightbox.css',
+        'css4/style.css',
+        'css4/responsive.css',
+        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
 
 
 
@@ -93,6 +97,15 @@ class AppAsset extends AssetBundle
         'js3/jquery.fancybox.min.js',
         'js3/jquery.stellar.min.js',
         'js3/main.js',
+        'js4/jquery.min.js',
+        'js4/bootstrap.min.js',
+        'js4/jquery.sticky.js',
+        'js4/isotope.pkgd.min.js',
+        'js4/jquery.scrolly.js',
+        'js4/lightbox.min.js',
+        'js4/jquery.easing.1.3.min.js',
+        'js4/main.js',
+        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
 
 
 
