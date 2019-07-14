@@ -1,6 +1,2 @@
-0-sierra
-1-essence
-2-personal
-3-？
-4-Aka
-5-cpts
+personal 中main.css
+其余样式主要在strle.css

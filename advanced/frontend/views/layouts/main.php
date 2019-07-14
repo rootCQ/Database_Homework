@@ -7,8 +7,12 @@ use yii\helpers\Html;
 // use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use yii\web\Controller;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use  yii\web\Response;
+use yii\helpers\Url;
+// use  yii\base\Controller;
 
 AppAsset::register($this);
 ?>
@@ -47,15 +51,16 @@ AppAsset::register($this);
 			          <li><a href="index.php"><img src="statics/img/home.ico"height="25" width="25" alt="">Home</a></li>
 			          <li class="menu-has-children"><a href="#"><img src="statics/img/news.ico"height="20" width="20" alt="">News <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			            <ul>
-			              <li><a href="index.php">News List</a></li>
-			              <li><a href="blog-single.html">News Page</a></li>
+			              <li><a href="?r=site%2Fnews">News List</a></li>
+			              <li><a href="?r=site%2Fnewsdetail">News Page</a></li>
                         </ul>
 			          </li>	
 			          </li>				          					          		          
-                      <li><a href="contact.html"><img src="statics/img1/core-img/bag.svg"height="20" width="20" alt="">Souvenirs</a></li>
-                      <li><a href="about.php"><img src="statics/img/about.ico"height="20" width="20" alt="">About</a></li>
-                      <li><a href="index.php"><img src="statics/img1/core-img/heart.svg" height="20" width="20" alt=""></a></li>
-                      <li><a href="index.php"><img src="statics/img1/core-img/user.svg" height="20" width="20" alt=""></a></li>
+                      <li><a href="?r=site%2Fshop"><img src="statics/img/bag.ico"height="17" width="17" alt="">Souvenirs</a></li>
+                      <li><a href="?r=site%2Fmessages"><img src="statics/img/about.ico"height="20" width="20" alt="">Messages</a></li>
+                      <li><a href="?r=site%2Fhistory"><img src="statics/img/history.ico"height="20" width="20" alt="">History</a></li>
+                      <li><a href="?r=site%2Fcontact"><img src="statics/img/heart.svg" height="20" width="20" alt=""></a></li>
+                      <li><a href="?r=site%2Flogin"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
 
 			        </ul>
                   </nav><!-- #nav-menu-container -->	
@@ -107,7 +112,7 @@ AppAsset::register($this);
 <footer class="footer-area section-gap">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-md-offset-1">
                             <div class="single-footer-widget">
                                 <h4>About Me</h4>
                                 <p>We are NKUers who tend to paddle but want to strive for the upper reaches,either.</p>

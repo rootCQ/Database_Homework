@@ -6,14 +6,14 @@ $this->title = 'My Yii Application';
 ?>
 <!-- <div class="site-index"> -->
 
-    <!-- <div class="jumbotron">
+<!-- <div class="jumbotron">
         <h1>Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div> -->
-		<!-- <div class="container">
+<!-- <div class="container">
 			<div class="row fullscreen align-items-center justify-content-between">
 				<div class="col-lg-6 col-md-6 banner-left">
 					<h6>This is our</h6>
@@ -25,94 +25,173 @@ $this->title = 'My Yii Application';
 				</div>
 			</div>
         </div>	 -->
-        
-        
-       
-     <div class="imgo timer_wrap">
-        <div id="home"class="slider-area">
-        <div data-velocity=".2" ></div>
-                <div class="col-md-12  col-md-offset-0 col-md-pull-0 col-md-push-0">
-                <div class="carousel-indicators1">
-                        <div id="counter" > </div> </div>
-                    <div id="slide-list" class="carousel-fade carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">                                      
-                                        <img class="imgg" src="statics/img/l1.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img class="imgg" src="statics/img/l2.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img  class="imgg" src="statics/img/l3.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img class="imgg" src="statics/img/l4.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img class="imgg" src="statics/img/l5.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img class="imgg" src="statics/img/l6.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-text">
-                                        <img class="imgg" src="statics/img/l7.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ol class="carousel-indicators">	
-                                <li data-target="#slide-list" data-slide-to="0" class="active"></li>
-                                <li data-target="#slide-list" data-slide-to="1"></li>
-                                <li data-target="#slide-list" data-slide-to="2"></li>
-                                <li data-target="#slide-list" data-slide-to="3"></li>
-                                <li data-target="#slide-list" data-slide-to="4"></li>
-                                <li data-target="#slide-list" data-slide-to="5"></li>
-                                <li data-target="#slide-list" data-slide-to="6"></li>
-                        </ol>
-                        </div>                    
-                </div>
-    </div>	
-    </div>
-    <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
+<div class="imgo timer_wrap">
+	<div id="home" class="slider-area">
+		<div data-velocity=".2"></div>
+		<div class="col-md-12  col-md-offset-0 col-md-pull-0 col-md-push-0">
+			<div class="carousel-indicators1">
+				<div id="counter"> </div>
+			</div>
+			<div id="slide-list" class="carousel-fade carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l1.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l2.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l3.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l4.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l5.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l6.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slide-text-wrapper">
+							<div class="slide-text">
+								<img class="imgg" src="statics/img/l7.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<ol class="carousel-indicators">
+					<li data-target="#slide-list" data-slide-to="0" class="active"></li>
+					<li data-target="#slide-list" data-slide-to="1"></li>
+					<li data-target="#slide-list" data-slide-to="2"></li>
+					<li data-target="#slide-list" data-slide-to="3"></li>
+					<li data-target="#slide-list" data-slide-to="4"></li>
+					<li data-target="#slide-list" data-slide-to="5"></li>
+					<li data-target="#slide-list" data-slide-to="6"></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="body-content">
+	<div class="row1">
+		<div class="col-md-9" frag="面板6">
+			<h2>
+				<span></span> <img src="statics/img/nk100.png" style="width:60px;">
+			</h2>
+			<hr style="margin:10px 0 10px 0">
+			<div class="row" frag="面板19" style="padding-left:15px;padding-right:15px;padding-bottom:30px;">
+				<div class="col-md-12" frag="窗口19" portletmode="simpleList">
+					<!-- List -->
+					<div class="news-list row">
+						<div class="col-md-12">
+
+							<a class="item-title" href="/2019/0117/c10880a118518/page.htm"> · 习近平总书记视察南开大学</a>
+							<p class="item-date"><small>2019-01-17</small></p>
+						</div>
+					</div>
+
+					<!-- List -->
+					<div class="news-list row">
+						<div class="col-md-12">
+
+							<a class="item-title" href="/2019/0602/c10880a170076/page.htm"> · 马志明院士做客“百年南开大讲坛”</a>
+							<p class="item-date"><small>2019-06-01</small></p>
+						</div>
+					</div>
+
+					<!-- List -->
+					<div class="news-list row">
+						<div class="col-md-12">
+
+							<a class="item-title" href="/2019/0602/c10880a170075/page.htm"> · 江小涓教授做客“百年南开大讲坛”</a>
+							<p class="item-date"><small>2019-05-31</small></p>
+						</div>
+					</div>
+
+					<!-- List -->
+					<div class="news-list row">
+						<div class="col-md-12">
+
+							<a class="item-title" href="/2019/0602/c10880a170074/page.htm"> · 林惠民院士做客“百年南开大讲坛”</a>
+							<p class="item-date"><small>2019-05-30</small></p>
+						</div>
+					</div>
+
+					<!-- List -->
+					<div class="news-list row">
+						<div class="col-md-12">
+
+							<a class="item-title" href="/2019/0602/c10880a170073/page.htm"> · 南开大学木斋馆思源堂秀山堂复建完工</a>
+							<p class="item-date"><small>2019-05-30</small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline" style="margin-bottom:0px;" frag="面板111">
+			<div class="timeline-left" frag="窗口11101">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table">
+					<tbody>
+						<tr>
+							<td>
+
+								<div class="item item-light">
+									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@白河之滨，汇聚四海英才。悠悠学府，天下桃李芬芳。南以开拓，公能传承百年。同祝华诞，再迎日新月异。</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+
+								<div class="item item-light">
+									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@祝南开早日成为世界一流大学，完成张伯苓老校长的夙愿！</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+
+								<div class="item item-light">
+									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@南开百年华诞将至，历百载愈淬公能初心，新时代更彰日新月异，祝母校永远年轻！</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- </div> -->
+		<!-- <div class="col-lg-4">
                 <h2>Heading</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -131,106 +210,109 @@ $this->title = 'My Yii Application';
                     fugiat nulla pariatur.</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+            </div> -->
 
-    </div>
-<!-- </div> -->
-<!-- 复制模板相关Js设置 -->
-<script>
-		$(document).ready(function () {
+	</div>
+	<!-- </div> -->
+	<!-- 复制模板相关Js设置 -->
+	<script>
+		$(document).ready(function() {
 			$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion           
-			width: 'auto', //auto or any width like 600px
-			fit: true,   // 100% fit in a container
-			closed: 'accordion', // Start closed if in accordion view
-			activate: function(event) { // Callback function if tab is switched
-			var $tab = $(this);
-			var $info = $('#tabInfo');
-			var $name = $('span', $info);
-			$name.text($tab.text());
-			$info.show();
-			}
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true, // 100% fit in a container
+				closed: 'accordion', // Start closed if in accordion view
+				activate: function(event) { // Callback function if tab is switched
+					var $tab = $(this);
+					var $info = $('#tabInfo');
+					var $name = $('span', $info);
+					$name.text($tab.text());
+					$info.show();
+				}
 			});
 			$('#verticalTab').easyResponsiveTabs({
-			type: 'vertical',
-			width: 'auto',
-			fit: true
+				type: 'vertical',
+				width: 'auto',
+				fit: true
 			});
 		});
 	</script>
 	<!-- scrolling script -->
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+			$(".scroll").click(function(event) {
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
 			});
 		});
-	</script> 
+	</script>
 	<!-- //scrolling script -->
 	<!--banner Slider starts Here-->
-    <script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-		  // Slideshow 4
-		  $("#slider4").responsiveSlides({
-			auto: true,
-			pager:true,
-			nav:true,
-			speed: 500,
-			namespace: "callbacks",
-			before: function () {
-			  $('.events').append("<li>before event fired.</li>");
-			},
-			after: function () {
-			  $('.events').append("<li>after event fired.</li>");
-			}
-		  });
-	
-		});
-	 </script>
-    <!--banner Slider ends Here-->
-    	<!-- Pop-up for pricing tables -->
-    <script>
-			$(document).ready(function() {
-				$('.popup-with-zoom-anim').magnificPopup({
-					type: 'inline',
-					fixedContentPos: false,
-					fixedBgPos: true,
-					overflowY: 'auto',
-					closeBtnInside: true,
-					preloader: false,
-					midClick: true,
-					removalDelay: 300,
-					mainClass: 'my-mfp-zoom-in'
-			});
-																							
-		});
-		</script>
-    <!-- //Pop-up for pricing tables -->
-    <!-- Stats-Number-Scroller-Animation-JavaScript -->
 	<script>
-		jQuery(document).ready(function( $ ) {
+		// You can also use "$(window).load(function() {"
+		$(function() {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function() {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function() {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider ends Here-->
+	<!-- Pop-up for pricing tables -->
+	<script>
+		$(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //Pop-up for pricing tables -->
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script>
+		jQuery(document).ready(function($) {
 			$('.counter').counterUp({
 				delay: 10,
-				time: 1000 
+				time: 1000
 			});
 		});
 	</script>
 	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
-	<!-- flexSlider --><!-- for testimonials -->
+	<!-- flexSlider -->
+	<!-- for testimonials -->
 	<script type="text/javascript">
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider) {
+					$('body').removeClass('loading');
+				}
+			});
 		});
 	</script>
-	<!-- //flexSlider --><!-- for testimonials -->
+	<!-- //flexSlider -->
+	<!-- for testimonials -->
 	<!-- Smooth scrolling -->
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
@@ -243,31 +325,33 @@ $this->title = 'My Yii Application';
 				easingType: 'linear' 
 				};
 			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
 			});
+
+		});
 	</script>
 	<!-- //here ends scrolling icon -->
 	<!-- //Smooth scrolling -->
 
-<!--popup-js-->
-<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
- <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-</script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
-<!--//popup-js-->
+	<!--popup-js-->
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+	<!--//popup-js-->

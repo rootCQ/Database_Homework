@@ -20,6 +20,26 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public function actionNews()
+    {
+        return $this->render('news');
+    }
+    public function actionNewsdetail()
+    {
+        return $this->render('newsdetail');
+    }
+    public function actionShop()
+    {
+        return $this->render('shop');
+    }
+    public function actionMessages()
+    {
+        return $this->render('messages');
+    }
+    public function actionHistory()
+    {
+        return $this->render('history');
+    }
     /**
      * {@inheritdoc}
      */
@@ -144,7 +164,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
     /**
      * Signs user up.
      *
