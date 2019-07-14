@@ -180,6 +180,7 @@ ul.side-nav>li>a:focus {
     position: absolute;
     width: 4px;
     opacity: 0.35;
+    height: 270px;
 }
 
 .timeline .timeline-left .timeline-centered-title {
@@ -215,7 +216,7 @@ ul.side-nav>li>a:focus {
     border-left: rgba(0, 0, 0, 0.06) 3px solid;
     padding: 15px;
     /* margin-right:50px; */
-    /* margin-bottom:30px; */
+    /* margin-bottom: 30px; */
     position: relative;
 }
 
