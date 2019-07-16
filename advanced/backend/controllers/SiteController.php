@@ -20,10 +20,9 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],         //或者加上这句话才能够显示验证码
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'], //,'captcha'], //添加captcha的权限
+                        'actions' => ['login', 'error'],
                         'allow' => true,
                     ],
                     [
@@ -47,27 +46,12 @@ class SiteController extends Controller
      */
     public function actions()
     {
-        
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-                'backColor'=>0x000000,
-                'maxLength'=>6,
-                'minLength'=>5,
-                'padding'=>5,
-                'height'=>40,
-                'width'=>130,
-                'foreColor'=>0xffffff,
-                'offset'=>4,
-            ],
         ];
     }
-
-
 
     /**
      * Displays homepage.
@@ -76,7 +60,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout="main_layout";
         return $this->render('index');
     }
 
@@ -87,18 +70,12 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        $this->layout="main";
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post())) {
-            \Yii::beginProfile('profile0');  //设置锚点，计算代码运行时间
-            $model->login();
-            \Yii::error('Hello,this is a error test!'); //输出错误日志，可以通过debug页面进行查看
-            \Yii::endProfile('profile0');
-
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
             $model->password = '';

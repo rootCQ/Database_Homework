@@ -20,6 +20,26 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public function actionNews()
+    {
+        return $this->render('news');
+    }
+    public function actionNewsdetail()
+    {
+        return $this->render('newsdetail');
+    }
+    public function actionShop()
+    {
+        return $this->render('shop');
+    }
+    public function actionMessages()
+    {
+        return $this->render('messages');
+    }
+    public function actionHistory()
+    {
+        return $this->render('history');
+    }
     /**
      * {@inheritdoc}
      */
@@ -63,14 +83,6 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-                'backColor'=>0x000000,
-                'maxLength'=>6,
-                'minLength'=>5,
-                'padding'=>5,
-                'height'=>40,
-                'width'=>130,
-                'foreColor'=>0xffffff,
-                'offset'=>4,
             ],
         ];
     }
@@ -82,7 +94,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        //$this->layout="main_layout";
         return $this->render('index');
     }
 
@@ -93,7 +104,6 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        //$this->layout='main';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -154,7 +164,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
     /**
      * Signs user up.
      *
@@ -267,13 +276,4 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
-
-    /**
-     * 自定义测试代码片段
-     */
-    public function actionSay($message="hello")
-    {
-        return  $this->render('say',['message'=>$message]);
-    }
-
 }
