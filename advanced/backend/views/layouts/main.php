@@ -37,8 +37,6 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label'=>'学生总体情况', 'url'=> ['/yii-teacher/index']],
-        ['label'=>'添加学生','url'=>['/yii-teacher/create']]
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
