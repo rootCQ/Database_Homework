@@ -44,23 +44,23 @@ AppAsset::register($this);
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
-			        <a href="index.php"><img src="statics/img/100nk.png" height="70px" width="220px" alt="" title="" /></a>
+			        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/index']); ?>"><img src="statics/img/100nk.png" height="70px" width="220px" alt="" title="" /></a>
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="index.php"><img src="statics/img/home.ico"height="25" width="25" alt="">Home</a></li>
+			          <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/index']); ?>"><img src="statics/img/home.ico"height="25" width="25" alt="">Home</a></li>
 			          <li class="menu-has-children"><a href="#"><img src="statics/img/news.ico"height="20" width="20" alt="">News <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			            <ul>
-			              <li><a href="?r=site%2Fnews">News List</a></li>
-			              <li><a href="?r=site%2Fnewsdetail">News Page</a></li>
+			              <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/news']); ?>">News List</a></li>
+			              <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/newsdetail']); ?>">News Page</a></li>
                         </ul>
 			          </li>	
 			          </li>				          					          		          
-                      <li><a href="?r=site%2Fshop"><img src="statics/img/bag.ico"height="17" width="17" alt="">Souvenirs</a></li>
-                      <li><a href="?r=site%2Fmessages"><img src="statics/img/about.ico"height="20" width="20" alt="">Messages</a></li>
-                      <li><a href="?r=site%2Fhistory"><img src="statics/img/history.ico"height="20" width="20" alt="">History</a></li>
-                      <li><a href="?r=site%2Fcontact"><img src="statics/img/heart.svg" height="20" width="20" alt=""></a></li>
-                      <li><a href="?r=site%2Flogin"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
+                      <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/shop']); ?>"><img src="statics/img/bag.ico"height="17" width="17" alt="">Souvenirs</a></li>
+                      <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/messages']); ?>"><img src="statics/img/about.ico"height="20" width="20" alt="">Messages</a></li>
+                      <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/history']); ?>"><img src="statics/img/history.ico"height="20" width="20" alt="">History</a></li>
+                      <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/index']); ?>"><img src="statics/img/heart.svg" height="20" width="20" alt=""></a></li>
+                      <li><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl(['site/login']); ?>"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
 
 			        </ul>
                   </nav><!-- #nav-menu-container -->	
