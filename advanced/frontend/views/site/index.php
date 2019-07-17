@@ -3,10 +3,12 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use frontend\models\NklNewsInfo;
 use  yii\db\ActiveRecord;
+use  frontend\models\NklBbsInfo;
 ?>
 <!-- <div class="site-index"> -->
 
@@ -31,7 +33,6 @@ use  yii\db\ActiveRecord;
         </div>	 -->
 
 
-
 <div class="imgo timer_wrap">
 	<div id="home" class="slider-area">
 		<div data-velocity=".2"></div>
@@ -45,7 +46,7 @@ use  yii\db\ActiveRecord;
 					<div class="item active">
 						<div class="slide-text-wrapper">
 							<div class="slide-text">
-								<img class="imgg" src="statics/img/l1.jpg">
+								<img class="imgg" src="statics/img/l5.jpg">
 							</div>
 						</div>
 					</div>
@@ -73,7 +74,7 @@ use  yii\db\ActiveRecord;
 					<div class="item">
 						<div class="slide-text-wrapper">
 							<div class="slide-text">
-								<img class="imgg" src="statics/img/l5.jpg">
+								<img class="imgg" src="statics/img/l1.jpg">
 							</div>
 						</div>
 					</div>
@@ -115,45 +116,15 @@ use  yii\db\ActiveRecord;
 			<div class="row" frag="面板19" style="padding-left:15px;padding-right:15px;padding-bottom:30px;">
 				<div class="col-md-12" frag="窗口19" portletmode="simpleList">
 					<!-- List -->
-					<div class="news-list row">
-						<div class="col-md-12">
-						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0001'])->one();?>
-							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
-							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
+					<?php $NklNewsInfos = NklNewsInfo::findBySql('SELECT * FROM `nkl_news_info` ORDER by news_releaseTime DESC  limit 5')->all(); ?>
+					<?php foreach ($NklNewsInfos as $NklNewsInfo) : ?>
+						<div class="news-list row">
+							<div class="col-md-12">
+								<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+								<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
+							</div>
 						</div>
-					</div>
-					<!-- List -->
-					<div class="news-list row">
-						<div class="col-md-12">
-						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0002'])->one();?>
-							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
-							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
-						</div>
-					</div>
-					<!-- List -->
-					<div class="news-list row">
-						<div class="col-md-12">
-						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0003'])->one();?>
-							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
-							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
-						</div>
-					</div>
-					<!-- List -->
-					<div class="news-list row">
-						<div class="col-md-12">
-						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0004'])->one();?>
-							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
-							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
-						</div>
-					</div>
-					<!-- List -->
-					<div class="news-list row">
-						<div class="col-md-12">
-						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0005'])->one();?>
-							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
-							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -162,30 +133,16 @@ use  yii\db\ActiveRecord;
 			<div class="timeline-left" frag="窗口11101">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table">
 					<tbody>
+					<?php $NklBbsInfos = NklBbsInfo::findBySql('SELECT * FROM `nkl_bbs_info` ORDER by bbs_time,bbs_id DESC  limit 3')->all(); ?>
+								<?php foreach ($NklBbsInfos as $NklBbsInfo) : ?>
 						<tr>
 							<td>
-
 								<div class="item item-light">
-									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@白河之滨，汇聚四海英才。悠悠学府，天下桃李芬芳。南以开拓，公能传承百年。同祝华诞，再迎日新月异。</p>
+									<p style="margin-top:0px;margin-bottom:0px;color:#666666;"><?= Html::encode("@ {$NklBbsInfo->bbs_content}") ?></p>
 								</div>
 							</td>
 						</tr>
-						<tr>
-							<td>
-
-								<div class="item item-light">
-									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@祝南开早日成为世界一流大学，完成张伯苓老校长的夙愿！</p>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-
-								<div class="item item-light">
-									<p style="margin-top:0px;margin-bottom:0px;color:#666666;">@南开百年华诞将至，历百载愈淬公能初心，新时代更彰日新月异，祝母校永远年轻！</p>
-								</div>
-							</td>
-						</tr>
+						<?php endforeach; ?>
 					</tbody>
 				</table>
 			</div>
@@ -214,6 +171,7 @@ use  yii\db\ActiveRecord;
             </div> -->
 
 	</div>
+</div>
 	<!-- </div> -->
 	<!-- 复制模板相关Js设置 -->
 	<script>
