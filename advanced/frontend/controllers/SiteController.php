@@ -14,12 +14,32 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\NklNewsInfo;
 
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
+    public function actionNklNewsInfo()
+    {
+        $query = NklNewsInfo::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $NklNewsInfos = $query->orderBy('news_id')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('index', [
+            'newsinfo' => $NklNewsInfos,
+            'pagination' => $pagination,
+        ]);
+    }
     public function actionNews()
     {
         return $this->render('news');

@@ -114,17 +114,23 @@ AppAsset::register($this);
                     <div class="row">
                         <div class="col-lg-5 col-md-6 col-sm-6 col-md-offset-1">
                             <div class="single-footer-widget">
-                                <h4>About Me</h4>
+                                <h4>About Us</h4>
                                 <p>We are NKUers who tend to paddle but want to strive for the upper reaches,either.</p>
                                 <p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Web is made by <i class="fa fa-heart-o" aria-hidden="true"></i>NKL</a></p>
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="col-md-3"style="margin-left:55px;">
                             <div class="single-footer-widget">
                                 <h4>Link</h4>
                                 <p><a href="https://www.nankai.edu.cn" target="_blank">南开大学</a></p>
                                 <p><a href="http://100.nankai.edu.cn" target="_blank">南开大学百年校庆</a></p>
                                 <p><a href="http://news.nankai.edu.cn" target="_blank">南开大学新闻网</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2" >
+                            <div class="single-footer-widget">
+                                <p style="margin-top:10px;"><img src="statics/img/bnxq.png" style="width:80px;height:80px"></p>
+                                <p style="margin-top:10px;">百年校庆官微</p>
                             </div>
                         </div>
                     </div>

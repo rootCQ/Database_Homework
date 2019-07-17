@@ -3,6 +3,10 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+use yii\helpers\Html;
+use yii\widgets\LinkPager;
+use frontend\models\NklNewsInfo;
+use  yii\db\ActiveRecord;
 ?>
 <!-- <div class="site-index"> -->
 
@@ -36,6 +40,7 @@ $this->title = 'My Yii Application';
 				<div id="counter"> </div>
 			</div>
 			<div id="slide-list" class="carousel-fade carousel slide" data-ride="carousel">
+				<div class="carousel-indicators2">距离<img src="statics/img/nku.png" style="width:160px;height:80px;">百年校庆还有</div>
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<div class="slide-text-wrapper">
@@ -112,45 +117,41 @@ $this->title = 'My Yii Application';
 					<!-- List -->
 					<div class="news-list row">
 						<div class="col-md-12">
-
-							<a class="item-title" href="/2019/0117/c10880a118518/page.htm"> · 习近平总书记视察南开大学</a>
-							<p class="item-date"><small>2019-01-17</small></p>
+						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0001'])->one();?>
+							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
 						</div>
 					</div>
-
 					<!-- List -->
 					<div class="news-list row">
 						<div class="col-md-12">
-
-							<a class="item-title" href="/2019/0602/c10880a170076/page.htm"> · 马志明院士做客“百年南开大讲坛”</a>
-							<p class="item-date"><small>2019-06-01</small></p>
+						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0002'])->one();?>
+							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
 						</div>
 					</div>
-
 					<!-- List -->
 					<div class="news-list row">
 						<div class="col-md-12">
-
-							<a class="item-title" href="/2019/0602/c10880a170075/page.htm"> · 江小涓教授做客“百年南开大讲坛”</a>
-							<p class="item-date"><small>2019-05-31</small></p>
+						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0003'])->one();?>
+							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
 						</div>
 					</div>
-
 					<!-- List -->
 					<div class="news-list row">
 						<div class="col-md-12">
-
-							<a class="item-title" href="/2019/0602/c10880a170074/page.htm"> · 林惠民院士做客“百年南开大讲坛”</a>
-							<p class="item-date"><small>2019-05-30</small></p>
+						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0004'])->one();?>
+							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
 						</div>
 					</div>
-
 					<!-- List -->
 					<div class="news-list row">
 						<div class="col-md-12">
-
-							<a class="item-title" href="/2019/0602/c10880a170073/page.htm"> · 南开大学木斋馆思源堂秀山堂复建完工</a>
-							<p class="item-date"><small>2019-05-30</small></p>
+						<?php $NklNewsInfo = NklNewsInfo::find()->where(['news_id' => '0005'])->one();?>
+							<a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
+							<p class="item-date"><small><?= Html::encode("{$NklNewsInfo->news_releaseTime}") ?></small></p>
 						</div>
 					</div>
 				</div>
