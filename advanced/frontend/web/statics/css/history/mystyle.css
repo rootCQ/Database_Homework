@@ -1,0 +1,59 @@
+/*html{background-color: #7E0C6E;}
+body
+{
+	background-color:#f5f4f0!important;
+	color:#2d2b31;
+	line-height:1.6rem;
+	margin:0;
+	padding:0;
+	-moz-osx-font-smoothing:grayscale
+	background-image: url(statics/img/history/NKU_7.jpg);
+}
+div.relative
+  {
+  margin:3px;
+  border:1px solid #bebebe;
+  height:300px;
+  width:400px;
+  float:left;
+  text-align:center;
+  }*/
+
+  /* Intro */
+ /* #intro {
+    padding: 4em 4em 2em 4em;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+    @media screen and (max-width: 736px) {
+
+      #intro {
+        padding: 2em 2em 0.1em 2em;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      #intro {
+        padding: 2em 1em 0.1em 1em;
+      }
+
+        #intro p br {
+          display: none;
+        }
+
+    }*/
+    /* Image */
+
+  div.img
+  {
+  margin:3px;
+  border:1px solid #bebebe;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+  }

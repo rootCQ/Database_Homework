@@ -31,13 +31,6 @@ class AppAsset extends AssetBundle
         'css/style1.css',
         'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
         'css/clock.css',
-       
-
-
-
-
-
-
     ];
     public $js = [
         'js/jquery-3.2.1.min.js',
@@ -61,10 +54,6 @@ class AppAsset extends AssetBundle
         'https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA',
         'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
         'js/clock.js',
-       
-
-
-
     ];
     public $depends = [
         'yii\web\YiiAsset',
