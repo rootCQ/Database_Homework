@@ -49,12 +49,12 @@ class NklBbsInfo extends \yii\db\ActiveRecord
     {
         return [
             'bbs_id' => 'Bbs ID',
-            'bbs_time' => 'Bbs Time',
-            'bbs_userNickname' => 'Bbs User Nickname',
-            'bbs_userDescribe' => 'Bbs User Describe',
-            'bbs_content' => 'Bbs Content',
-            'bbs_isSelected' => 'Bbs Is Selected',
-            'bbs_isSolved' => 'Bbs Is Solved',
+            'bbs_time' => '留言时间',
+            'bbs_userNickname' => '留言者姓名',
+            'bbs_userDescribe' => '留言者身份',
+            'bbs_content' => '留言内容',
+            'bbs_isSelected' => '精选留言',
+            'bbs_isSolved' => '留言处理',
         ];
     }
 

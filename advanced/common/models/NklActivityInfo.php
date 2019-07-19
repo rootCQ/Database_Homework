@@ -47,13 +47,13 @@ class NklActivityInfo extends \yii\db\ActiveRecord
     {
         return [
             'activity_id' => 'Activity ID',
-            'activity_info' => 'Activity Info',
-            'activity_location' => 'Activity Location',
-            'activity_beginDate' => 'Activity Begin Date',
-            'activity_beginTime' => 'Activity Begin Time',
-            'activity_endDate' => 'Activity End Date',
-            'activity_endTime' => 'Activity End Time',
-            'activity_hostDept' => 'Activity Host Dept',
+            'activity_info' => '活动名称',
+            'activity_location' => '活动地点',
+            'activity_beginDate' => '活动开始日期',
+            'activity_beginTime' => '活动开始时间',
+            'activity_endDate' => '活动结束日期',
+            'activity_endTime' => '活动结束时间',
+            'activity_hostDept' => '活动主办单位',
         ];
     }
 }

@@ -14,7 +14,10 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use frontend\models\NklNewsInfo;
+use common\models\NklNewsInfo;
+use common\models\NklBbsInfo;
+use common\models\NklActivityInfo;
+use common\models\NklActivityInfoSearch;
 
 /**
  * Site controller
@@ -35,7 +38,7 @@ class SiteController extends Controller
             ->limit($pagination->limit)
             ->all();
 
-        return $this->render('index', [
+        return $this->render('news', [
             'newsinfo' => $NklNewsInfos,
             'pagination' => $pagination,
         ]);
@@ -44,17 +47,40 @@ class SiteController extends Controller
     {
         return $this->render('news');
     }
-    public function actionNewsdetail()
+    public function actionActivities()
     {
-        return $this->render('newsdetail');
+        // return $this->render('activities');
+        $model = new NklActivityInfo();
+	        $searchModel = new NklActivityInfoSearch();
+	        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+	
+	        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+	            return $this->redirect(['activities',  'model' => $model, 
+	            'searchModel' => $searchModel,
+	            'dataProvider' => $dataProvider,]);
+	        }
+	        return $this->render('activities', [
+	            'model' => $model, 
+	            'searchModel' => $searchModel,
+	            'dataProvider' => $dataProvider,
+	        ]);
     }
     public function actionShop()
     {
         return $this->render('shop');
     }
-    public function actionMessages()
+    public function actionBbs()
     {
-        return $this->render('messages');
+        $model = new NklBbsInfo();
+	
+	        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+	             return $this->render('bbs',['model' => new NklBbsInfo()]);
+	        }
+	        else{
+	        return $this->render('bbs', [
+	            'model' => $model,
+	        ]);
+	    }
     }
     public function actionHistory()
     {

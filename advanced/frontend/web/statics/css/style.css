@@ -418,7 +418,7 @@ ul.side-nav>li>a:focus {
     position: relative;
     margin-top: 84px;
     background-position: center center;
-    height: 770px;
+    /* height: 770px; */
 }
 
 ul.side-nav a:hover,
