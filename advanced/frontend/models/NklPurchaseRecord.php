@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -10,10 +10,8 @@ use Yii;
  * @property string $purchase_time
  * @property int $user_id
  * @property int $product_id
- * @property int $purchase_amount
- * @property double $purchase_totalPrice
  *
- * @property NklUsersInfo $user
+ * @property NklUsersLogin $user
  * @property NklProductsInfo $product
  */
 class NklPurchaseRecord extends \yii\db\ActiveRecord
@@ -32,12 +30,11 @@ class NklPurchaseRecord extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['purchase_time', 'user_id', 'product_id', 'purchase_amount', 'purchase_totalPrice'], 'required'],
+            [['purchase_time', 'user_id', 'product_id'], 'required'],
             [['purchase_time'], 'safe'],
-            [['user_id', 'product_id', 'purchase_amount'], 'integer'],
-            [['purchase_totalPrice'], 'number'],
+            [['user_id', 'product_id'], 'integer'],
             [['purchase_time', 'user_id'], 'unique', 'targetAttribute' => ['purchase_time', 'user_id']],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklUsersInfo::className(), 'targetAttribute' => ['user_id' => 'user_id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklUsersLogin::className(), 'targetAttribute' => ['user_id' => 'user_id']],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklProductsInfo::className(), 'targetAttribute' => ['product_id' => 'product_id']],
         ];
     }
@@ -51,8 +48,6 @@ class NklPurchaseRecord extends \yii\db\ActiveRecord
             'purchase_time' => 'Purchase Time',
             'user_id' => 'User ID',
             'product_id' => 'Product ID',
-            'purchase_amount' => 'Purchase Amount',
-            'purchase_totalPrice' => 'Purchase Total Price',
         ];
     }
 
@@ -61,7 +56,7 @@ class NklPurchaseRecord extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(NklUsersInfo::className(), ['user_id' => 'user_id']);
+        return $this->hasOne(NklUsersLogin::className(), ['user_id' => 'user_id']);
     }
 
     /**

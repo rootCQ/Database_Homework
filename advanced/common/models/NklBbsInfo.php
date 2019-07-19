@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 
@@ -8,14 +8,14 @@ use Yii;
  * This is the model class for table "nkl_bbs_info".
  *
  * @property int $bbs_id
- * @property int $user_id
  * @property string $bbs_time
+ * @property string $bbs_userNickname
+ * @property string $bbs_userDescribe
  * @property string $bbs_content
  * @property int $bbs_isSelected
  * @property int $bbs_isSolved
  *
- * @property NklUsersInfo $user
- * @property NklBbsSelectrecord[] $nklBbsSelectrecords
+ * @property NklBbsSelectRecord[] $nklBbsSelectRecords
  */
 class NklBbsInfo extends \yii\db\ActiveRecord
 {
@@ -33,11 +33,12 @@ class NklBbsInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'bbs_time', 'bbs_content'], 'required'],
-            [['user_id', 'bbs_isSelected', 'bbs_isSolved'], 'integer'],
+            [['bbs_time', 'bbs_userNickname', 'bbs_userDescribe', 'bbs_content'], 'required'],
             [['bbs_time'], 'safe'],
-            [['bbs_content'], 'string', 'max' => 100],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklUsersInfo::className(), 'targetAttribute' => ['user_id' => 'user_id']],
+            [['bbs_isSelected', 'bbs_isSolved'], 'integer'],
+            [['bbs_userNickname'], 'string', 'max' => 25],
+            [['bbs_userDescribe'], 'string', 'max' => 50],
+            [['bbs_content'], 'string', 'max' => 500],
         ];
     }
 
@@ -48,8 +49,9 @@ class NklBbsInfo extends \yii\db\ActiveRecord
     {
         return [
             'bbs_id' => 'Bbs ID',
-            'user_id' => 'User ID',
             'bbs_time' => 'Bbs Time',
+            'bbs_userNickname' => 'Bbs User Nickname',
+            'bbs_userDescribe' => 'Bbs User Describe',
             'bbs_content' => 'Bbs Content',
             'bbs_isSelected' => 'Bbs Is Selected',
             'bbs_isSolved' => 'Bbs Is Solved',
@@ -59,16 +61,8 @@ class NklBbsInfo extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUser()
+    public function getNklBbsSelectRecords()
     {
-        return $this->hasOne(NklUsersInfo::className(), ['user_id' => 'user_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getNklBbsSelectrecords()
-    {
-        return $this->hasMany(NklBbsSelectrecord::className(), ['bbs_id' => 'bbs_id']);
+        return $this->hasMany(NklBbsSelectRecord::className(), ['bbs_id' => 'bbs_id']);
     }
 }

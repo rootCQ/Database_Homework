@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -8,9 +8,11 @@ use Yii;
  * This is the model class for table "nkl_users_login".
  *
  * @property int $user_id
- * @property string $user_pwd
+ * @property string $user_name
+ * @property string $user_password_hash
+ * @property string $user_auth_key
  *
- * @property NklUsersInfo $user
+ * @property NklPurchaseRecord[] $nklPurchaseRecords
  */
 class NklUsersLogin extends \yii\db\ActiveRecord
 {
@@ -28,11 +30,10 @@ class NklUsersLogin extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id'], 'required'],
-            [['user_id'], 'integer'],
-            [['user_pwd'], 'string', 'max' => 50],
-            [['user_id'], 'unique'],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklUsersInfo::className(), 'targetAttribute' => ['user_id' => 'user_id']],
+            [['user_name', 'user_password_hash', 'user_auth_key'], 'required'],
+            [['user_name'], 'string', 'max' => 25],
+            [['user_password_hash'], 'string', 'max' => 255],
+            [['user_auth_key'], 'string', 'max' => 32],
         ];
     }
 
@@ -43,15 +44,17 @@ class NklUsersLogin extends \yii\db\ActiveRecord
     {
         return [
             'user_id' => 'User ID',
-            'user_pwd' => 'User Pwd',
+            'user_name' => 'User Name',
+            'user_password_hash' => 'User Password Hash',
+            'user_auth_key' => 'User Auth Key',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUser()
+    public function getNklPurchaseRecords()
     {
-        return $this->hasOne(NklUsersInfo::className(), ['user_id' => 'user_id']);
+        return $this->hasMany(NklPurchaseRecord::className(), ['user_id' => 'user_id']);
     }
 }

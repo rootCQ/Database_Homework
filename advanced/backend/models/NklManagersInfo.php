@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -15,10 +15,10 @@ use Yii;
  * @property string $manager_college
  * @property string $manager_major
  *
- * @property NklBbsSelectrecord[] $nklBbsSelectrecords
+ * @property NklBbsSelectRecord[] $nklBbsSelectRecords
  * @property NklManagersLogin $nklManagersLogin
- * @property NklNewsCommentsSelectrecord[] $nklNewsCommentsSelectrecords
  * @property NklNewsInfo[] $nklNewsInfos
+ * @property NklNewsSelectRecord[] $nklNewsSelectRecords
  */
 class NklManagersInfo extends \yii\db\ActiveRecord
 {
@@ -38,9 +38,9 @@ class NklManagersInfo extends \yii\db\ActiveRecord
         return [
             [['manager_name', 'manager_email', 'manager_grade', 'manager_college'], 'required'],
             [['manager_grade'], 'integer'],
-            [['manager_name', 'manager_email'], 'string', 'max' => 25],
+            [['manager_name', 'manager_college', 'manager_major'], 'string', 'max' => 25],
             [['manager_sex'], 'string', 'max' => 1],
-            [['manager_college', 'manager_major'], 'string', 'max' => 20],
+            [['manager_email'], 'string', 'max' => 255],
         ];
     }
 
@@ -63,9 +63,9 @@ class NklManagersInfo extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNklBbsSelectrecords()
+    public function getNklBbsSelectRecords()
     {
-        return $this->hasMany(NklBbsSelectrecord::className(), ['manager_id' => 'manager_id']);
+        return $this->hasMany(NklBbsSelectRecord::className(), ['manager_id' => 'manager_id']);
     }
 
     /**
@@ -79,16 +79,16 @@ class NklManagersInfo extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNklNewsCommentsSelectrecords()
+    public function getNklNewsInfos()
     {
-        return $this->hasMany(NklNewsCommentsSelectrecord::className(), ['manager_id' => 'manager_id']);
+        return $this->hasMany(NklNewsInfo::className(), ['news_releaser' => 'manager_id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNklNewsInfos()
+    public function getNklNewsSelectRecords()
     {
-        return $this->hasMany(NklNewsInfo::className(), ['news_releaser' => 'manager_id']);
+        return $this->hasMany(NklNewsSelectRecord::className(), ['manager_id' => 'manager_id']);
     }
 }

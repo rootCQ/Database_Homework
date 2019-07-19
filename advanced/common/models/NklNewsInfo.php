@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace common\models;
 
 use Yii;
 
@@ -9,11 +9,11 @@ use Yii;
  *
  * @property int $news_id
  * @property string $news_title
- * @property string $news_content
  * @property int $news_releaser
  * @property string $news_releaseTime
  * @property string $news_link
- * @property NklNewsComments[] $nklNewsComments
+ * @property int $news_isSelected
+ *
  * @property NklManagersInfo $newsReleaser
  */
 class NklNewsInfo extends \yii\db\ActiveRecord
@@ -32,12 +32,11 @@ class NklNewsInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['news_title', 'news_content', 'news_releaser', 'news_releaseTime'], 'required'],
-            [['news_releaser'], 'integer'],
+            [['news_title', 'news_releaser', 'news_releaseTime', 'news_link'], 'required'],
+            [['news_releaser', 'news_isSelected'], 'integer'],
             [['news_releaseTime'], 'safe'],
-            [['news_title'], 'string', 'max' => 25],
-            [['news_content'], 'string', 'max' => 500],
-            [['news_link'], 'string', 'max' => 200],
+            [['news_title'], 'string', 'max' => 100],
+            [['news_link'], 'string', 'max' => 255],
             [['news_releaser'], 'exist', 'skipOnError' => true, 'targetClass' => NklManagersInfo::className(), 'targetAttribute' => ['news_releaser' => 'manager_id']],
         ];
     }
@@ -50,19 +49,11 @@ class NklNewsInfo extends \yii\db\ActiveRecord
         return [
             'news_id' => 'News ID',
             'news_title' => 'News Title',
-            'news_content' => 'News Content',
-            'news_link' => 'News Link',
             'news_releaser' => 'News Releaser',
             'news_releaseTime' => 'News Release Time',
+            'news_link' => 'News Link',
+            'news_isSelected' => 'News Is Selected',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getNklNewsComments()
-    {
-        return $this->hasMany(NklNewsComments::className(), ['news_id' => 'news_id']);
     }
 
     /**

@@ -1,16 +1,16 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
 /**
- * This is the model class for table "nkl_bbs_selectrecord".
+ * This is the model class for table "nkl_bbs_selectRecord".
  *
- * @property int $bbs_id
  * @property int $manager_id
  * @property int $bbs_isSelected
  * @property string $bbs_solveTime
+ * @property int $bbs_id
  *
  * @property NklManagersInfo $manager
  * @property NklBbsInfo $bbs
@@ -22,7 +22,7 @@ class NklBbsSelectRecord extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'nkl_bbs_selectrecord';
+        return 'nkl_bbs_selectRecord';
     }
 
     /**
@@ -31,8 +31,8 @@ class NklBbsSelectRecord extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['bbs_id', 'manager_id', 'bbs_isSelected', 'bbs_solveTime'], 'required'],
-            [['bbs_id', 'manager_id', 'bbs_isSelected'], 'integer'],
+            [['manager_id', 'bbs_isSelected', 'bbs_solveTime', 'bbs_id'], 'required'],
+            [['manager_id', 'bbs_isSelected', 'bbs_id'], 'integer'],
             [['bbs_solveTime'], 'safe'],
             [['manager_id', 'bbs_solveTime'], 'unique', 'targetAttribute' => ['manager_id', 'bbs_solveTime']],
             [['manager_id'], 'exist', 'skipOnError' => true, 'targetClass' => NklManagersInfo::className(), 'targetAttribute' => ['manager_id' => 'manager_id']],
@@ -46,10 +46,10 @@ class NklBbsSelectRecord extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'bbs_id' => 'Bbs ID',
             'manager_id' => 'Manager ID',
             'bbs_isSelected' => 'Bbs Is Selected',
             'bbs_solveTime' => 'Bbs Solve Time',
+            'bbs_id' => 'Bbs ID',
         ];
     }
 
