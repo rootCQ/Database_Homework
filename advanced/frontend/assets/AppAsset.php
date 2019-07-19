@@ -32,6 +32,7 @@ class AppAsset extends AssetBundle
         'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
         'css/clock.css',
         'css/messages/sinaFaceAndEffec.css',
+        'css/messages/main.css',
 
        
 
