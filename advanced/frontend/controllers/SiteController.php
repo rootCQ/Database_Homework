@@ -14,6 +14,16 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+/**
+ * 祝福消息的model引入
+ */
+use common\models\YiiMessage;
+use common\models\YiiMessageSearch;
+/**
+ * 活动预告的model引入
+ */
+use common\models\YiiActivities;
+use common\models\YiiActivitiesSearch;
 
 /**
  * Site controller
@@ -24,17 +34,47 @@ class SiteController extends Controller
     {
         return $this->render('news');
     }
+    
     public function actionNewsdetail()
     {
-        return $this->render('newsdetail');
+        $model = new YiiActivities();
+        $searchModel = new YiiActivitiesSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['newsdetail',  'model' => $model, 
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,]);
+        }
+        return $this->render('newsdetail', [
+            'model' => $model, 
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
+
+
     public function actionShop()
     {
         return $this->render('shop');
     }
+       /**
+     * Creates a new YiiMessage model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
     public function actionMessages()
     {
-        return $this->render('messages');
+        $model = new YiiMessage();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+             return $this->render('messages',['model' => new YiiMessage()]);
+        }
+        else{
+        return $this->render('messages', [
+            'model' => $model,
+        ]);
+        }
     }
     public function actionHistory()
     {
