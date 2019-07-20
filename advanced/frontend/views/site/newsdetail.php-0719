@@ -1,0 +1,1439 @@
+<?php
+use yii\helpers\Html;
+?>
+<!DOCTYPE html>
+
+<html id="home" class="slider-area">
+<!--<![endif]-->
+
+<!-- <head> -->
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <title>活动预告</title>
+    <meta name="keywords" content="南开大学百年校庆,百年校庆,百年南开,南开校庆,南开大学" />
+    <meta name="description" content="2019年南开大学建校一百周年。百年南开，再塑辉煌" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <link type="text/css" href="./statics/css/activities/simplenews.css" rel="stylesheet" />
+    <link type="text/css" href="./statics/css/activities/sudyNav.css" rel="stylesheet" />
+
+ 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link href="./statics/css/activities/bootstrapmin.css" rel="stylesheet" type="text/css" />
+    <link href="./statics/css/activities/font-awesome.min.css" rel="stylesheet">
+    <link href="./statics/css/activities/style.css" rel="stylesheet" />
+
+
+  
+    <style type="text/css">
+        #filters {
+            padding-left: 25px;
+        }
+        
+        #filters .date {
+            text-align: center;
+            javascript: void(0);
+            float: left;
+            border: 1px solid #e7e7e7;
+        }
+        
+        #filters .date {
+            width: 20%;
+        }
+        
+        #filters .date-1017 {
+            width: 40%;
+        }
+        
+        #filters .date-active {
+            background: #fffcea;
+            border: 1px solid #a0468c;
+        }
+        
+        #filters .date-month {
+            font-size: 18px;
+            height: 50px;
+            line-height: 50px;
+            color: #888;
+        }
+        
+        #filters .date-active .date-month {
+            color: #a0468c;
+        }
+        
+        #filters .date-month span {
+            font-size: 14px;
+            height: 32px;
+            line-height: 32px;
+        }
+        
+        #filters .date-year {
+            background-color: #fafafa;
+            color: #d5d5d5;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        
+        #filters .date-active .date-year {
+            color: #fff;
+            background-color: #a0468c;
+        }
+        
+        #container .item {
+            transition: 2s;
+            -moz-transition: 2s;
+            /* Firefox 4 */
+            -webkit-transition: 2s;
+            /* Safari and Chrome */
+            -o-transition: 2s;
+            /* Opera */
+        }
+    </style>
+<!-- </head> -->
+
+<body class="smoothscroll">
+<script language="javascript" src="./statics/css/activities/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="155"></script>
+    <script language="javascript" src="./statics/css/activities/jquery.sudy.wp.visitcount.js"></script>
+    <script type="text/javascript" src="./statics/css/activities/jquery.sudyNav.js"></script>
+    <script type="text/javascript" src="./statics/js/activities/jquery-214min.js"></script>
+    
+    
+    <div id="wrapper">
+
+        <section class="padding-top30  margin-top--60" style="padding-top:30px;    background-image: url(/_upload/tpl/01/41/321/template321/__ASSETS__/img/newsbg.png);
+        background-size: auto;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-position-x: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8" frag="面板6">
+                        <h2 style="padding-bottom:20px;font-family:华文中宋;" frag="窗口6" portletmode="simpleColumnAnchor">
+                            <span class='Column_Anchor'>活动预告</span> <img src=".\statics\img\messages\100num.png" style="width:60px;" />
+                        </h2>
+                        <hr style="margin:10px 0 20px 0">
+                        <div class="timeline1" id="container" frag="面板19">
+                            <div class="timeline-left" frag="窗口19" portletmode="simpleList">
+
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="page.htm">【百年校庆】总结与宣传活动一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年4-12月
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="page.htm">【百年校庆】学术与交流活动一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年4-12月
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="page.htm">【百年校庆】文化与纪念活动一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年4-12月
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0319/c10881a120988/page.htm">【百年校庆】校友与发展活动一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年4-12月
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0320/c10881a120998/page.htm">【百年校庆】部门及院系活动一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年4-12月
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201904 201905" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/_redirect?siteId=155&columnId=10881&articleId=124040">【百年校庆】百年南开大讲坛信息一览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年11月至近期
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0304/c10881a120120/page.htm">【文体活动】南开大学京剧传承基地启动仪式</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：汉语言文化学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-31 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区东方艺术大楼演播厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnxq" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0306/c10881a120253/page.htm">【百年校庆】南开大学建校100周年倒计时200天仪式暨第二届南开大学MBA校友会发展论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学MBA校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-31 14:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0227/c10881a119901/page.htm">【百年南开大讲坛】巴里·马歇尔院士（诺奖）：突破性的创新-诺贝尔奖得主的诞生与合作机遇</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-29 14:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区主楼小礼堂</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0325/c10881a121241/page.htm">【百年南开大讲坛】威廉·科恩：处在十字路口的中美关系</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：国际交流处 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-26 下午
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0317/c10881a120853/page.htm">【百年南开大讲坛】邓子新院士：我平凡科研案例背后的科学与人文思考</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-26 12:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区生物站报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0311/c10881a120530/page.htm">【百年南开大讲坛】辛向阳教授：习近平新时代中国特色社会主义思想的基本要义</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：马克思主义学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-24 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：马克思主义学院一楼113</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0227/c10881a119900/page.htm">【百年南开大讲坛】梁其姿教授：清末穗港澳地区医学知识建构的全球在地化</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：历史学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-22 19:15 <a href="http://100.nankai.edu.cn/2019/0325/c10880a121266/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区历史学院119室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0227/c10881a119893/page.htm">【百年南开大讲坛】周其林院士：手性物质化学</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：化学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-22 15:00 <a href="http://100.nankai.edu.cn/2019/0325/c10880a121255/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区天南联合楼A座4楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0227/c10881a119892/page.htm">【百年南开大讲坛】薛冬峰研究员：稀土资源利用中的高质量发展</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：物理科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-19 18:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：物理科学学院（三教）301</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0316/c10881a120831/page.htm">【百年南开大讲坛】方滨兴院士：漫谈网络空间安全威胁</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：网络空间安全学院、计算机学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-19 10:00 <a href="http://100.nankai.edu.cn/2019/0326/c10880a121735/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区业务东楼114报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0306/c10881a120274/page.htm">【百年南开大讲坛】王世明：奋斗精神与传统文化</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：文学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-14 10:00 <a href="http://100.nankai.edu.cn/2019/0316/c10880a120829/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：东方艺术大楼一楼逸夫厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 xshd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0305/c10881a120175/page.htm">【学术活动】2019南开高价碘会议</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-09
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0227/c10881a119883/page.htm">【百年南开大讲坛】道格拉斯•斯蒂芬：FLP体系反应模式的拓展</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：化学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-08 10:30 <a href="http://100.nankai.edu.cn/2019/0311/c10880a120563/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区石先楼二楼学术报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 jnhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0228/c10881a119929/page.htm">【纪念活动】世纪伟人腾飞梦—周恩来与两弹一星　全国巡回展天津站　</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：见文内 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-02 <a href="http://100.nankai.edu.cn/2019/0304/c10880a120147/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区大通学生中心</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201903 cxsxl xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0308/c10881a120458/page.htm">【学术活动】吴泉水 教授：Skew Calabi-Yau algebras, Homological Determinants and Nakayama Automorphisms</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-03-01
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201902 bnnkdjt lyjcjsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0221/c10881a119622/page.htm">【百年南开大讲坛】杰弗里•沃尔：”文化与农业：以旅游带动创新型乡村经济“</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：旅游与服务学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-02-27 14:30 <a href="http://100.nankai.edu.cn/2019/0306/c10880a120251/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区旅游与服务学院134会议室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201902 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0219/c10881a119510/page.htm">【百年南开大讲坛】洪明奇：PAPR，EGFR抑制剂及有效免疫检查点靶向治疗的研究进展</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-02-26 9:30 <a href="http://100.nankai.edu.cn/2019/0227/c10880a119909/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 生物站报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201902 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0222/c10881a119692/page.htm">【校友活动】南开艺术校友会成立大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：校友工作办公室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-02-23 15:00 <a href="http://100.nankai.edu.cn/2019/0225/c10880a119740/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区东方艺术大楼逸夫厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201902 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0217/c10881a119440/page.htm">【百年南开大讲坛】任贤良：深入学习领会习近平总书记关于网络强国的重要思想，为实现“两个百年”的中国梦插上互联网的腾飞翅膀</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：网络空间安全学院、计算机学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-02-22 14:30 <a href="http://100.nankai.edu.cn/2019/0225/c10880a119739/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区业务西楼122报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117629/page.htm">【校友活动】南开大学重庆校友会2018年会暨首届南开渝州论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学重庆校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-19 14:00 <a href="http://100.nankai.edu.cn/2019/0213/c10880a119347/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：重庆国际会议展览中心1F多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117623/page.htm">【学术活动】天津体系结构/系统软件青年论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学计算机学院 南开-百度联合实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-19 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区 计算机学院 523会议室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117628/page.htm">【校友活动】南开吉林校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开吉林校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-19 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：长春拉图摩根酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0108/c10881a118004/page.htm">【百年南开大讲坛】黄友义：从翻译世界到翻译中国</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：外国语学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-14 10:00 <a href="http://100.nankai.edu.cn/2019/0115/c10880a118400/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：外国语学院7教139会议室（良铮厅）</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117627/page.htm">【校友活动】“公能守正、聚力前行”2018年南开北京校友年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开北京校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-13 14:00 <a href="http://100.nankai.edu.cn/2019/0118/c10880a118817/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：北京日坛宾馆</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117626/page.htm">【校友活动】南开海南校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开海南校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-12 15:00 <a href="http://100.nankai.edu.cn/2019/0115/c10880a118401/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：海南亚泰温泉酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117642/page.htm">【校友活动】南开宁波校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开宁波校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-12 14:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：宁波国际会展中心10号馆普乐缇咖啡馆</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115533/page.htm">【百年南开大讲坛】王中林院士：人工智能时代的能源与传感</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：材料科学与工程学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-11 9:00 <a href="http://100.nankai.edu.cn/2019/0114/c10880a118329/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区业务东楼114多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117622/page.htm">【学术活动】第七届药学领域国家重点实验室发展与交流学术年会 暨药学领域国家重点实验室联盟大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：药物化学生物学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019年1月10至12日 <a href="http://100.nankai.edu.cn/2019/0114/c10880a118367/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学津南校区西业务楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0104/c10881a117880/page.htm">【校友活动】南开校友企业家联谊会成立大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开校友总会 南开大学教育基金会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-09 15:00 <a href="http://100.nankai.edu.cn/2019/0110/c10880a118239/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0308/c10881a120457/page.htm">【学术活动】纪念陈茹玉院士诞辰100周年—巴基斯坦卡拉奇大学Prof. M. Iqbal Choudhar</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-07 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117625/page.htm">【校友活动】南开俄勒冈校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开俄勒冈校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-05 18:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：Forest Height HOA 2061 NW Miller Rd, Portland, OR 97229</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201901 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1229/c10881a117624/page.htm">【校友活动】南开温哥华校友会新年联欢会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开温哥华校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2019-01-05 18:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：聚焦传媒（105-4351 No.3 Road，Richmond，BC，Canada）</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115546/page.htm">【文体活动】南开大学2019年新年音乐会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：学工部艺术教育指导中心 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-28 19:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0102/c10881a117742/page.htm">【学术活动】徐平 教授：Introduction to deformation quantization</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-27 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115578/page.htm">【校友活动】南开大学外贸校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：外贸校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-23
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区谊园餐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115545/page.htm">【校友活动】南开上海校友会2018年会暨八里台金融论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：上海校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-23 9:00 <a href="http://100.nankai.edu.cn/2018/1225/c10880a117367/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：上海陆家嘴中国金融信息中心</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115543/page.htm">【校友活动】南开湖南校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：湖南校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-22 <a href="http://100.nankai.edu.cn/2018/1226/c10880a117459/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：湖南长沙普瑞宾馆</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115542/page.htm">【校友活动】南开苏州校友会2018年度联谊会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：苏州校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-22 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：江苏苏州工业园建屋国际大酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115544/page.htm">【校友活动】南开洛杉矶校友会圣诞新年聚会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：洛杉矶校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-22 12:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：Regal Buffet&Grill 10478 Valley Blvd,E1 Monte,CA 91731 </p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115540/page.htm">【校友活动】南开深圳校友会2018年校友大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：深圳校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-22 15:30 <a href="http://100.nankai.edu.cn/2018/1225/c10880a117367/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：深圳凯宾斯基酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115539/page.htm">【校友活动】南开好项目第四届总决赛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：深圳校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-22 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：深圳凯宾斯基酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd bnxq" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1122/c10881a114242/page.htm">【校友活动 百年校庆】“拥抱新百年——久久长长  日新月异”南开大学天津校友会2019年新年晚会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：天津校友会、校友办、百年校庆办公室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-21 15:00 <a href="http://100.nankai.edu.cn/2018/1224/c10880a117300/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115538/page.htm">【文体活动】 琴诵经典——李悦古琴音乐会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：宣传部 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-20
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区 大通学生中心小音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1217/c10881a116830/page.htm">【百年南开大讲坛】邬江兴院士：拟态防御理论与技术开发状态</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：计算机学院、网络空间安全学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-20 14:00 <a href="http://100.nankai.edu.cn/2018/1221/c10880a117243/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区业务东楼114多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1101/c10881a112484/page.htm">【学术活动】积分几何与凸几何国际学术研讨会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年12月20日至23日
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：陈省身数学研究所</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115536/page.htm">【校友活动】南开日本校友会忘年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：日本校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-16 11:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：日本东京川味坊</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115534/page.htm">【校友活动】南开安徽校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：安徽校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-15 14:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：安徽合肥市社会科学院内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115532/page.htm">【文体活动】中华优秀传统文化——丝韵南开葫芦丝专场演出</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：团委 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-14 19:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：东方艺术大楼一楼逸夫厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115577/page.htm">【校友活动】南开大学医学校友会成立大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：医学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-13 16:00 <a href="http://100.nankai.edu.cn/2018/1217/c10880a116829/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1206/c10881a116122/page.htm">【学术活动】张瑞斌 教授：Diagram Algebras in Invariant Theory</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-13 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0102/c10881a117744/page.htm">【学术活动】纪念陈茹玉院士诞辰100周年—中国科学技术大学王细胜教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-12 17:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2019/0102/c10881a117743/page.htm">【学术活动】纪念陈茹玉院士诞辰100周年—华东师范大学高栓虎教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-12 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115531/page.htm">【校友活动】2018年南开浙江校友会联谊会暨第二届南开•钱塘论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：浙江校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-09 13:30 <a href="http://nkuaa.nankai.edu.cn/n/2785.html">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：浙江杭州紫金港国际饭店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115530/page.htm">【校友活动】南开河南校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：河南校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-08 14:30 <a href="http://nkuaa.nankai.edu.cn/n/2793.html">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：河南郑州福缘国际酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115529/page.htm">【文体活动】翔宇剧社第二十一届话剧节话剧《收信快乐》演出</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：团委 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-07
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区大通学生中心小音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1204/c10881a115955/page.htm">【百年南开大讲坛】杨宝峰：践行中国工程科技战略规划，推进我国重大疾病成果转化</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-06 14:30 <a href="http://100.nankai.edu.cn/2018/1210/c10880a116389/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 jzhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1122/c10881a114239/page.htm">【捐赠活动】2018年南开大学社会捐赠感恩答谢会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学教育基金会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-06 18:00 <a href="http://100.nankai.edu.cn/2018/1210/c10880a116390/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区谊园</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1203/c10881a115866/page.htm">【学术活动】吕克宁 教授：SRB measures, Entropy, and Horseshoe for infinite dimensional dynamical systems</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-06 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1203/c10881a115938/page.htm">【文体活动】天文科幻科普电影《飞越星空》公映</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开天协 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年12月5-6日
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见文内</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115528/page.htm">【百年南开大讲坛】“致敬‘民族脊梁’——纪念‘两弹一星’元勋、南开杰出校友郭永怀逝世50周年”宣讲会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：物理科学学院、百年校庆办公室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-04 18:30 <a href="http://100.nankai.edu.cn/2018/1205/c10880a116038/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201812 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1129/c10881a115526/page.htm">【文体活动】“青春国粹喜相逢”京剧专场演出</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：汉语言文化学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-12-04 <a href="http://100.nankai.edu.cn/2018/1210/c10880a116388/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：东方艺术大楼一楼逸夫厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1114/c10881a113491/page.htm">【百年南开大讲坛】罗援少将：个人理��与国家</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：团委 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-30 14:30 <a href="http://100.nankai.edu.cn/2018/1203/c10880a115861/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区学生活动中心大音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cryxl jnhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1126/c10881a114935/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—美国斯坦福大学夏岩教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-30 14:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼学术报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1127/c10881a115076/page.htm">【学术活动】林亚南 教授：Tilting bundles on weighted projective lines</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-29 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1119/c10881a113930/page.htm">【百年南开大讲坛】瑞典皇家科学院院士Anders Liljas : Atoms, ions and molecules</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：药学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-28 14:00 <a href="http://100.nankai.edu.cn/2018/1130/c10880a115754/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区药学院114会议室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1121/c10881a114164/page.htm">【文体活动】南开大学夕阳美合唱团纪念改革开放40周年专场演唱会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：离退休人员管理处 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-23 15:00 <a href="http://100.nankai.edu.cn/2018/1126/c10880a114991/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1119/c10881a114042/page.htm">【学术活动】张晓 研究员：广义相对论正能量定理</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-22 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 bnnkdjt" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1115/c10881a113677/page.htm">【百年南开大讲坛】（首场）饶子和院士：基础研究与人类健康</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：百年校庆办公室，科技处，生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-20 16:00 <a href="http://100.nankai.edu.cn/2018/1121/c10880a114204/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd jnhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1114/c10881a113531/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—Dr. Uwe Schneider</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-19 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1214/c10881a116737/page.htm">【校友活动】南开雄安校友会成立仪式</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开雄安校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-18 <a href="http://100.nankai.edu.cn/2018/1121/c10880a114142/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：雄安媒体中心</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112934/page.htm">【校友活动】南开广州校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开广州校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-17 14:00 <a href="http://100.nankai.edu.cn/2018/1121/c10880a114141/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：广州市增城恒大酒店 </p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1112/c10881a113382/page.htm">【学术活动】尚在久 研究员：动力系统几何算法</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-15 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1112/c10881a113340/page.htm">【学术活动】走向50周年的中意关系—意大利驻华大使谢国谊先生</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：外国语学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-15 10:00 <a href="http://100.nankai.edu.cn/2018/1119/c10880a113882/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cryxl jnhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1108/c10881a113071/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—Prof. Thomas Müller</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-14 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：元素所石先楼二楼学术报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1113/c10881a113415/page.htm">【学术活动】梁兵：对冲基金操作风险</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：金融学院学术发展中心 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-13 10:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区金融学院234</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1106/c10881a112860/page.htm">【校友活动】南开媒体校友会成立大会暨南开大学百年校庆宣传工作座谈会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：宣传部、校友办、校庆办 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-11 14:30 <a href="http://100.nankai.edu.cn/2018/1112/c10880a113298/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112974/page.htm">【学术活动】学术讲座：从统计学到数据科学</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：统计与数据科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-10 9:30
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：统计与数据科学学院432教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1026/c10881a111881/page.htm">【校友活动】“跨界赋能 南物真势力”——首届全球南开物理校友代表大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学物理科学学院、南开物理校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-10 下午2:00 <a href="http://100.nankai.edu.cn/2018/1112/c10880a113297/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：伯苓楼</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112933/page.htm">【校友活动】南开大学MBA校友会组织与发展研讨会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学MBA校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-10
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石家庄</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112932/page.htm">【校友活动】南开四川校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开四川校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-10 14:00 <a href="http://100.nankai.edu.cn/2018/1113/c10880a113396/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：成都市青羊区顺城街269号丽思卡尔顿酒店</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1023/c10881a111640/page.htm">【学术活动】第十三届全国芽胞杆菌青年工作者学术研讨会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-9、10、11
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学学生活动中心一楼会议大厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd jnhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112937/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—北京大学来鲁华教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-9 10:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1101/c10881a112483/page.htm">【学术活动】青年概率学者会议</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年11月5日至9日
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112931/page.htm">【校友活动】南开石家庄校友会2018年年会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开石家庄校友会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-4
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石家庄市金圆大厦</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112930/page.htm">【校友活动】“师兄带我去战斗”校友企业秋季专场招聘会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开校友总会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-2 9:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学八里台校区学学生活动中心一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112929/page.htm">【学术活动】徐兴旺 教授：Liouville Equations</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-1 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201811 xshh" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1022/c10881a111448/page.htm">【学术活动】第一届水与环境安全未来工程师（FEWES）国际大学生竞赛暨水与环境安全创新论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学中加水与环境安全联合研发中心 天津市滨海新区科技和工业创新委员会 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-11-1、2 <a href="http://100.nankai.edu.cn/2018/1105/c10880a112738/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：天津滨海新区顺河路西MIG金融大厦三楼会议厅(原中心商务区投促中心，中钢大厦旁)</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd jnhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112936/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—英国布里斯托大学 Timothy C Gallagher 教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-31 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd jnhd cryxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112935/page.htm">【纪念活动 学术活动】纪念陈茹玉院士诞辰100周年系列学术活动—法国巴黎综合理工学院 Samir Z. Zard 教授</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：元素有机化学国家重点实验室 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-30 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：石先楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd cxsxl" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1107/c10881a112959/page.htm">【学术活动】成庆明 教授：Singularities of mean curvature flow</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：陈省身数学研究所 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-25 16:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：南开大学省身楼216教室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1025/c10881a111789/page.htm">【学术活动】柴天佑院士学术报告会: 制造流程智能化对人工智能的挑战</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：人工智能学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-28 上午10:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区业务东楼114多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1025/c10881a111787/page.htm">【学术活动】天津市第六届大学生生命科学基本实验技能竞赛暨天津市高等学校生命科学实验教学研讨会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-27
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：综合实验楼</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1025/c10881a111782/page.htm">【学术活动】第十九届海峡两岸继续教育论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年10月23日至26日 <a href="http://100.nankai.edu.cn/2018/1025/c10880a111800/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：省身楼二楼报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 201811 jnhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1022/c10881a111508/page.htm">【纪念活动】纪念周恩来诞辰120周年、毛主席视察南开大学60周年展览</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：档案馆 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018年10月17日至11月15日 <a href="http://100.nankai.edu.cn/2018/1022/c10880a111461/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：详见正文</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1023/c10881a111584/page.htm">【学术活动】饶子和院士团队科研成果发布会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-26 下午2:30 <a href="http://100.nankai.edu.cn/2018/1029/c10880a112156/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1023/c10881a111583/page.htm">【学术活动】Prof.Eddy Liew：The role of cytokines in neurological diseases 学术报告</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-23 上午10：00 <a href="http://100.nankai.edu.cn/2018/1025/c10880a111778/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：生物站报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1023/c10881a111581/page.htm">【学术活动】曹义海教授学术报告：调节血管治疗疾病的机制和临床应用</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：南开大学生命科学学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-22 14:30 <a href="http://news.nankai.edu.cn/nkyw/system/2018/10/23/000414075.shtml">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：生物站报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1012/c10881a110680/page.htm">【学术活动】周恩来诞辰120周年纪念活动之周恩来研究国际研讨会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：周恩来政府管理学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-27、28 <a href="http://100.nankai.edu.cn/2018/1029/c10880a112164/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 bnxq" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110388/page.htm">【百年校庆】南开大学建校100周年倒计时一周年启动仪式</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：百年校庆办公室、宣传部 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-17 16:00 <a href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 jnhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1012/c10881a110677/page.htm">【纪念活动】南开大学纪念黄钰生先生诞辰120周年座谈会暨黄钰生塑像揭幕仪式</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：办公室、发展办、校友办、宣传部、校史办 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-17 14:30 <a href="http://100.nankai.edu.cn/2018/1019/c10880a111202/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 服务楼111会议室</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 wthd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110382/page.htm">【文体活动】南开大学建校99周年纪念晚会暨2018级迎新晚会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：学工部艺术教育中心 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-14 18:30 <a href="http://100.nankai.edu.cn/2018/1016/c10880a110954/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：津南校区 大通学生中心音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 jnhd xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110383/page.htm">【纪念活动 校友活动】南开大学建校99周年暨1988届校友毕业30周年纪念大会			</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：学校办公室、校友办 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-14 8:30 <a href="http://100.nankai.edu.cn/2018/1015/c10880a110835/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 田家炳音乐厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xshhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110384/page.htm">【学术活动】亚洲国际经济学论坛</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：经济学院、跨国公司研究中心、中国特色社会主义经济建设协同创新中心 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-13、14 <a href="http://100.nankai.edu.cn/2018/1015/c10880a110937/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 省身楼一楼多功能厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110385/page.htm">【校友活动】南开外语校友会成立大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：外国语学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-13 14:00 <a href="http://100.nankai.edu.cn/2018/1015/c10880a110834/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 外国语学院111报告厅</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110386/page.htm">【校友活动】纪念南开大学建校99周年系列活动之：缘定南开 情意久久——南开大学首届集体婚礼			</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：天津校友会、南开女人帮、校友办 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-06 16:00 <a href="http://100.nankai.edu.cn/2018/1009/c10880a110483/page.htm">【新闻报道】</a></p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区体育场</p>
+                                    </div>
+                                </div>
+
+                                <div class="item noborder 201810 xyhd" style="display:none;">
+                                    <div class="singleline">
+                                        <a class='news-title' href="/2018/1009/c10881a110387/page.htm">【校友活动】南开大学1984级管理系毕业30周年返校大会</a>
+                                        <p> &nbsp;<i class="fa fa-fw fa-user"></i> 主办单位：商学院 </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：2018-10-04 14:00
+                                            <a href=""></a>
+                                        </p>
+                                        <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：八里台校区 商学院A301</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id='filters' class="act">
+                            <h4><i class="fa fa-angle-right"></i> 专题推荐</h4>
+                            <ul class="nav nav-pills">
+                                <li class="tap-btn-zt" data-filter="bnnkdjt"><a href="javascript:void(0)">百年南开大讲坛</a></li>
+                            </ul>
+                            <hr style="margin:10px 0 20px 0">
+                            <h4><i class="fa fa-angle-right"></i> 类型筛选</h4>
+                            <ul class="nav nav-pills">
+                                <li class="tap-btn active" data-filter="*"><a href="javascript:void(0)">全部</a></li>
+                                <li class="tap-btn" data-filter="bnxq"><a href="javascript:void(0)">百年校庆</a></li>
+                                <li class="tap-btn" data-filter="bnnkdjt"><a href="javascript:void(0)">百年南开大讲坛</a></li>
+                                <li class="tap-btn" data-filter="xshhd"><a href="javascript:void(0)">学术活动</a></li>
+                                <li class="tap-btn" data-filter="wthd"><a href="javascript:void(0)">文体活动</a></li>
+                                <li class="tap-btn" data-filter="jnhd"><a href="javascript:void(0)">纪念活动</a></li>
+                                <li class="tap-btn" data-filter="xyhd"><a href="javascript:void(0)">校友活动</a></li>
+                                <li class="tap-btn" data-filter="jzhd"><a href="javascript:void(0)">发展活动</a></li>
+                                <li class="tap-btn" data-filter="qthd"><a href="javascript:void(0)">其他活动</a></li>
+
+                            </ul>
+                            <hr style="margin:10px 0 20px 0">
+                            <h4><i class="fa fa-angle-right"></i> 院系所系列活动</h4>
+                            <ul class="nav nav-pills">
+                                <li class="tap-btn-xl active" data-filter="*"><a href="javascript:void(0)">全部</a></li><br/>
+                                <li class="tap-btn-xl" data-filter="cryxl"><a href="javascript:void(0)">纪念陈茹玉院士诞辰100周年系列学术活动</a></li><br/>
+                                <li class="tap-btn-xl" data-filter="cxsxl"><a href="javascript:void(0)">陈省身数学研究所学术讲座</a></li><br/>
+                                <li class="tap-btn-xl" data-filter="lyjcjsxl"><a href="javascript:void(0)">百年南开杰出教授讲座系列（旅游与服务学院）</a></li>
+                            </ul>
+                            <hr style="margin:10px 0 20px 0">
+
+                            <h4><i class="fa fa-angle-right"></i> 日期筛选</h4>
+                            <div class="date" data-filter="201810">
+                                <div class="date-month"> 10 <span>月</span></div>
+                                <div class="date-year"> 2018 </div>
+                            </div>
+                            <div class="date" data-filter="201811">
+                                <div class="date-month"> 11 <span>月</span></div>
+                                <div class="date-year"> 2018 </div>
+                            </div>
+                            <div class="date" data-filter="201812">
+                                <div class="date-month"> 12 <span>月</span></div>
+                                <div class="date-year"> 2018 </div>
+                            </div>
+                            <div class="date" data-filter="201901">
+                                <div class="date-month"> 01 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201902">
+                                <div class="date-month"> 02 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201903">
+                                <div class="date-month"> 03 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date date-active" data-filter="201904">
+                                <div class="date-month"> 04 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201905">
+                                <div class="date-month"> 05 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201906">
+                                <div class="date-month"> 06 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201907">
+                                <div class="date-month"> 07 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201908">
+                                <div class="date-month"> 08 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201909">
+                                <div class="date-month"> 09 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date" data-filter="201910">
+                                <div class="date-month"> 10 <span>月</span></div>
+                                <div class="date-year"> 2019 </div>
+                            </div>
+                            <div class="date date-active date-1017" data-filter="20191017">
+                                <div class="date-month"> 百年校庆</div>
+                                <div class="date-year"> 2019.10.17 </div>
+                            </div>
+                            <div style="clear:both;"></div>
+                            <!--    <hr style="margin:10px 0 20px 0">
+                        <div>
+                            <a href="javascript:void(0)"><img style="width:100%;" src="/_upload/tpl/01/41/321/template321/__ASSETS__/img/slider5.jpg"/></a>
+                        </div>
+                        <hr style="margin:10px 0 20px 0"> -->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="javascript:void(0)" id="toTop"></a>
+
+    </div>
+    <script type="text/javascript" src="./statics/js/activities/bootstrapmin.js"></script>
+    <script type="application/javascript">
+        function filter() {
+            var filter = '#container .item';
+            var filter_zt = $('.tap-btn-zt.active').data('filter');
+            if (filter_zt == 'bnnkdjt') {
+                filter = filter + '.' + filter_zt;
+            } else {
+                var filter_b = $('#filters .date.date-active').first().data('filter');
+                if (filter_b != '*') {
+                    filter = filter + '.' + filter_b;
+                }
+            }
+
+
+
+
+            var filter_a = $('.tap-btn.active').data('filter');
+            if (filter_a != '*') {
+                filter = filter + '.' + filter_a;
+            }
+            var filter_c = $('.tap-btn-xl.active').data('filter');
+            if (filter_c != '*') {
+                filter = filter + '.' + filter_c;
+            }
+
+            $('#container .item').css('display', 'none');
+            $('#container .item').css('opacity', 0);
+
+            $(filter).css('display', 'block');
+            $(filter).css('display');
+            $(filter).css('opacity', 1);
+
+        }
+        $('#filters .tap-btn-zt').on('click tap', function() {
+            $this = $(this);
+            $('.tap-btn-zt').removeClass('active');
+            $('.tap-btn').removeClass('active');
+            $('.tap-btn').first().addClass('active');
+            $('.tap-btn-xl').removeClass('active');
+            $('.tap-btn-xl').first().addClass('active');
+            $this.addClass('active');
+            $('#container .item').css('display', 'none');
+            filter();
+        });
+        $('#filters .tap-btn').on('click tap', function() {
+            $this = $(this);
+            $('.tap-btn').removeClass('active');
+            $this.addClass('active');
+            $('.tap-btn-zt').removeClass('active');
+            $('#container .item').css('display', 'none');
+            filter();
+        });
+        $('#filters .tap-btn-xl').on('click tap', function() {
+            $this = $(this);
+            $('.tap-btn-xl').removeClass('active');
+            $this.addClass('active');
+            $('.tap-btn-zt').removeClass('active');
+            $('#container .item').css('display', 'none');
+            filter();
+        });
+
+        $('#filters .date').on('click tap', function() {
+            $this = $(this);
+            $('#filters .date:not(.date-1017)').removeClass('date-active');
+            $this.addClass('date-active');
+            $('.tap-btn-zt').removeClass('active');
+            $('#container .item').css('display', 'none');
+            filter();
+        });
+
+
+
+
+        $(document).ready(function() {
+            filter();
+        });
+    </script>
+</body>
+
+</html>
+
+<img src="/_visitcount?siteId=155&type=2&columnId=10881" style="display:none" width="0" height="0"></image>
+
