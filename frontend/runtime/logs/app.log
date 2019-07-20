@@ -1,0 +1,848 @@
+2019-07-14 17:19:13 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.user' doesn't exist in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('\\common\\models\\...', Array, Object(frontend\models\SignupForm))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1059): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#11 D:\Program File\xampp\htdocs\advanced\frontend\models\SignupForm.php(47): yii\base\Model->validate()
+#12 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#13 [internal function]: frontend\controllers\SiteController->actionSignup()
+#14 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#18 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.user' doesn't exist
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `user` WHERE `user`.`username`='Claire') in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('\\common\\models\\...', Array, Object(frontend\models\SignupForm))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(1059): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#11 D:\Program File\xampp\htdocs\advanced\frontend\models\SignupForm.php(47): yii\base\Model->validate()
+#12 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#13 [internal function]: frontend\controllers\SiteController->actionSignup()
+#14 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#18 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii2advanced.user' doesn't exist
+)
+
+2019-07-14 17:19:12 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'ZwLrHtHV2JX1iiTQd84qV9BLBgdycXAulDaiKUykOXEoMKcnkoOS4Zf9bZcngnUHpAVoZhMDREX_UpFGGMMPJw=='
+    'SignupForm' => [
+        'username' => 'Claire'
+        'email' => '546707347@qq.com'
+        'password' => '123456'
+    ]
+    'signup-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '460iaf3d5f1274g42tk09q8fhc'
+    '_csrf-backend' => '1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k\";}'
+    'advanced-frontend' => 'eikn5kvkqbpj8ecl71gm6k1ikk'
+    '_csrf-frontend' => 'cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '227'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8081/advanced/frontend/web/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=460iaf3d5f1274g42tk09q8fhc; _csrf-backend=1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k%22%3B%7D; advanced-frontend=eikn5kvkqbpj8ecl71gm6k1ikk; _csrf-frontend=cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V%22%3B%7D'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '65252'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563117552.959
+    'REQUEST_TIME' => 1563117552
+]
+2019-07-14 19:06:42 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "NklBbsInfo". in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('NklBbsInfo', Array)
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-07-14 19:06:42 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][info][application] $_GET = [
+    'r' => 'NklBbsInfo'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '460iaf3d5f1274g42tk09q8fhc'
+    '_csrf-backend' => '1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k\";}'
+    'advanced-frontend' => 'eikn5kvkqbpj8ecl71gm6k1ikk'
+    '_csrf-frontend' => 'cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=460iaf3d5f1274g42tk09q8fhc; _csrf-backend=1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k%22%3B%7D; advanced-frontend=eikn5kvkqbpj8ecl71gm6k1ikk; _csrf-frontend=cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V%22%3B%7D'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '49372'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=NklBbsInfo'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=NklBbsInfo'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563124002.738
+    'REQUEST_TIME' => 1563124002
+]
+2019-07-14 19:11:39 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\NklBbsInfoController' in file: D:\Program File\xampp\htdocs\advanced/frontend/controllers/NklBbsInfoController.php. Namespace missing? in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(637): class_exists('frontend\\contro...')
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('nkl-bbs-info')
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('index')
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('nkl-bbs-info/in...', Array)
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-07-14 19:11:39 [::1][-][eikn5kvkqbpj8ecl71gm6k1ikk][info][application] $_GET = [
+    'r' => 'nkl-bbs-info/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '460iaf3d5f1274g42tk09q8fhc'
+    '_csrf-backend' => '1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k\";}'
+    'advanced-frontend' => 'eikn5kvkqbpj8ecl71gm6k1ikk'
+    '_csrf-frontend' => 'cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=460iaf3d5f1274g42tk09q8fhc; _csrf-backend=1e824504780291063c05a6b649c23a8a5897d59f2700b7e8a635599a4fc57778a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Xdk-2urSG5HOLQ_coBlfgRKGMTXxlb-k%22%3B%7D; advanced-frontend=eikn5kvkqbpj8ecl71gm6k1ikk; _csrf-frontend=cf3f7b788777b1277f82fc3dbc81b4494a81aed68774de655e9f3ca0cb292261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22O2L9CVJtbwIGPL_PtNnaar4kkd3oTg6V%22%3B%7D'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '49614'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=nkl-bbs-info/index'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=nkl-bbs-info/index'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563124299.897
+    'REQUEST_TIME' => 1563124299
+]
+2019-07-17 12:55:33 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\models\NklNewsInfo' in file: D:\Program File\xampp\htdocs\advanced/frontend/models/NklNewsInfo.php. Namespace missing? in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\models...')
+#1 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(120): spl_autoload_call('frontend\\models...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', Array)
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#6 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-07-17 12:55:31 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '59622'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563360931.53
+    'REQUEST_TIME' => 1563360931
+]
+2019-07-17 12:59:22 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\models\NklNewsInfo' in file: D:\Program File\xampp\htdocs\advanced/frontend/models/NklNewsInfo.php. Namespace missing? in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\models...')
+#1 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(120): spl_autoload_call('frontend\\models...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', Array)
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#6 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-07-17 12:59:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '59684'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563361162.012
+    'REQUEST_TIME' => 1563361162
+]
+2019-07-17 13:31:39 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\models\NklNewsInfo' in file: D:\Program File\xampp\htdocs\advanced/frontend/models/NklNewsInfo.php. Namespace missing? in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\models...')
+#1 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(120): spl_autoload_call('frontend\\models...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', Array)
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#6 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-07-17 13:31:38 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '59719'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563363098.627
+    'REQUEST_TIME' => 1563363098
+]
+2019-07-19 14:57:43 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=10.1...', 'root', 'sHnnzbl-2210', NULL)
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Schema->getQueryBuilder()
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(120): yii\db\ActiveQuery->one()
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', '[]')
+#18 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#19 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#20 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#21 [internal function]: frontend\controllers\SiteController->actionIndex()
+#22 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#25 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#26 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Schema->getQueryBuilder()
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(120): yii\db\ActiveQuery->one()
+#14 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#15 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', '[]')
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#18 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#19 [internal function]: frontend\controllers\SiteController->actionIndex()
+#20 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#21 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#22 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#23 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#24 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2019-07-19 14:57:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;D:\\Program File\\nodejs\\;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '60772'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563541040.623
+    'REQUEST_TIME' => 1563541040
+]
+2019-07-19 15:03:51 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=10.1...', 'root', 'sHnnzbl-2210', NULL)
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(237): yii\db\Command->queryAll()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(119): yii\db\ActiveQuery->all()
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', '[]')
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#13 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#14 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#15 [internal function]: frontend\controllers\SiteController->actionIndex()
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#19 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#20 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\Query.php(237): yii\db\Command->queryAll()
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(119): yii\db\ActiveQuery->all()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', '[]')
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#12 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#17 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#18 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2019-07-19 15:03:30 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;D:\\Program File\\nodejs\\;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '60885'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563541410.364
+    'REQUEST_TIME' => 1563541410
+]
+2019-07-19 15:09:03 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\models\NklBbsInfo' in file: D:\Program File\xampp\htdocs\advanced/frontend/models/NklBbsInfo.php. Namespace missing? in D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\models...')
+#1 D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php(128): spl_autoload_call('frontend\\models...')
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Program File...')
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', Array)
+#4 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#5 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#6 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#12 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-07-19 15:09:03 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;D:\\Program File\\nodejs\\;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '60914'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563541743.086
+    'REQUEST_TIME' => 1563541743
+]
+2019-07-19 18:23:03 [::1][-][8lll0ouueiht0dici1t908s2pj][error][Error] Error: Class 'frontend\models\NklNewsInfo' not found in D:\Program File\xampp\htdocs\advanced\frontend\views\site\index.php:120
+Stack trace:
+#0 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\Program File...', Array)
+#2 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\Program File...', Array, Object(frontend\controllers\SiteController))
+#3 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#4 D:\Program File\xampp\htdocs\advanced\frontend\controllers\SiteController.php(117): yii\base\Controller->render('index')
+#5 [internal function]: frontend\controllers\SiteController->actionIndex()
+#6 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#9 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#10 D:\Program File\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\Program File\xampp\htdocs\advanced\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-07-19 18:23:02 [::1][-][8lll0ouueiht0dici1t908s2pj][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '8lll0ouueiht0dici1t908s2pj'
+    '_csrf-frontend' => 'ddb870dc2f88bc7d53f812700b3a18c83ca978dfcc63e71de39ddb31dcdb490ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LvbVqV4SL_PH8E3GenoEnLihJMa1ZS46\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Program File/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Program File/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=8lll0ouueiht0dici1t908s2pj; _csrf-frontend=ddb870dc2f88bc7d53f812700b3a18c83ca978dfcc63e71de39ddb31dcdb490ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22LvbVqV4SL_PH8E3GenoEnLihJMa1ZS46%22%3B%7D'
+    'PATH' => 'D:\\Program File\\xampp\\php;D:\\composer;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;D:\\Program File\\nodejs\\;D:\\Program File\\Python\\Python36\\Scripts\\;D:\\Program File\\Python\\Python36\\;C:\\Users\\Claire\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;D:\\Program File\\MiKTeX 2.9\\miktex\\bin\\x64\\;D:\\Program File\\Microsoft VS Code\\bin;D:\\Google\\Chrome\\Application;C:\\Users\\Claire\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program File\\nodejs;C:\\Users\\Claire\\AppData\\Roaming\\npm;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Program File/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Program File/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '63168'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563553382.801
+    'REQUEST_TIME' => 1563553382
+]
