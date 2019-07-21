@@ -3,10 +3,13 @@
 use yii\helpers\Html;
 use common\models\NklNewsInfo;
 use yii\data\Pagination;
+<<<<<<< HEAD
 use  yii\web\Response;
 use yii\web\Controller;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+=======
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
 ?>
 <div class="slider-area1">
     <div class="row">
@@ -17,10 +20,15 @@ use yii\widgets\LinkPager;
             <hr style="margin:10px 0 20px 0">
             <div class="row" frag="面板19" style="padding-left:15px;padding-right:15px;padding-bottom:30px;">
                 <div class="col-md-12" frag="窗口19" portletmode="simpleList">
+<<<<<<< HEAD
                     <?php $NklNewsInfos = NklNewsInfo::find()->orderBy('news_releaseTime DESC')->all(); ?>
                     <?php $count = NklNewsInfo::find()->count(); $pagination = new Pagination(['totalCount' => $count,'pageSize' => 15]);
                                  $articles = NklNewsInfo::find()->offset($pagination->offset)->limit($pagination->limit)->all();?> 
                     <?php foreach ($articles as $NklNewsInfo) : ?>
+=======
+                    <?php $NklNewsInfos = NklNewsInfo::find()->where(['news_isSelected' => 1])->orderBy('news_releaseTime DESC')->all(); ?>
+                    <?php foreach ($NklNewsInfos as $NklNewsInfo) : ?>
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
                         <div class="news-list row">
                             <div class="col-md-12">
                                 <a class="item-title" href="<?= Html::encode("{$NklNewsInfo->news_link}") ?>"><?= Html::encode("· {$NklNewsInfo->news_title}") ?></a>
@@ -30,6 +38,7 @@ use yii\widgets\LinkPager;
                     <?php endforeach; ?>
                     <div id="wp_paging_w19">
                         <ul class="wp_paging clearfix">
+<<<<<<< HEAD
                             <!-- <li class="pages_count" style="margin-bottom:10px;"> -->
                             <? echo LinkPager::widget([
                                     'pagination' => $pagination,
@@ -40,6 +49,14 @@ use yii\widgets\LinkPager;
                                 
                             <!-- </li> -->
                              
+=======
+                            <li class="pages_count">
+                                <!-- <?php $count = NklNewsInfo::find()->count(); ?> -->
+                                <!-- <span class="per_page">每页&nbsp;<em class="per_count">12</em>&nbsp;记录&nbsp;</span> -->
+                                <span class="all_count">总共&nbsp;<em class="all_count"><?= Html::encode("{$count}") ?></em>&nbsp;条记录&nbsp;</span>
+
+                            </li>
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
                             <!-- <li class="page_nav">
                             <a href="javascript:" class="layui-laypage-first" data-page="0"><span>首页</span></a>
                                 <a href="javascript:" class="layui-laypage-pre" data-page="2"><span>&lt;&lt;上一页</span></a>
@@ -63,6 +80,7 @@ use yii\widgets\LinkPager;
                     <a class="nav-head"><i class="fa fa-angle-down"></i> 更多栏目</a>
                 </li>
                 <li class="">
+<<<<<<< HEAD
                     <a href="<?php echo Url::to(['site/news']);?>">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i> 校庆公告</a>
                 </li>
                 <li class="">
@@ -71,6 +89,16 @@ use yii\widgets\LinkPager;
 
                 <li class="">
                     <a href="<?php echo Url::to(['site/activities']);?>">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i> 活动预告</a>
+=======
+                    <a href="http://100.nankai.edu.cn/xqgg/list.htm">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i> 校庆公告</a>
+                </li>
+                <li class="">
+                    <a href="http://100.nankai.edu.cn/xqxw/list.htm">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i> 校庆新闻</a>
+                </li>
+
+                <li class="">
+                    <a href="http://100.nankai.edu.cn/xqhd/list.htm">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i> 活动预告</a>
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
                 </li>
             </ul>
         </div>

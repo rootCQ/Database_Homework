@@ -15,7 +15,11 @@ use yii\data\ActiveDataProvider;
 <script src="statics/js/messages/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="statics/js/messages/sinaFaceAndEffec.js"></script>
 
+<<<<<<< HEAD
 <body >
+=======
+<body style="margin-left:30px;">
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
     <div id="content" style="width: 700px; height: auto;">
         <div class="wrap">
             <h2 style="padding-bottom:20px;font-family:华文中宋;">

@@ -1,7 +1,11 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+<<<<<<< HEAD
 use common\models\NklActivityInfo;
+=======
+use common\models\YiiActivities;
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
 use yii\data\ActiveDataProvider;
 ?>
 
@@ -110,7 +114,11 @@ use yii\data\ActiveDataProvider;
     
     <div id="wrapper" style="margin-left:30px;">
 
+<<<<<<< HEAD
         <section class="padding-top30  margin-top--60" style="padding-top:30px; 
+=======
+        <section class="padding-top30  margin-top--60" style="padding-top:30px;    background-image: url(/_upload/tpl/01/41/321/template321/__ASSETS__/img/newsbg.png);
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
         background-size: auto;
         background-position-y: bottom;
         background-repeat: no-repeat;
@@ -131,12 +139,21 @@ use yii\data\ActiveDataProvider;
                   
                                  foreach ($posts as $model)
                               {
+<<<<<<< HEAD
                                 echo '<div class="item noborder bnxq" style="display:inline;">';
                                 echo '<div class="singleline">';
                                 echo ' <a class="news-title">',$model['activity_info'],'</a>';
                                 echo '<p> &nbsp;<i class="fa fa-fw fa-user"></i>主办单位：',$model['activity_hostDept'] ,'</p>';
                                 echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['activity_beginDate'], ' ',$model['activity_beginTime'] ,'<a href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>';
                                 echo '  <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：',$model['activity_location'],'</p>';
+=======
+                                echo '<div class="item noborder 201810 bnxq" style="display:inline;">';
+                                echo '<div class="singleline">';
+                                echo ' <a class="news-title" href="/2018/1009/c10881a110388/page.htm">',$model['ac_activities'],'</a>';
+                                echo '<p> &nbsp;<i class="fa fa-fw fa-user"></i>主办单位：',$model['ac_hostdept'] ,'</p>';
+                                echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['ac_begindate'], ' ',$model['ac_begintime'] ,'<a href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>';
+                                echo '  <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：',$model['ac_location'],'</p>';
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
                                 echo '  </div>';
                                 echo '</div>';
                                 }
@@ -149,7 +166,11 @@ use yii\data\ActiveDataProvider;
                     <div class="col-md-4">
                         <div id='filters' class="act">
 
+<<<<<<< HEAD
                             <?php  echo $this->render('../activities/_search', ['model' => $searchModel]); ?>
+=======
+                            <?php  echo $this->render('/activities/_search', ['model' => $searchModel]); ?>
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
 
                             <!-- <h4><i class="fa fa-angle-right"></i> 专题推荐</h4>
                             <ul class="nav nav-pills">
@@ -333,4 +354,11 @@ use yii\data\ActiveDataProvider;
     </script> -->
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+<img src="/_visitcount?siteId=155&type=2&columnId=10881" style="display:none" width="0" height="0"></image>
+
+>>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
