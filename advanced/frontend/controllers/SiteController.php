@@ -9,72 +9,83 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\Pagination;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-/**
- * 祝福消息的model引入
- */
-use common\models\YiiMessage;
-use common\models\YiiMessageSearch;
-/**
- * 活动预告的model引入
- */
-use common\models\YiiActivities;
-use common\models\YiiActivitiesSearch;
+use common\models\NklNewsInfo;
+use common\models\NklBbsInfo;
+use common\models\NklActivityInfo;
+use common\models\NklActivityInfoSearch;
+use yii\base\Configurable;
+use yii\web\Linkable;
 
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
+    public function actionNklNewsInfo()
+    {
+        $query = NklNewsInfo::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $NklNewsInfos = $query->orderBy('news_id')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('news', [
+            'newsinfo' => $NklNewsInfos,
+            'pagination' => $pagination,
+        ]);
+    }
     public function actionNews()
     {
         return $this->render('news');
     }
-    
-    public function actionNewsdetail()
+    public function actionActivities()
     {
-        $model = new YiiActivities();
-        $searchModel = new YiiActivitiesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['newsdetail',  'model' => $model, 
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,]);
-        }
-        return $this->render('newsdetail', [
-            'model' => $model, 
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+         // return $this->render('activities');
+         $model = new NklActivityInfo();
+         $searchModel = new NklActivityInfoSearch();
+         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+ 
+     
+             if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                 return $this->render('activities', [ 'model' => $model, 
+                 'searchModel' => $searchModel,
+                 'dataProvider' => $dataProvider,]);
+             }
+             
+             return $this->render('activities', [
+                 'model' => $model, 
+                 'searchModel' => $searchModel,
+                 'dataProvider' => $dataProvider,
+             ]);
     }
-
-
     public function actionShop()
     {
         return $this->render('shop');
     }
-       /**
-     * Creates a new YiiMessage model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionMessages()
+    public function actionBbs()
     {
-        $model = new YiiMessage();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-             return $this->render('messages',['model' => new YiiMessage()]);
-        }
-        else{
-        return $this->render('messages', [
-            'model' => $model,
-        ]);
-        }
+        $model = new NklBbsInfo();
+	
+	        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+	             return $this->render('bbs',['model' => new NklBbsInfo()]);
+	        }
+	        else{
+	        return $this->render('bbs', [
+	            'model' => $model,
+	        ]);
+	    }
     }
     public function actionHistory()
     {
