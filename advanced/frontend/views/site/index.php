@@ -295,11 +295,7 @@ use  common\models\NklBbsInfo;
 <!-- //Smooth scrolling -->
 
 <!--popup-js-->
-<<<<<<< HEAD
 <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-=======
-<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
->>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
 <script>
 	$(document).ready(function() {
 		$('.popup-with-zoom-anim').magnificPopup({

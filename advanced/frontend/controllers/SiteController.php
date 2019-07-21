@@ -19,11 +19,8 @@ use common\models\NklNewsInfo;
 use common\models\NklBbsInfo;
 use common\models\NklActivityInfo;
 use common\models\NklActivityInfoSearch;
-<<<<<<< HEAD
 use yii\base\Configurable;
 use yii\web\Linkable;
-=======
->>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
 
 /**
  * Site controller
@@ -55,7 +52,6 @@ class SiteController extends Controller
     }
     public function actionActivities()
     {
-<<<<<<< HEAD
          // return $this->render('activities');
          $model = new NklActivityInfo();
          $searchModel = new NklActivityInfoSearch();
@@ -73,23 +69,6 @@ class SiteController extends Controller
                  'searchModel' => $searchModel,
                  'dataProvider' => $dataProvider,
              ]);
-=======
-        // return $this->render('activities');
-        $model = new NklActivityInfo();
-	        $searchModel = new NklActivityInfoSearch();
-	        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-	
-	        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-	            return $this->redirect(['activities',  'model' => $model, 
-	            'searchModel' => $searchModel,
-	            'dataProvider' => $dataProvider,]);
-	        }
-	        return $this->render('activities', [
-	            'model' => $model, 
-	            'searchModel' => $searchModel,
-	            'dataProvider' => $dataProvider,
-	        ]);
->>>>>>> da11d20ff7fec8199af51ba585bba3d965cb29a3
     }
     public function actionShop()
     {
