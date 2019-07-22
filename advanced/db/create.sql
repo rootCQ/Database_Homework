@@ -33,6 +33,22 @@ CREATE TABLE `nkl_managers_info` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
+-- ----------------------------
+-- Records of nkl_managers_info
+-- ----------------------------
+BEGIN;
+INSERT INTO `nkl_managers_info` VALUES (1, '周辰霏', '女', '1712991@mail.nankai.edu.cn', 2017, '计算机学院', '计算机科学与技术');
+INSERT INTO `nkl_managers_info` VALUES (2, '乔静欣', '女', 'qjx@qjx.com', 2017, '网络空间安全学院', '信息安全');
+INSERT INTO `nkl_managers_info` VALUES (3, '李伟', '男', 'lw@lw.com', 2017, '计算机学院', '计算机科学与技术');
+INSERT INTO `nkl_managers_info` VALUES (4, '李力挺', '男', 'llt@llt.com', 2017, '计算机学院', '计算机科学与技术');
+INSERT INTO `nkl_managers_info` VALUES (5, '朱心怡', '女', 'zxy@zxy.com', 2017, '网络空间安全学院', '信息安全');
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
 DROP TABLE IF EXISTS `nkl_managers_login`;
 CREATE TABLE `nkl_managers_login` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -47,7 +63,7 @@ CREATE TABLE `nkl_managers_login` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 
 -- ----------------------------
@@ -143,20 +159,7 @@ CREATE TABLE `nkl_history_info` (
 
 SET FOREIGN_KEY_CHECKS = 1;
 
--- ----------------------------
--- Records of nkl_managers_info
--- ----------------------------
-BEGIN;
-INSERT INTO `nkl_managers_info` VALUES (1, '周辰霏', '女', '1712991@mail.nankai.edu.cn', 2017, '计算机学院', '计算机科学与技术');
-INSERT INTO `nkl_managers_info` VALUES (2, '乔静欣', '女', 'qjx@qjx.com', 2017, '网络空间安全学院', '信息安全');
-INSERT INTO `nkl_managers_info` VALUES (3, '李伟', '男', 'lw@lw.com', 2017, '计算机学院', '计算机科学与技术');
-INSERT INTO `nkl_managers_info` VALUES (4, '李力挺', '男', 'llt@llt.com', 2017, '计算机学院', '计算机科学与技术');
-INSERT INTO `nkl_managers_info` VALUES (5, '朱心怡', '女', 'zxy@zxy.com', 2017, '网络空间安全学院', '信息安全');
-COMMIT;
 
-SET FOREIGN_KEY_CHECKS = 1;
-
-SET FOREIGN_KEY_CHECKS = 1;
 DROP TABLE IF EXISTS `nkl_news_info`;
 CREATE TABLE `nkl_news_info` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -235,6 +238,17 @@ COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
+DROP TABLE IF EXISTS `nkl_users_login`;
+CREATE TABLE `nkl_users_login` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `user_password_hash` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `user_auth_key` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
 DROP TABLE IF EXISTS `nkl_purchase_record`;
 CREATE TABLE `nkl_purchase_record` (
   `purchase_time` datetime NOT NULL,
@@ -245,16 +259,6 @@ CREATE TABLE `nkl_purchase_record` (
   KEY `product_id` (`product_id`),
   CONSTRAINT `nkl_purchase_record_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `nkl_users_login` (`user_id`),
   CONSTRAINT `nkl_purchase_record_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `nkl_products_info` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-SET FOREIGN_KEY_CHECKS = 1;
-DROP TABLE IF EXISTS `nkl_users_login`;
-CREATE TABLE `nkl_users_login` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `user_password_hash` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `user_auth_key` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 SET FOREIGN_KEY_CHECKS = 1;

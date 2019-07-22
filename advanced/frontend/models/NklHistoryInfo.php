@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use Yii;
 
@@ -43,5 +43,14 @@ class NklHistoryInfo extends \yii\db\ActiveRecord
             'history_title' => 'History Title',
             'history_passage' => 'History Passage',
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return NklHistoryInfoQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new NklHistoryInfoQuery(get_called_class());
     }
 }
