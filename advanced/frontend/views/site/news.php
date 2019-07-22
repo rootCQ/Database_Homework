@@ -31,11 +31,7 @@ use yii\widgets\LinkPager;
                     <div id="wp_paging_w19">
                         <ul class="wp_paging clearfix">
                             <!-- <li class="pages_count" style="margin-bottom:10px;"> -->
-                            <? echo LinkPager::widget([
-                                    'pagination' => $pagination,
-                                    'maxButtonCount' => 5,
-                                    'options' => ['class' => 'mypagination'], 
-                                ]);?>
+                            <? echo LinkPager::widget(['pagination' => $pagination,'maxButtonCount' => 5,'options' => ['class' => 'mypagination'], ]);?>
                             <span class="all_count">总共&nbsp;<em class="all_count"><?= Html::encode("{$count}") ?></em>&nbsp;条新闻&nbsp;</span>
                                 
                             <!-- </li> -->

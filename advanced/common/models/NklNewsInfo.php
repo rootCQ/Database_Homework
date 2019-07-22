@@ -12,7 +12,6 @@ use Yii;
  * @property int $news_releaser
  * @property string $news_releaseTime
  * @property string $news_link
- * @property int $news_isSelected
  *
  * @property NklManagersInfo $newsReleaser
  */
@@ -52,7 +51,6 @@ class NklNewsInfo extends \yii\db\ActiveRecord
             'news_releaser' => 'News Releaser',
             'news_releaseTime' => 'News Release Time',
             'news_link' => 'News Link',
-            'news_isSelected' => 'News Is Selected',
         ];
     }
 

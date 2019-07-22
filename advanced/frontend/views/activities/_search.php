@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="nkl-activity-info-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => ['activities'],
         'method' => 'get',
     ]); ?>
 

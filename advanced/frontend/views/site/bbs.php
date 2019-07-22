@@ -15,8 +15,8 @@ use yii\data\ActiveDataProvider;
 <script src="statics/js/messages/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="statics/js/messages/sinaFaceAndEffec.js"></script>
 
-<body >
-    <div id="content" style="width: 700px; height: auto;">
+<body>
+    <div id="content" style="width: 700px; height: auto;margin-left:50px;">
         <div class="wrap">
             <h2 style="padding-bottom:20px;font-family:华文中宋;">
                 我爱南开 <img src="statics/img/messages/100num.png" style="width:60px;">
@@ -68,7 +68,7 @@ use yii\data\ActiveDataProvider;
     <div id="info-show">
         <ul></ul>
         <?php
-        $query = NklBbsInfo::find();
+        $query = NklBbsInfo::find()->where(['bbs_isSelected' => 1]);
 
         $provider = new ActiveDataProvider([
             'query' => $query,
