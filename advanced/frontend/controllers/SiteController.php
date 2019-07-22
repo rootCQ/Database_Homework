@@ -74,19 +74,22 @@ class SiteController extends Controller
     {
         return $this->render('shop');
     }
+
     public function actionBbs()
     {
         $model = new NklBbsInfo();
 	
-	        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-	             return $this->render('bbs',['model' => new NklBbsInfo()]);
-	        }
-	        else{
-	        return $this->render('bbs', [
+	    if ($model->load(Yii::$app->request->post()) && $model->save()) {
+	             return $this->redirect(['bbs','model' => new NklBbsInfo()]);
+            } 
+        
+        return $this->render('bbs', [
 	            'model' => $model,
 	        ]);
-	    }
+	    
     }
+
+
     public function actionHistory()
     {
         return $this->render('history');

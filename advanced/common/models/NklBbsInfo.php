@@ -33,7 +33,9 @@ class NklBbsInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['bbs_time', 'bbs_userNickname', 'bbs_userDescribe', 'bbs_content'], 'required'],
+            // [['bbs_time', 'bbs_userNickname', 'bbs_userDescribe', 'bbs_content'], 'required'],
+            // 无法和数据库通信的原因在于前端只填写了三个值，没有time，所以一直不会通过验证
+            [[ 'bbs_userNickname', 'bbs_userDescribe', 'bbs_content'], 'required'],
             [['bbs_time'], 'safe'],
             [['bbs_isSelected', 'bbs_isSolved'], 'integer'],
             [['bbs_userNickname'], 'string', 'max' => 25],
