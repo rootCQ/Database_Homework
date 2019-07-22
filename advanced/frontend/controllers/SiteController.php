@@ -15,6 +15,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\NklHistoryInfo;
 use common\models\NklNewsInfo;
 use common\models\NklBbsInfo;
 use common\models\NklActivityInfo;
@@ -59,7 +60,7 @@ class SiteController extends Controller
  
      
              if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                 return $this->render('activities', [ 'model' => $model, 
+                 return $this->redirect('activities', [ 'model' => $model, 
                  'searchModel' => $searchModel,
                  'dataProvider' => $dataProvider,]);
              }
@@ -92,7 +93,15 @@ class SiteController extends Controller
 
     public function actionHistory()
     {
-        return $this->render('history');
+        $model = new NklHistoryInfo();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['history', 'id' => $model->history_id]);
+        }
+
+        return $this->render('history', [
+            'model' => $model,
+        ]);
     }
     /**
      * {@inheritdoc}

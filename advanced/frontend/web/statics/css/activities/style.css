@@ -311,7 +311,6 @@ div.slider a.btn-default {
     color: #fff;
     font-style: normal;
     font-weight: normal;
-    speak: none;
     display: inline-block;
     text-decoration: inherit;
     margin-right: 0;
@@ -320,8 +319,6 @@ div.slider a.btn-default {
     width: 40px;
     font-size: 20px;
 }
-
-.tparrows {}
 
 .tparrows.round {
     cursor: pointer;
@@ -433,7 +430,7 @@ div.slider a.btn-default {
     border-radius: 3px;
     color: transparent;
     opacity: 1;
-    -webkit-transition: all .3s ease;
+    /* -webkit-transition: all .3s ease; */
 }
 
 .flexslider.flexFull .flex-direction-nav a.flex-next:after,
@@ -1674,6 +1671,7 @@ form.onepage .row div {
 }
 
 form {
+    padding: 100px;
     padding-left: 15px;
     padding-right: 15px;
 }

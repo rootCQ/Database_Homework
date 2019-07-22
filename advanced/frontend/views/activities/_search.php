@@ -15,7 +15,10 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'activity_id') ?>
+    <?php  
+    //echo  $form->field($model, 'activity_id')
+    echo '<label style=" padding:10px 0px 10px 0px">活动预告查询：</label>'
+     ?>
 
     <?= $form->field($model, 'activity_info') ?>
 

@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\NklHistoryInfo;
+use frontend\models\NklHistoryInfo;
 use frontend\models\NklHistoryInfoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

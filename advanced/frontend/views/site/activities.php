@@ -29,8 +29,6 @@ use yii\data\ActiveDataProvider;
     <link href="statics/css/activities/font-awesome.min.css" rel="stylesheet">
     <link href="statics/css/activities/style.css" rel="stylesheet" />
 
-
-  
     <style type="text/css">
         #filters {
             padding-left: 25px;
@@ -120,7 +118,7 @@ use yii\data\ActiveDataProvider;
                         </h2>
                         <hr style="margin:10px 0 20px 0">
                         <div class="timeline1" id="container" frag="面板19">
-                            <div class="timeline-left1" frag="窗口19" portletmode="simpleList">
+                            <div class="timeline-left" frag="窗口19" portletmode="simpleList">
 
                             <?php
                                   // 返回一个Post实例的数组
@@ -128,7 +126,7 @@ use yii\data\ActiveDataProvider;
                   
                                  foreach ($posts as $model)
                               {
-                                echo '<div class="item noborder bnxq" style="display:inline;">';
+                                echo '<div class="item noborder  bnxq" style="display:inline;">';
                                 echo '<div class="singleline">';
                                 echo ' <a class="news-title">',$model['activity_info'],'</a>';
                                 echo '<p> &nbsp;<i class="fa fa-fw fa-user"></i>主办单位：',$model['activity_hostDept'] ,'</p>';
@@ -144,11 +142,8 @@ use yii\data\ActiveDataProvider;
                     <div class="col-md-4">
                         <div id="filters" class="act">
                         <?php  echo $this->render('../activities/_search', ['model' => $searchModel]); ?>
-
-                
-                        </div>
-
-
+                        
+                    </div>
                     </div>
                 </div>
             </div>
