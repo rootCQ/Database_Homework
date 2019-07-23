@@ -116,7 +116,7 @@ use  common\models\NklBbsInfo;
 			<div class="row" frag="面板19" style="padding-left:15px;padding-right:15px;padding-bottom:30px;">
 				<div class="col-md-12" frag="窗口19" portletmode="simpleList">
 					<!-- List -->
-					<?php $NklNewsInfos = NklNewsInfo::find()->orderBy('news_releaseTime DESC')->limit(5)->all(); ?>
+					<?php $NklNewsInfos = NklNewsInfo::find()->orderBy('news_releaseTime DESC')->limit(8)->all(); ?>
 					<?php foreach ($NklNewsInfos as $NklNewsInfo) : ?>
 						<div class="news-list row">
 							<div class="col-md-12">
@@ -133,7 +133,7 @@ use  common\models\NklBbsInfo;
 			<div class="timeline-left" frag="窗口11101">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table">
 					<tbody>
-						<?php $NklBbsInfos = NklBbsInfo::find()->orderBy('bbs_time,bbs_id DESC')->limit(3)->all(); ?>
+						<?php $NklBbsInfos = NklBbsInfo::find()->where(['bbs_isSelected' => 1])->orderBy('bbs_time,bbs_id DESC')->limit(5)->all(); ?>
 						<?php foreach ($NklBbsInfos as $NklBbsInfo) : ?>
 							<tr>
 								<td>
@@ -231,6 +231,7 @@ use  common\models\NklBbsInfo;
 </script>
 <!--banner Slider ends Here-->
 <!-- Pop-up for pricing tables -->
+<script src="statics/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <script>
 	$(document).ready(function() {
 		$('.popup-with-zoom-anim').magnificPopup({

@@ -31,7 +31,7 @@ AppAsset::register($this);
     <link rel="icon" href="statics/img/N.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"> -->
     <title>NKL</title>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -116,7 +116,7 @@ AppAsset::register($this);
             <?= $content ?>
         </div>
     </div>
-    <footer class="footer-area section-gap" style="float:inline-end;">
+    <footer class="footer-area section-gap" style="float:inline-end;margin-top:50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-6 col-md-offset-1">

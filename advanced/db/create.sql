@@ -26,7 +26,7 @@ CREATE TABLE `nkl_managers_info` (
   `manager_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `manager_sex` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `manager_email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `manager_grade` int(11) NOT NULL,
+  `manager_stuNum` int(11) NOT NULL,
   `manager_college` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `manager_major` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`manager_id`)
@@ -49,22 +49,36 @@ SET FOREIGN_KEY_CHECKS = 1;
 SET FOREIGN_KEY_CHECKS = 1;
 
 
-DROP TABLE IF EXISTS `nkl_managers_login`;
-CREATE TABLE `nkl_managers_login` (
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '账户',
-  `auth_key` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `auth_key` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `role` smallint(6) NOT NULL DEFAULT '10',
-  `mobile` varchar(11) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '手机号码（登录账号）',
-  `status` smallint(6) NOT NULL DEFAULT '10' COMMENT '状态',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+  `status` smallint(6) NOT NULL DEFAULT '10',
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
+  `verification_token` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `password_reset_token` (`password_reset_token`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+BEGIN;
+INSERT INTO `user` VALUES (2, 'Claire', 'JYQaRH8X4YOvhHui8quKfKuPUudrxigb', '$2y$13$lX3hTS24UXQqP4hfSpTWfu6OnnraxjhKPlTMU7lfX.X/wEZKFpthu', NULL, '546707347@qq.com', 10, 1563368518, 1563368518, 'J_uPbKUrteluzUN7ZhjNttPyJbaxDWQG_1563368518');
+INSERT INTO `user` VALUES (3, 'Liyu', 's8BtkIR1GaqUyTTt-ucM_O4_jl_VQziP', '$2y$13$SrxcwsfmjhUvwaO9x7wqD.GG4pgPY9xDJprM8rw1om4EfrqKdUvAC', NULL, 'liyu@liyu.com', 10, 1563789330, 1563789330, 'IRbwTOxgw17xz0-LETJ7sttwQibUFfyR_1563789330');
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
 
 -- ----------------------------
 -- Table structure for nkl_activity_info
@@ -95,14 +109,14 @@ SET FOREIGN_KEY_CHECKS = 1;
 DROP TABLE IF EXISTS `nkl_bbs_info`;
 CREATE TABLE `nkl_bbs_info` (
   `bbs_id` int(11) NOT NULL AUTO_INCREMENT,
-  `bbs_time` timestamp NOT NULL,
+  `bbs_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `bbs_userNickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `bbs_userDescribe` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `bbs_content` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `bbs_isSelected` tinyint(1) NOT NULL DEFAULT '0',
   `bbs_isSolved` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`bbs_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of nkl_bbs_info
@@ -111,22 +125,24 @@ BEGIN;
 INSERT INTO `nkl_bbs_info` VALUES (1, '2019-07-20 18:22:00', '赵明', '哲学系83级', '祝南开早日成为世界一流大学，完成张伯苓老校长的夙愿！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (2, '2019-07-20 18:22:38', '邓承浩', '2009级商学院旅游管理校友', '南开百年华诞将至，历百载愈淬公能初心，新时代更彰日新月异，祝愿母校永远年轻！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (3, '2019-07-20 18:23:19', '陈静雯', '17级 国际关系专业格拉斯哥班', '白河之滨，汇聚四海英才。南以开拓，公能传承百年。同祝华诞，迎日新月异。', 1, 1);
-INSERT INTO `nkl_bbs_info` VALUES (4, '2019-07-21 01:46:16', '南开大学第二十届研究生支教团', '南开大学第二十届研究生支教团', '二十载扎根西部，于三尺讲台书青春华章；  一百年壮怀难折，为泱泱中华筑公能学府。  中兴业，当吾辈！巍巍南开，月异日新！', 0, 1);
-INSERT INTO `nkl_bbs_info` VALUES (5, '2019-07-21 22:16:10', '2017年经济管理贵州南开校友会', '2017年经济管理贵州南开校友会', '希望母校越来越好', 0, 0);
+INSERT INTO `nkl_bbs_info` VALUES (4, '2019-07-23 17:27:33', '南开大学第二十届研究生支教团', '南开大学第二十届研究生支教团', '二十载扎根西部，于三尺讲台书青春华章；  一百年壮怀难折，为泱泱中华筑公能学府。', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (5, '2019-07-23 15:42:42', '2017年经济管理贵州南开校友会', '2017年经济管理贵州南开校友会', '希望母校越来越好', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (6, '2019-07-23 17:28:19', '周辰霏', '17计科', '祝南开百岁华诞快乐，日后更上一层楼，我愿以光大南开为己任', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (8, '2019-07-23 17:42:10', '周辰霏', '17计算机', '<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/f6/2018new_aini_org.png\" height=\"22\" width=\"22\" />我爱南开100年！', 1, 1);
 COMMIT;
 
-
 SET FOREIGN_KEY_CHECKS = 1;
+
 DROP TABLE IF EXISTS `nkl_bbs_selectRecord`;
 CREATE TABLE `nkl_bbs_selectRecord` (
-  `manger_id` int(11) NOT NULL,
+  `manager_id` int(11) NOT NULL,
   `bbs_isSelected` tinyint(1) NOT NULL,
   `bbs_solveTime` datetime NOT NULL,
   `bbs_id` int(11) NOT NULL,
-  PRIMARY KEY (`manger_id`,`bbs_solveTime`) USING BTREE,
+  PRIMARY KEY (`manager_id`,`bbs_solveTime`) USING BTREE,
   KEY `bbs_id` (`bbs_id`),
   CONSTRAINT `nkl_bbs_selectrecord_ibfk_2` FOREIGN KEY (`bbs_id`) REFERENCES `nkl_bbs_info` (`bbs_id`),
-  CONSTRAINT `nkl_bbs_selectrecord_ibfk_3` FOREIGN KEY (`manger_id`) REFERENCES `nkl_managers_info` (`manager_id`)
+  CONSTRAINT `nkl_bbs_selectrecord_ibfk_3` FOREIGN KEY (`manager_id`) REFERENCES `nkl_managers_info` (`manager_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
@@ -157,7 +173,17 @@ CREATE TABLE `nkl_history_info` (
   PRIMARY KEY (`history_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+BEGIN;
+INSERT INTO `nkl_history_info` (`history_id`, `history_title`, `history_passage`) VALUES
+(1, '始于1919', '自创建以来，南开大学历经坎坷。<br />\r\n建立之初，只是一所规模很小的私立学校.<br />\r\n在多方努力下，得到了很大的发展。<br />\r\n日军蹂躏中华，南开热血儿纷纷投入抗日运动。<br />\r\n1937年7月，天津沦陷，南开大学被日军炸毁。<br />\r\n流亡南迁后，与北大、清华成立为西南联大。<br />\r\n从1937年至1946年，西南联大最后结束。<br />\r\n1946年，南开复员之后遂改立为国立大学。<br />\r\n复员之后，南开园得以重建。<br />'),
+(2, '水田风光', '三十年代初，南开大学是有名的风景游览区。<br />\r\n当时，诗人柳亚子在南开大学赋诗称道：<br />\r\n汽车飞驶抵南开，水影林光互抱怀。<br />\r\n此是桃源仙境界，已同浊世隔尘埃。 <br />\r\n“水”是南开大学校园的一大特色。<br />\r\n整个学校被支河细流所环绕,有水田风光。<br />\r\n校内小溪纵横交错，南北通达。<br />'),
+(3, '私立时期', '南开大学孕育于新文化运动，诞生于五四运动。<br />\r\n在北洋军阀的黑暗统治下，教育得不到重视。<br />\r\n在其成立的最初几年，是最艰难的一个时期。<br />\r\n在建立初期，南开大学就开时代先声，<br />\r\n实行男女同校，这在北方私立大学中为第一家。<br />\r\n1928年，学校提出以“土货化”为今后发展的根本方针。<br />\r\n这是南开教育的重大进步，也是其发展到新阶段的标志。<br />'),
+(4, '西南联大', '华北事变后，形势日趋紧张。日军向天津进攻。<br />\r\n7月30日凌晨一点，日军开始向南开大学开炮。<br />\r\n南开大学校园遭受了日军侵略者八年的蹂躏。<br />\r\n南开被毁，是抗战中全国首个罹难的高等学府。<br />\r\n财产损失占高校全部战争损失的十分之一。<br />\r\n南开为中国而牺牲，有中国即有南开！<br />\r\n1937年南开大学与清北共同成立长沙临时大学。<br />\r\n1938年国立长沙临时大学改称西南联合大学。<br />'),
+(5, '百年积淀，再创辉煌', '南开大学是国家教育部直属重点综合性大学，<br />\r\n是敬爱的周恩来总理的母校。<br />\r\n被誉为“学府北辰”。<br />\r\n是国内学科齐全的综合性、研究型大学之一。<br />\r\n南开大学坚持“允公允能，日新月异”的校训，<br />\r\n形成了文理并重、基础宽厚、<br />\r\n突出应用与创新的办学特色。<br />\r\n2019年，南开大学将迎来建校百年。<br />\r\n南开大学将继续为建设南开品格、<br />\r\n中国特色、世界一流大学而努力奋斗！<br />');
+COMMIT;
+
 SET FOREIGN_KEY_CHECKS = 1;
+
 
 
 DROP TABLE IF EXISTS `nkl_news_info`;

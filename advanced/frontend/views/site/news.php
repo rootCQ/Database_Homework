@@ -30,21 +30,7 @@ use yii\widgets\LinkPager;
                     <?php endforeach; ?>
                     <div id="wp_paging_w19">
                         <ul class="wp_paging clearfix">
-                            <!-- <li class="pages_count" style="margin-bottom:10px;"> -->
-                            <? echo LinkPager::widget(['pagination' => $pagination,'maxButtonCount' => 5,'options' => ['class' => 'mypagination'], ]);?>
-                            <span class="all_count">总共&nbsp;<em class="all_count"><?= Html::encode("{$count}") ?></em>&nbsp;条新闻&nbsp;</span>
-                                
-                            <!-- </li> -->
-                             
-                            <!-- <li class="page_nav">
-                            <a href="javascript:" class="layui-laypage-first" data-page="0"><span>首页</span></a>
-                                <a href="javascript:" class="layui-laypage-pre" data-page="2"><span>&lt;&lt;上一页</span></a>
-                                <a  href="javascript:" class="layui-laypage-next" data-page="2"><span>下一页&gt;&gt;</span></a>
-                                <a href="javascript:" class="layui-laypage-last" data-page="2"><span>尾页</span></a>
-                            </li>
-                            <li class="page_jump">
-                                <span class="pages">页码&nbsp;<em class="curr_page">1</em>/<em class="all_pages">4</em></span>
-                            </li> -->
+                        总共&nbsp;<?= Html::encode("{$count}") ?>&nbsp;条新闻&nbsp;<?php  echo LinkPager::widget(['pagination' => $pagination,'maxButtonCount' => 5,'options' => ['class' => 'mypagination'], ]);?>
                         </ul>
                     </div>
 
@@ -52,7 +38,7 @@ use yii\widgets\LinkPager;
                 </div>
             </div>
         </div>
-        <div class="col-md-2" style="border-left:1px dotted #ddd;">
+        <div class="col-md-2" style="border-left:1px dotted #ddd;hight:10px;">
             <!-- 子栏目 -->
             <ul class="nav nav-list side-nav" frag="窗口8">
                 <li class="">

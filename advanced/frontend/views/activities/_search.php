@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?php  
     //echo  $form->field($model, 'activity_id')
-    echo '<label style=" padding:10px 0px 10px 0px">活动预告查询：</label>'
+    echo '<h3 style=" padding:10px 0px 10px 0px">活动预告查询：</h3>'
      ?>
 
     <?= $form->field($model, 'activity_info') ?>
@@ -35,8 +35,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'activity_hostDept') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary1']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary1']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

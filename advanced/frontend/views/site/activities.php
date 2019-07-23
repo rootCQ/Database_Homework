@@ -23,11 +23,10 @@ use yii\data\ActiveDataProvider;
     <!-- <link type="text/css" href="css/system.css" rel="stylesheet" />
     <link type="text/css" href="css/6.css" rel="stylesheet" />
     <link type="text/css" href="css/146.css" rel="stylesheet" /> -->
-    <link type="text/css" href="statics/css/activities/simplenews.css" rel="stylesheet" />
-    <link type="text/css" href="statics/css/activities/sudyNav.css" rel="stylesheet" />
-    <link href="statics/css/activities/bootstrapmin.css" rel="stylesheet" type="text/css" />
-    <link href="statics/css/activities/font-awesome.min.css" rel="stylesheet">
-    <link href="statics/css/activities/style.css" rel="stylesheet" />
+   <!-- <link type="text/css" href="statics/css/simplenews.css" rel="stylesheet" />
+    <link type="text/css" href="statics/css/sudyNav.css" rel="stylesheet" />
+    <link href="statics/css/bootstrapmin.css" rel="stylesheet" type="text/css" />
+    <link href="statics/css/activities/style2.css" rel="stylesheet" />  -->
 
     <style type="text/css">
         #filters {
@@ -114,7 +113,7 @@ use yii\data\ActiveDataProvider;
                 <div class="row">
                     <div class="col-md-7" frag="面板6">
                         <h2 style="padding-bottom:20px;font-family:华文中宋;">
-                            <span class='Column_Anchor'>活动预告</span> <img src="statics/img/messages/100num.png" style="width:60px;" />
+                            <span class='Column_Anchor'>活动预告</span> <img src="statics/img/nk100.png" style="width:60px;" />
                         </h2>
                         <hr style="margin:10px 0 20px 0">
                         <div class="timeline1" id="container" frag="面板19">
@@ -127,10 +126,10 @@ use yii\data\ActiveDataProvider;
                                  foreach ($posts as $model)
                               {
                                 echo '<div class="item noborder  bnxq" style="display:inline;">';
-                                echo '<div class="singleline">';
-                                echo ' <a class="news-title">',$model['activity_info'],'</a>';
+                                echo '<div class="singleline" style="margin-left:40px;">';
+                                echo ' <a class="news-title" >',$model['activity_info'],'</a>';
                                 echo '<p> &nbsp;<i class="fa fa-fw fa-user"></i>主办单位：',$model['activity_hostDept'] ,'</p>';
-                                echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['activity_beginDate'], ' ',$model['activity_beginTime'] ,'<a href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>';
+                                echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['activity_beginDate'], ' ',$model['activity_beginTime'] ,'<a style="color:#7e0c6e" href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>';
                                 echo '  <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：',$model['activity_location'],'</p>';
                                 echo '  </div>';
                                 echo '</div>';
