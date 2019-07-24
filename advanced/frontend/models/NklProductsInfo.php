@@ -30,7 +30,7 @@ class NklProductsInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_name', 'product_price', 'product_storage'], 'required'],
+            [['product_name', 'product_price'], 'required'],
             [['product_price'], 'number'],
             [['product_storage'], 'integer'],
             [['product_name'], 'string', 'max' => 25],

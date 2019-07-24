@@ -1,9 +1,5 @@
-<?php
-use yii\helpers\Html;
-?>
 <!DOCTYPE html>
-<html id="home" class="slider-area">
-<head>
+<html><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -12,23 +8,23 @@ use yii\helpers\Html;
     <!--pageMeta-->
 
     <!-- Loading Bootstrap -->
-    <link href="statics/css/products/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 	
     <!-- Loading Elements Styles -->   
-    <link href="statics/css/products/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 	
 	<!-- Loading Magnific-Popup Styles --> 
-    <link href="statics/css/products/magnific-popup.css" rel="stylesheet"> 
+    <link href="css/magnific-popup.css" rel="stylesheet"> 
 	   
     <!-- Loading Font Styles -->
-    <link href="statics/css/products/iconfont-style.css" rel="stylesheet">
+    <link href="css/iconfont-style.css" rel="stylesheet">
 	
 	
 	<!-- Favicons -->
-	<link rel="icon" href="statics/img/products/562c11dfa9ec8a13bb1224f6fb03918fa0ecc098.jpg">
-	<link rel="apple-touch-icon" href="statics/img/products/favicons/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="statics/img/products/favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="statics/img/products/favicons/apple-touch-icon-114x114.png">
+	<link rel="icon" href="images/562c11dfa9ec8a13bb1224f6fb03918fa0ecc098.jpg">
+	<link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -47,7 +43,7 @@ use yii\helpers\Html;
 		<!-- NAVIGATION -->
 	  <nav class="navbar navbar-fixed-top navbar-slide bg-color3">
 			<div class="container-fluid"> 
-				<a class="navbar-brand goto" href="#"><img src="statics/img/products/微信图片_20190713160715.png" alt="Your logo" width="238" height="57"></a> 
+				<a class="navbar-brand goto" href="#"><img src="images/微信图片_20190713160715.png" alt="Your logo" width="238" height="57"></a> 
 			  <button class="round-toggle navbar-toggle menu-collapse-btn collapsed" data-toggle="collapse" data-target=".navMenuCollapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<div class="collapse navbar-collapse navMenuCollapse">
 					<ul class="nav">
@@ -60,7 +56,7 @@ use yii\helpers\Html;
 	  </nav>
 		
 		<!-- INTRO RIGHT BLOCK -->
-		<header id="intro-right" class="container" style="background-image: url(statics/img/products/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190713160734.jpg);">
+		<header id="intro-right" class="container" style="background-image: url(images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190713160734.jpg);">
 		  <div class="container">
 		    <div class="slogan">
 		      <div class="container">
@@ -73,7 +69,8 @@ use yii\helpers\Html;
 	            </a> </div>
 		    </div>
 		  </div>
-    </header>
+		</header>
+	
 		<!-- PORTFOLIO SHOP BLOCK -->
 		<section id="portfolio-shop" class="portfolio-block">
 		  <div class="container">
@@ -87,8 +84,8 @@ use yii\helpers\Html;
 				</div>
 				<ul class="portfolio-list portfolio-4col">
 					<li>
-						<a href="statics/img/products/微信图片_20190713172451.jpg" title="Description"><span><i class="icon center-icon icon-magnifier-add"></i></span>
-							<img src="statics/img/products/微信图片_20190713172451.jpg" alt="" width="320" height="461">
+						<a href="images/微信图片_20190713172451.jpg" title="Description"><span><i class="icon center-icon icon-magnifier-add"></i></span>
+							<img src="images/微信图片_20190713172451.jpg" alt="" width="320" height="461">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=南开风景明信片" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -97,8 +94,8 @@ use yii\helpers\Html;
 					  </div>
 				  </li>
 					<li> 
-						<a href="statics/img/products/微信图片_20190713172455.jpg" title="Description">
-							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172455.jpg" alt="">
+						<a href="images/微信图片_20190713172455.jpg" title="Description">
+							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172455.jpg" alt="">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=学位熊" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -107,8 +104,8 @@ use yii\helpers\Html;
 					  </div> 
 				  </li>
 					<li> 
-						<a href="statics/img/products/微信图片_20190713172458.jpg" title="Description">
-							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172458.jpg" alt="">
+						<a href="images/微信图片_20190713172458.jpg" title="Description">
+							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172458.jpg" alt="">
 						</a> 
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=阳阳与亮亮" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -117,7 +114,7 @@ use yii\helpers\Html;
 					  </div>
 				  </li>
 					<li> 
-						<a href="statics/img/products/微信图片_20190713172505.jpg" title="Description"><span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172505.jpg" alt="">
+						<a href="images/微信图片_20190713172505.jpg" title="Description"><span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172505.jpg" alt="">
 						</a> 
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=校徽" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -126,8 +123,8 @@ use yii\helpers\Html;
 					  </div>
 				  </li>
 					<li>
-						<a href="statics/img/products/微信图片_20190713172502.jpg" title="Description">
-						<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172502.jpg" alt="">
+						<a href="images/微信图片_20190713172502.jpg" title="Description">
+						<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172502.jpg" alt="">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=口红套装" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -135,8 +132,8 @@ use yii\helpers\Html;
 						  <span class="price">280</span>.00</div>
 				  </li>
 					<li> 
-						<a href="statics/img/products/微信图片_20190713172510.jpg" title="Description">
-							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172510.jpg" alt="">
+						<a href="images/微信图片_20190713172510.jpg" title="Description">
+							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172510.jpg" alt="">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=保温杯" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -145,8 +142,8 @@ use yii\helpers\Html;
 					  </div>
 				  </li>
 					<li>
-						<a href="statics/img/products/微信图片_20190713172515.jpg" title="Description">
-							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172515.jpg" alt="">
+						<a href="images/微信图片_20190713172515.jpg" title="Description">
+							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172515.jpg" alt="">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=荷花木雕水杯垫" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -155,8 +152,8 @@ use yii\helpers\Html;
 					  </div>
 				  </li>
 					<li> 
-						<a href="statics/img/products/微信图片_20190713172518.jpg" title="Description">
-							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="statics/img/products/微信图片_20190713172518.jpg" alt="">
+						<a href="images/微信图片_20190713172518.jpg" title="Description">
+							<span><i class="icon center-icon icon-magnifier-add"></i></span><img src="images/微信图片_20190713172518.jpg" alt="">
 						</a>
 						<div class="desc">
 							<a href="?r=nklproductsinfo/payment&productname=兔仔玩偶" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>
@@ -169,7 +166,7 @@ use yii\helpers\Html;
 	  </section>
 		
 		<!-- DOWNLOAD LINE 2 BLOCK -->
-		<section id="download-line-2" class="dark-bg cover-bg" style="background-image: url(statics/img/products/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190713163655.png);">
+		<section id="download-line-2" class="dark-bg cover-bg" style="background-image: url(images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190713163655.png);">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -208,11 +205,8 @@ use yii\helpers\Html;
 	<!-- MODALS END-->
 	 
 
-<!-- 注释：这些js也不知到用到没，在zxy的js文件中并没有这些js， -->
-
-    <!-- JavaScript  -->
-
-	<!-- <script src="scripts/jquery-1.11.2.min.js"></script> 
+    <!-- JavaScript --> 
+	<script src="scripts/jquery-1.11.2.min.js"></script> 
 	<script src="scripts/bootstrap.min.js"></script> 
 	<script src="scripts/jquery.validate.min.js"></script>
 	<script src="scripts/smoothscroll.js"></script> 
@@ -223,7 +217,9 @@ use yii\helpers\Html;
 	<script src="scripts/waypoints.min.js"></script>
 	<script src="scripts/video.js"></script>
 	<script src="scripts/bigvideo.js"></script>
-	<script src="scripts/custom.js"></script> -->
+	<script src="scripts/custom.js"></script>
+	
+	
 
-</body>
-</html>
+
+</body></html>

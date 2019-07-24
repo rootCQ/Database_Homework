@@ -51,43 +51,52 @@ class SiteController extends Controller
     {
         return $this->render('news');
     }
+    public function actionStatistics()
+    {
+        return $this->render('statistics');
+    }
     public function actionActivities()
     {
          // return $this->render('activities');
          $model = new NklActivityInfo();
          $searchModel = new NklActivityInfoSearch();
          $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
- 
-     
+
+
              if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                 return $this->redirect('activities', [ 'model' => $model, 
+                 return $this->redirect('activities', [ 'model' => $model,
                  'searchModel' => $searchModel,
                  'dataProvider' => $dataProvider,]);
              }
-             
+
              return $this->render('activities', [
-                 'model' => $model, 
+                 'model' => $model,
                  'searchModel' => $searchModel,
                  'dataProvider' => $dataProvider,
              ]);
     }
     public function actionShop()
     {
-        return $this->render('shop');
+        return $this->redirect('index.php?r=login/login');
+    }
+
+    public function actionShop1()
+    {
+        return $this->render('shop1');
     }
 
     public function actionBbs()
     {
         $model = new NklBbsInfo();
-	
+
 	    if ($model->load(Yii::$app->request->post()) && $model->save()) {
 	             return $this->redirect(['bbs','model' => new NklBbsInfo()]);
-            } 
-        
+            }
+
         return $this->render('bbs', [
 	            'model' => $model,
 	        ]);
-	    
+
     }
 
 

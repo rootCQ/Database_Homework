@@ -17,9 +17,9 @@ class NklproductsinfoController extends Controller{
 
 
     public function actionSucceed(){
-  
+
     $this->layout = false;
     return $this->render("succeed");
     }
-    public $enableCsrfValidation = false; 
+    public $enableCsrfValidation = false;
 }

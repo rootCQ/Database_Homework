@@ -56,54 +56,11 @@ AppAsset::register($this);
                             <li><a href="<?php echo Url::to(['site/shop']); ?>"><img src="statics/img/bag.ico" height="17" width="17" alt="">Souvenirs</a></li>
                             <li><a href="<?php echo Url::to(['site/bbs']); ?>"><img src="statics/img/about.ico" height="20" width="20" alt="">BBS</a></li>
                             <li><a href="<?php echo Url::to(['site/history']); ?>"><img src="statics/img/history.ico" height="20" width="20" alt="">History</a></li>
-                            <li><a href="<?php echo Url::to(['site/index']); ?>"><img src="statics/img/statics.ico" height="20" width="20" alt=""></a></li>
-                            <li><a href="<?php echo Url::to(['site/login']); ?>"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
+                            <li><a href="<?php echo Url::to(['site/statistics']); ?>"><img src="statics/img/statics.ico" height="20" width="20" alt=""></a></li>
+                            <li><a href="../../backend/web/index.php"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
 
                         </ul>
                     </nav>
-                     <!--?php
-                            NavBar::begin([
-                                // 'brandLabel' => Yii::$app->name,
-                                // 'brandUrl' => Yii::$app->homeUrl,
-                                'options' => [
-                                    'class' => 'navbar-expand-lg navbar-light bg-light',
-                                    'id' => 'nav-menu-container'
-                                ],
-                            ]);
-
-                            // $menuItems = [
-                            //     ['label' => 'Home', 'url' => ['/site/index']],
-                            //     ['label' => 'About', 'url' => ['/site/about']],
-                            //     ['label' => 'Contact', 'url' => ['/site/contact']],
-                            // ];
-                            $menuItems[] = '<li>'
-                                . Html::beginForm(['/site/index'], 'post')
-                                . Html::submitButton(
-                                    'Logout (' . Yii::$app->user->identity->username . ')',
-                                    ['class' => 'btn btn-link logout']
-                                )
-                                . Html::endForm()
-                                . '</li >';
-                            if (Yii::$app->user->isGuest) {
-                                $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-                                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-                            } else {
-                                $menuItems[] = '<li>'
-                                    . Html::beginForm(['/site/logout'], 'post')
-                                    . Html::submitButton(
-                                        'Logout (' . Yii::$app->user->identity->username . ')',
-                                        ['class' => 'btn btn-link logout']
-                                    )
-                                    . Html::endForm()
-                                    . '</li>';
-                            }
-                            echo Nav::widget([
-                                'options' => ['class' => 'navbar-nav navbar-right'],
-                                'items' => $menuItems,
-                            ]);
-                            NavBar::end();
-                            ?--> 
-                    <!-- User Login Info -->
                 </div>
             </div>
         </header><!-- #header -->

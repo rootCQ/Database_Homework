@@ -33,7 +33,7 @@ class LoginForm extends Model
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
             
-            ['verifycode','captcha'],
+            // ['verifycode','captcha'],
         ];
     }
 

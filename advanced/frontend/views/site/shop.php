@@ -206,24 +206,5 @@ use yii\helpers\Html;
 		</div>
 </div>
 	<!-- MODALS END-->
-	 
-
-<!-- 注释：这些js也不知到用到没，在zxy的js文件中并没有这些js， -->
-
-    <!-- JavaScript  -->
-
-	<!-- <script src="scripts/jquery-1.11.2.min.js"></script> 
-	<script src="scripts/bootstrap.min.js"></script> 
-	<script src="scripts/jquery.validate.min.js"></script>
-	<script src="scripts/smoothscroll.js"></script> 
-	<script src="scripts/jquery.smooth-scroll.min.js"></script> 
-	<script src="scripts/placeholders.jquery.min.js"></script> 
-	<script src="scripts/jquery.magnific-popup.min.js"></script> 
-	<script src="scripts/jquery.counterup.min.js"></script>
-	<script src="scripts/waypoints.min.js"></script>
-	<script src="scripts/video.js"></script>
-	<script src="scripts/bigvideo.js"></script>
-	<script src="scripts/custom.js"></script> -->
-
 </body>
 </html>

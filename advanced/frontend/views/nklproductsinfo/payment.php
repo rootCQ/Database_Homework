@@ -1,4 +1,4 @@
-<?php 
+<?php
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use  yii\db\ActiveRecord;
@@ -7,7 +7,7 @@ use  yii\db\ActiveRecord;
 <html>
 <head>
 	<meta charset="UTF-8">
-	
+
 	<title>支付宝即时到账交易接口</title>
 </head>
 <style>
@@ -152,7 +152,7 @@ use  yii\db\ActiveRecord;
 		width:100%;
 		min-width:1200px;
 		height:660px;
-		background-color:#fff;		
+		background-color:#fff;
 	}
 	.alipayform {
 		width:800px;
@@ -234,14 +234,16 @@ use  yii\db\ActiveRecord;
 </style>
 <body>
 	<div class="header">
-		<div class="container black">
-			<div class="qrcode"></div>
-		</div>
+		
 		<div class="container">
 			<div class="nav"><span class="divier"></span>
 				<a class="open" target="_blank">南开收银</a>
 				<ul class="navbar">
-					<li><a href="index.php?r=nklproductsinfo/index" target="_blank">返回商城主页</a></li>
+					<li><a href="index.php?r=site/shop1" target="_blank">返回商城主页</a></li>
+					<li></li>
+				</ul>
+				<ul class="navbar">
+					<li><a href="index.php" target="_blank">百年南开主页</a></li>
 					<li></li>
 				</ul>
 			</div>
@@ -267,7 +269,7 @@ use  yii\db\ActiveRecord;
 				<br>
 				<div class="mark"></div>
 			</div>
-			
+
               <div class="element">
 				<div class="etitle">商品名称:</div>
 				<div class="einput">
@@ -292,7 +294,7 @@ use  yii\db\ActiveRecord;
 			<div class="element">
 				<div class="etitle">商品库存:</div>
 				<div class="einput">
-					<?php     
+					<?php
         echo htmlspecialchars(stripslashes($result['product_storage']));
                  ?>
                 </div>
@@ -303,21 +305,22 @@ use  yii\db\ActiveRecord;
 				<input type="submit" class="alisubmit" value ="确认支付">
 			</div>
 		</form>
-		      <?php 
+		      <?php
+
      $num = $result['product_storage'];
      $num = $num - 1;
-     Yii::$app->db->createCommand()->update('nkl_products_info', ['product_storage' => $num])->execute();    
+     Yii::$app->db->createCommand()->update('nkl_products_info', ['product_storage' => $num],['product_name'=>$result['product_name']])->execute();
 	$userid = Yii::$app->session->get('admin')['adminuser'];
     $nowtime = date('Y-m-d H:i:s',time());
     $res = Yii::$app->db->createCommand()->insert('nkl_purchase_record', [
-    'user_id' => '12345',
+    'user_id' =>  Yii::$app->session->get('user')['username'],
     'product_id' => $result['product_id'],
     'purchase_time' => $nowtime,
 ])->execute();
 		?>
 	</div>
-	<div class="footer">
-		<p class="footer-sub">南开大学出品@南开龙</p>
+	<div class="footer" style="background-color:rgb(71,169,232);color:#fff">
+		<p class="footer-sub">南开大学出品@NKL</p>
 	</div>
 </body>
 </html>

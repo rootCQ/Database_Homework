@@ -11,14 +11,12 @@ use Yii;
  * @property string $manager_name
  * @property string $manager_sex
  * @property string $manager_email
- * @property int $manager_grade
+ * @property int $manager_stuNum
  * @property string $manager_college
  * @property string $manager_major
  *
- * @property NklBbsSelectRecord[] $nklBbsSelectRecords
- * @property NklManagersLogin $nklManagersLogin
+ * @property NklBbsSelectrecord[] $nklBbsSelectrecords
  * @property NklNewsInfo[] $nklNewsInfos
- * @property NklNewsSelectRecord[] $nklNewsSelectRecords
  */
 class NklManagersInfo extends \yii\db\ActiveRecord
 {
@@ -36,8 +34,8 @@ class NklManagersInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['manager_name', 'manager_email', 'manager_grade', 'manager_college'], 'required'],
-            [['manager_grade'], 'integer'],
+            [['manager_name', 'manager_email', 'manager_stuNum', 'manager_college'], 'required'],
+            [['manager_stuNum'], 'integer'],
             [['manager_name', 'manager_college', 'manager_major'], 'string', 'max' => 25],
             [['manager_sex'], 'string', 'max' => 1],
             [['manager_email'], 'string', 'max' => 255],
@@ -54,7 +52,7 @@ class NklManagersInfo extends \yii\db\ActiveRecord
             'manager_name' => 'Manager Name',
             'manager_sex' => 'Manager Sex',
             'manager_email' => 'Manager Email',
-            'manager_grade' => 'Manager Grade',
+            'manager_stuNum' => 'Manager Stu Num',
             'manager_college' => 'Manager College',
             'manager_major' => 'Manager Major',
         ];
@@ -63,17 +61,9 @@ class NklManagersInfo extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNklBbsSelectRecords()
+    public function getNklBbsSelectrecords()
     {
-        return $this->hasMany(NklBbsSelectRecord::className(), ['manager_id' => 'manager_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getNklManagersLogin()
-    {
-        return $this->hasOne(NklManagersLogin::className(), ['manager_id' => 'manager_id']);
+        return $this->hasMany(NklBbsSelectrecord::className(), ['manager_id' => 'manager_id']);
     }
 
     /**
@@ -82,13 +72,5 @@ class NklManagersInfo extends \yii\db\ActiveRecord
     public function getNklNewsInfos()
     {
         return $this->hasMany(NklNewsInfo::className(), ['news_releaser' => 'manager_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getNklNewsSelectRecords()
-    {
-        return $this->hasMany(NklNewsSelectRecord::className(), ['manager_id' => 'manager_id']);
     }
 }
