@@ -59,7 +59,7 @@
 - 整合朱心怡销售页面，目前由于朱心怡的销售页面设计逻辑和当前的项目设计逻辑有所不同，所以还没有完全整合进入整体项目中去，zxy设计销售页面的逻辑首先是利用自己写的product.PHP文件进行数据库连接的配置，然后采用编写的NklProductsInfoController.php进行跳转的控制，因此她所编写的三个文件（分别销售主页页面（index)、确认付款页面(payment )、支付成功页面（succeed))均在views下属的文件夹nklproductsinfo下，我对涉及的相关的js和css以及img都做了归档存放的处理，目前手动访问{http://...index.php?r=nklproductsinfo} 可以进入index界面（商品页面）并可以点击购买将数据传入数据库，但是目前没有登录验证的功能，即用户没有登录也可以购买商品，需要后期完善，此外朱心怡的登录页面没有整合
 - 对活动预告页面和留言页面的部分样式进行了完善，具体可以看截图效果
 
-![主页](pictures-lw/1-1563813968433.PNG)
+![主页](pictures-lw/1.PNG)
 
 ![2](pictures-lw/2.PNG)
 
