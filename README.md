@@ -63,7 +63,7 @@
 
 ![2](pictures-lw/2.PNG)
 
-![3](pictures-lw件/3.PNG)
+![3](pictures-lw/3.PNG)
 
 ![4](pictures-lw/4.PNG)
 
