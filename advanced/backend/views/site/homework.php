@@ -17,12 +17,12 @@ use  yii\db\ActiveRecord;
 
     <div class="jumbotron">
         <h1 style="color:#7e0c6e">团队作业</h1>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_需求文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_实现文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_用户手册(1711350_1711295_1712991_1711345_1711304)">用户手册</a></p>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_项目展示PPT(1711350_1711295_1712991_1711345_1711304)">项目展示PPT</a></p>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_部署文档(1711350_1711295_1712991_1711345_1711304)">部署文档</a></p>
-        <p><a href="../../data/team/w3logo.gif" download="NKL_设计文档(1711350_1711295_1712991_1711345_1711304)">设计文档</a></p>
+        <p><a href="../../data/team/NKL_需求文档(1711350_1711295_1712991_1711345_1711304).pdf" download="NKL_需求文档(1711350_1711295_1712991_1711345_1711304)">需求文档</a></p>
+        <p><a href="../../data/team/NKL_设计文档(1711350_1711295_1712991_1711345_1711304).pdf" download="NKL_设计文档(1711350_1711295_1712991_1711345_1711304)">设计文档</a></p>
+        <p><a href="../../data/team/NKL_实现文档(1711350_1711295_1712991_1711345_1711304).pdf" download="NKL_实现文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
+        <p><a href="../../data/team/NKL_部署文档(1711350_1711295_1712991_1711345_1711304).pdf" download="NKL_部署文档(1711350_1711295_1712991_1711345_1711304)">部署文档</a></p>
+        <p><a href="../../data/team/NKL_用户手册(1711350_1711295_1712991_1711345_1711304).pdf" download="NKL_用户手册(1711350_1711295_1712991_1711345_1711304)">用户手册</a></p>
+        <p><a href="../../data/team/NKL_项目展示PPT(1711350_1711295_1712991_1711345_1711304).pptx" download="NKL_项目展示PPT(1711350_1711295_1712991_1711345_1711304)">项目展示PPT</a></p>
     </div>
 
     <div class="jumbotron">
@@ -33,7 +33,7 @@ use  yii\db\ActiveRecord;
 
         <div class="row">
             <div class="col-lg-4">
-                <h2 style="color:#9966cc">李力挺</h2>
+                <h2 style="color:#9966cc">李力铤</h2>
                 <p>
                 <a href="../../data/personal/llt/作业1(1711345_李力铤).pdf" download="作业1(1711345_李力铤)">作业1(1711345_李力铤)</a>
                 </p>

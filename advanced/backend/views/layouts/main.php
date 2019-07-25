@@ -44,7 +44,7 @@ AppAsset::register($this);
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top navbar-shadow">
         <div class="navbar-branding">
-            <a class="navbar-brand" >
+            <a class="navbar-brand">
                 <b>NK</b>L
             </a>
             <span id="toggle_sidemenu_l" class="ad ad-lines">
@@ -145,7 +145,7 @@ AppAsset::register($this);
 
             <!-- Start: Sidebar Collapse Button -->
             <div class="sidebar-toggle-mini">
-                <a href="<?php echo Url::to(['site/login'])?>">
+                <a href="../../frontend/web/index.php">
                     <span class="fa fa-sign-out"></span>
                 </a>
             </div>

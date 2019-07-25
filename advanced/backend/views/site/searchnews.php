@@ -25,7 +25,6 @@ $this->title = 'Search News';
             'news_releaser',
             'news_releaseTime',
             'news_link',
-
             // ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

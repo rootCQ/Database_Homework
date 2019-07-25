@@ -124,7 +124,7 @@ use yii\data\ActiveDataProvider;
                                 echo '<div class="singleline" style="margin-left:40px;">';
                                 echo ' <a class="news-title" >',$model['activity_info'],'</a>';
                                 echo '<p> &nbsp;<i class="fa fa-fw fa-user"></i>主办单位：',$model['activity_hostDept'] ,'</p>';
-                                echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['activity_beginDate'], ' ',$model['activity_beginTime'] ,'<a style="color:#7e0c6e" href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【新闻报道】</a></p>';
+                                echo ' <p> &nbsp;<i class="fa fa-fw fa-calendar"></i> 日期：',$model['activity_beginDate'], ' ',$model['activity_beginTime'] ,'<a style="color:#7e0c6e" href="http://100.nankai.edu.cn/2018/1018/c10880a111096/page.htm">【百年南开】</a></p>';
                                 echo '  <p> &nbsp;<i class="fa fa-fw fa-map-marker"></i> 地点：',$model['activity_location'],'</p>';
                                 echo '  </div>';
                                 echo '</div>';

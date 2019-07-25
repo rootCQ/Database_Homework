@@ -13,8 +13,19 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use common\models\NklNewsInfo;
 use  yii\db\ActiveRecord;
+use yii\widgets\ActiveForm;
+use yii\data\ActiveDataProvider;
 use  common\models\NklBbsInfo;
 ?>
+<!DOCTYPE html>
+<html id="home" class="slider-area">
+<link rel="stylesheet" type="text/css" href="statics/css/sinaFaceAndEffec.css">
+<title></title>
+</head>
+<script src="statics/js/uploadPreview.js" type="text/javascript"></script>
+<script src="statics/js/jquery.min.js"></script>
+<script src="statics/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="statics/js/sinaFaceAndEffec.js"></script>
 <div class="imgo timer_wrap">
 	<div id="home" class="slider-area">
 		<div data-velocity=".2"></div>
@@ -94,6 +105,7 @@ use  common\models\NklBbsInfo;
 					<li data-target="#slide-list" data-slide-to="4"></li>
 					<li data-target="#slide-list" data-slide-to="5"></li>
 					<li data-target="#slide-list" data-slide-to="6"></li>
+					<li data-target="#slide-list" data-slide-to="7"></li>
 				</ol>
 			</div>
 			<!-- 跳马灯结束 -->
@@ -129,11 +141,11 @@ use  common\models\NklBbsInfo;
 			<div class="timeline-left" frag="窗口11101">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table">
 					<tbody>
-						<?php $NklBbsInfos = NklBbsInfo::find()->where(['bbs_isSelected' => 1])->orderBy('bbs_time,bbs_id DESC')->limit(5)->all(); ?>
+						<?php $NklBbsInfos = NklBbsInfo::find()->where(['and','bbs_isSelected' => 1,'length(bbs_content)<120'])->orderBy('bbs_time DESC')->limit(5)->all(); ?>
 						<?php foreach ($NklBbsInfos as $NklBbsInfo) : ?>
 							<tr>
 								<td>
-									<div class="item item-light">
+									<div class="item item-light comment-body">
 										<p style="margin-top:0px;margin-bottom:0px;color:#666666;"><?= Html::encode("@ {$NklBbsInfo->bbs_content}") ?></p>
 									</div>
 								</td>
@@ -147,6 +159,16 @@ use  common\models\NklBbsInfo;
 	</div>
 </div>
 <!-- 以下JS from 李伟 -->
+<script type="text/javascript">
+    // 绑定表情
+    $('.face-icon').SinaEmotion($('.text'));
+
+    function trans() {
+        console.log($('.text').val());
+        $('.text').val(AnalyticEmotion($('.text').val()));
+        console.log($('.text').val());
+    }
+</script>
 <script>
 	$(document).ready(function() {
 		$('#horizontalTab').easyResponsiveTabs({
