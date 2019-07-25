@@ -1,6 +1,7 @@
 #  互联网数据库开发
 
->  [全是bug的测试网站](http://49.234.202.251/advanced/frontend/web/index.php)
+>  [应该没有bug的前台](http://49.234.202.251/advanced/frontend/web/index.php)
+>  [应该没有bug的后台](http://49.234.202.251/advanced/backend/web/index.php)
 
 
 
