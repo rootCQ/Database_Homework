@@ -1,11 +1,17 @@
-#  互联网数据库开发
+#  @NKL百年校庆专题网站
 
 >  [应该没有bug的前台](http://49.234.202.251/advanced/frontend/web/index.php)
 >  [应该没有bug的后台](http://49.234.202.251/advanced/backend/web/index.php)
 
+作业指南advanced/data下
+实现不回显密码的一键部署脚本
 
 
-## 模板整合到本地
+
+
+
+
+## 模板整合到本地——zcf
 
 #### 已更改，直接pull origin master或者clone即可本地运行
 
