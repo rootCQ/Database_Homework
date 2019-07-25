@@ -5,7 +5,12 @@ namespace backend\models;
 use Yii;
 
 /**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
  * This is the model class for table "nkl_activity_info".
+ */
+
+/**
  *
  * @property int $activity_id
  * @property string $activity_info

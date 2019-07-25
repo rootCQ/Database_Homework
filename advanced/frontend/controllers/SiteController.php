@@ -24,8 +24,11 @@ use yii\base\Configurable;
 use yii\web\Linkable;
 
 /**
- * Site controller
+ * Team: @NKL,NKU
+ * Coding by 周辰霏 1712991 index,news,shop,布局相关,李伟 1711350 activities,bbs相关,李力铤 1711345 history,statistics相关
+ * Site controller for frontend.
  */
+
 class SiteController extends Controller
 {
     public function actionNklNewsInfo()

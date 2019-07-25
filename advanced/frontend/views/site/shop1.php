@@ -1,6 +1,12 @@
 <?php
 use yii\helpers\Html;
 use frontend\models\NklProductsInfo;
+/**
+ * Team: @NKL,NKU
+ * Coding by 李伟 1711350 视图html层, 周辰霏1712991 加入数据库读取数据以及重写shop.php方便跳转  原型基于朱心怡的../nklproductsinfo/index.php由于无法融入整体框架和layout
+ * 朱心怡原代码在../../web文件夹下html和phpphp文件夹以及单独的有注释头，此view是最终显示的商城首页
+ * This is the activities views for the frontend web.
+ */
 ?>
 <!DOCTYPE html>
 <html id="home" class="slider-area">
@@ -30,16 +36,6 @@ use frontend\models\NklProductsInfo;
 	<link rel="apple-touch-icon" href="statics/img/products/favicons/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="statics/img/products/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="statics/img/products/favicons/apple-touch-icon-114x114.png">
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="scripts/html5shiv.js"></script>
-      <script src="scripts/respond.min.js"></script>
-    <![endif]-->
-    
-    <!--headerIncludes-->
-    
 </head>
 <body data-spy="scroll" data-target=".navMenuCollapse">
     

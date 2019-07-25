@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: @NKL,NKU
+ * Coding by 周辰霏 1712991
+ * This is the activities views for the frontend web.
+ */
 use yii\helpers\Html;
 use common\models\NklNewsInfo;
 use yii\data\Pagination;

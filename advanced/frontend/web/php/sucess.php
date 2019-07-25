@@ -1,4 +1,9 @@
 <?PHP
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the success  .
+ */
 	ini_set("error_reporting","E_ALL & ~E_NOTICE");
 	session_start();//启动Session
 	if(!$_SESSION['name']){

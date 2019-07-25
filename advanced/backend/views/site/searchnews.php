@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Views for news overview on the backend.
+ */
 
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -8,8 +13,6 @@ $this->title = 'Search News';
 <div class="nkl-news-info-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -23,7 +26,7 @@ $this->title = 'Search News';
             'news_releaseTime',
             'news_link',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            // ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

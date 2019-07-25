@@ -2,12 +2,16 @@
 
 use yii\helpers\Html;
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 
+ * Views of activities addition for backend.
+ */
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\NklActivityInfo */
 
 $this->title = 'Add Activity';
-//$this->params['breadcrumbs'][] = ['label' => 'Nkl Activity Infos', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="nkl-activity-info-create">
 

@@ -4,12 +4,16 @@ use yii\helpers\Html;
 use  yii\web\Response;
 use yii\helpers\Url;
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 
+ * Views for news addition for backend.
+ */
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\NklNewsInfo */
 
  $this->title = 'Add News';
-// $this->params['breadcrumbs'][] = ['label' => 'Nkl News Infos', 'url' => ['index']];
-// $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="nkl-news-info-create">

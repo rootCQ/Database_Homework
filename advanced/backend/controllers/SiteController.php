@@ -15,9 +15,13 @@ use backend\models\NklNewsInfoSearch;
 
 use backend\models\NklActivityInfo;
 use backend\models\NklActivityInfoSearch;
+
 /**
- * Site controller
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Site controller for all the backend web site.
  */
+
 class SiteController extends Controller
 {
 
@@ -91,7 +95,6 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->refresh();
-            //return $this->redirect(['view', 'manager_id' => $model->manager_id, 'bbs_solveTime' => $model->bbs_solveTime]);
         }
 
         return $this->render('addbbs', [
@@ -106,7 +109,6 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->refresh();
-            //return $this->redirect(['view', 'id' => $model->news_id]);
         }
     
         return $this->render('addnews', [
@@ -130,7 +132,6 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->refresh();
-            //return $this->redirect(['view', 'id' => $model->activity_id]);
         }
 
         return $this->render('addactivities', [
@@ -160,12 +161,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                //'only' =>['logout','signup','login','index','homework','newsselect','bbsselect'],
                 'rules' => [
                     [
-                        'actions' => ['login', 'error','signup'],//,'signup'
+                        'actions' => ['login', 'error','signup'],
                         'allow' => true,
-                       // 'roles' => ['?']
                     ],
                     [
                         'actions' => ['index','addnews','searchnews','addactivities','searchactivities','addbbs','searchbbs','homework','logout'], //
@@ -238,6 +237,5 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
         return $this->goHome();
-        //return $this->render('login');
     }
 }

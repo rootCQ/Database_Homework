@@ -3,18 +3,18 @@ create database NKL;
 use NKL;
 /*
  Navicat Premium Data Transfer
-
- Source Server         : NKL
+update by zcf 的 腾讯云服务器
+ Source Server         : Big NKL
  Source Server Type    : MySQL
- Source Server Version : 80016
- Source Host           : 192.168.64.1:3306
+ Source Server Version : 50560
+ Source Host           : 49.234.202.251:3306
  Source Schema         : NKL
 
  Target Server Type    : MySQL
- Target Server Version : 80016
+ Target Server Version : 50560
  File Encoding         : 65001
 
- Date: 24/07/2019 23:30:22
+ Date: 25/07/2019 11:29:35
 */
 
 SET NAMES utf8mb4;
@@ -26,15 +26,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `nkl_activity_info`;
 CREATE TABLE `nkl_activity_info` (
   `activity_id` int(11) NOT NULL AUTO_INCREMENT,
-  `activity_info` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `activity_location` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `activity_info` varchar(500) NOT NULL,
+  `activity_location` varchar(100) NOT NULL,
   `activity_beginDate` date NOT NULL,
   `activity_beginTime` time DEFAULT NULL,
   `activity_endDate` date NOT NULL,
   `activity_endTime` time DEFAULT NULL,
-  `activity_hostDept` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `activity_hostDept` varchar(50) NOT NULL,
   PRIMARY KEY (`activity_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_activity_info
@@ -52,26 +52,26 @@ DROP TABLE IF EXISTS `nkl_bbs_info`;
 CREATE TABLE `nkl_bbs_info` (
   `bbs_id` int(11) NOT NULL AUTO_INCREMENT,
   `bbs_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `bbs_userNickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `bbs_userDescribe` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `bbs_content` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `bbs_userNickname` varchar(25) NOT NULL,
+  `bbs_userDescribe` varchar(50) NOT NULL,
+  `bbs_content` varchar(500) NOT NULL,
   `bbs_isSelected` tinyint(1) NOT NULL DEFAULT '0',
   `bbs_isSolved` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`bbs_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_bbs_info
 -- ----------------------------
 BEGIN;
-INSERT INTO `nkl_bbs_info` VALUES (1, '2019-07-21 02:22:00', '赵明', '哲学系83级', '祝南开早日成为世界一流大学，完成张伯苓老校长的夙愿！', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (1, '2019-07-25 02:22:00', '赵明', '哲学系83级', '祝南开早日成为世界一流大学，完成张伯苓老校长的夙愿！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (2, '2019-07-24 17:01:43', '朱心怡', '2017', '小开生日快乐！！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (3, '2019-07-24 17:01:47', '李伟', '2017', '快乐！！！', 1, 1);
-INSERT INTO `nkl_bbs_info` VALUES (4, '2019-07-24 01:27:33', '南开大学第二十届研究生支教团', '南开大学第二十届研究生支教团', '二十载扎根西部，于三尺讲台书青春华章；  一百年壮怀难折，为泱泱中华筑公能学府。', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (4, '2019-07-25 01:27:33', '南开大学第二十届研究生支教团', '南开大学第二十届研究生支教团', '二十载扎根西部，于三尺讲台书青春华章；  一百年壮怀难折，为泱泱中华筑公能学府。', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (5, '2019-07-24 17:01:49', '乔静欣', '2017', '百年快乐', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (6, '2019-07-24 01:28:19', '周辰霏', '17计科', '祝南开百岁华诞快乐，日后更上一层楼，我愿以光大南开为己任', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (7, '2019-07-24 12:59:12', '李力铤', '2017', '百年快乐！', 1, 1);
-INSERT INTO `nkl_bbs_info` VALUES (8, '2019-07-24 01:42:10', '周辰霏', '17计算机', '<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/f6/2018new_aini_org.png\" height=\"22\" width=\"22\" />我爱南开100年！', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (8, '2019-07-21 01:42:10', '周辰霏', '17计算机', '<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/f6/2018new_aini_org.png\" height=\"22\" width=\"22\" />我爱南开100年！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (9, '2019-07-24 13:00:13', '朱心怡', '2017', '百年快乐！', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (10, '2019-07-24 13:00:18', '乔静欣', '2017', '百年快乐', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (11, '2019-07-24 12:59:12', '李力铤', '2017', '百年快乐！', 1, 1);
@@ -92,9 +92,11 @@ INSERT INTO `nkl_bbs_info` VALUES (25, '2019-07-24 13:00:18', '乔静欣', '2017
 INSERT INTO `nkl_bbs_info` VALUES (26, '2019-07-24 15:36:55', '贵州校友会', '2017年经济管理贵州南开校友会', '希望母校越来越好', 0, 1);
 INSERT INTO `nkl_bbs_info` VALUES (27, '2019-07-24 14:09:16', '李云', '2018', '百年快乐', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (28, '2019-07-24 14:21:16', '李力铤', '2017', '100快乐！！！！', 1, 1);
-INSERT INTO `nkl_bbs_info` VALUES (32, '2019-07-24 16:56:50', '邓承浩', '2009级商学院旅游管理校友', '南开百年华诞将至，历百载愈淬公能初心，新时代更彰日新月异，祝愿母校永远年轻！', 1, 1);
-INSERT INTO `nkl_bbs_info` VALUES (33, '2019-07-24 16:56:52', '陈静雯', '17级 国际关系专业格拉斯哥班', '白河之滨，汇聚四海英才。南以开拓，公能传承百年。同祝华诞，迎日新月异。', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (32, '2019-07-25 16:56:50', '邓承浩', '2009级商学院旅游管理校友', '南开百年华诞将至，历百载愈淬公能初心，新时代更彰日新月异，祝愿母校永远年轻！', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (33, '2019-07-25 16:56:52', '陈静雯', '17级 国际关系专业格拉斯哥班', '白河之滨，汇聚四海英才。南以开拓，公能传承百年。同祝华诞，迎日新月异。', 1, 1);
 INSERT INTO `nkl_bbs_info` VALUES (34, '2019-07-24 16:57:45', '2017年经济管理贵州南开校友会', '2017年经济管理贵州南开校友会', '希望母校越来越好', 1, 1);
+INSERT INTO `nkl_bbs_info` VALUES (35, '2019-07-25 04:04:50', '杨志爽', '2017年经济管理贵州南开校友会', '我们在贵州祝福南开！<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/7b/2018new_miaomiao_thumb.png\" height=\"22\" width=\"22\" />', 0, 0);
+INSERT INTO `nkl_bbs_info` VALUES (36, '2019-07-25 08:10:18', '李伟', '2017年经济管理贵州南开校友会', '半夜三点，南开快乐！<img src=\"http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/a1/2018new_doge02_org.png\" height=\"22\" width=\"22\" />', 1, 1);
 COMMIT;
 
 -- ----------------------------
@@ -104,13 +106,13 @@ DROP TABLE IF EXISTS `nkl_bbs_selectRecord`;
 CREATE TABLE `nkl_bbs_selectRecord` (
   `manager_id` int(11) NOT NULL,
   `bbs_isSelected` tinyint(1) NOT NULL,
-  `bbs_solveTime` datetime NOT NULL,
+  `bbs_solveTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `bbs_id` int(11) NOT NULL,
   PRIMARY KEY (`manager_id`,`bbs_solveTime`) USING BTREE,
   KEY `bbs_id` (`bbs_id`),
   CONSTRAINT `nkl_bbs_selectrecord_ibfk_2` FOREIGN KEY (`bbs_id`) REFERENCES `nkl_bbs_info` (`bbs_id`),
   CONSTRAINT `nkl_bbs_selectrecord_ibfk_3` FOREIGN KEY (`manager_id`) REFERENCES `nkl_managers_info` (`manager_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_bbs_selectRecord
@@ -118,6 +120,7 @@ CREATE TABLE `nkl_bbs_selectRecord` (
 BEGIN;
 INSERT INTO `nkl_bbs_selectRecord` VALUES (1, 0, '2019-07-21 00:00:00', 4);
 INSERT INTO `nkl_bbs_selectRecord` VALUES (1, 0, '2019-07-24 00:00:00', 26);
+INSERT INTO `nkl_bbs_selectRecord` VALUES (1, 1, '2019-07-25 00:00:00', 36);
 COMMIT;
 
 -- ----------------------------
@@ -126,10 +129,10 @@ COMMIT;
 DROP TABLE IF EXISTS `nkl_history_info`;
 CREATE TABLE `nkl_history_info` (
   `history_id` int(11) NOT NULL AUTO_INCREMENT,
-  `history_title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `history_passage` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `history_title` varchar(100) NOT NULL,
+  `history_passage` varchar(2000) NOT NULL,
   PRIMARY KEY (`history_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_history_info
@@ -148,14 +151,14 @@ COMMIT;
 DROP TABLE IF EXISTS `nkl_managers_info`;
 CREATE TABLE `nkl_managers_info` (
   `manager_id` int(11) NOT NULL AUTO_INCREMENT,
-  `manager_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `manager_sex` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `manager_email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `manager_name` varchar(25) NOT NULL,
+  `manager_sex` char(1) DEFAULT NULL,
+  `manager_email` varchar(255) NOT NULL,
   `manager_stuNum` int(11) NOT NULL,
-  `manager_college` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `manager_major` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `manager_college` varchar(25) NOT NULL,
+  `manager_major` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`manager_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_managers_info
@@ -174,14 +177,14 @@ COMMIT;
 DROP TABLE IF EXISTS `nkl_news_info`;
 CREATE TABLE `nkl_news_info` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
-  `news_title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `news_title` varchar(100) NOT NULL,
   `news_releaser` int(11) NOT NULL,
   `news_releaseTime` date NOT NULL,
-  `news_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `news_link` varchar(255) NOT NULL,
   PRIMARY KEY (`news_id`),
   KEY `news_releaser` (`news_releaser`),
   CONSTRAINT `nkl_news_info_ibfk_1` FOREIGN KEY (`news_releaser`) REFERENCES `nkl_managers_info` (`manager_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_news_info
@@ -229,24 +232,24 @@ COMMIT;
 DROP TABLE IF EXISTS `nkl_products_info`;
 CREATE TABLE `nkl_products_info` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
+  `product_name` varchar(25) NOT NULL,
   `product_price` float(10,2) NOT NULL,
   `product_storage` int(255) NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_products_info
 -- ----------------------------
 BEGIN;
-INSERT INTO `nkl_products_info` VALUES (1, '南开风景明信片', 14.00, 31);
-INSERT INTO `nkl_products_info` VALUES (2, '学位熊', 150.00, 40);
-INSERT INTO `nkl_products_info` VALUES (3, '阳阳与亮亮', 110.00, 41);
-INSERT INTO `nkl_products_info` VALUES (4, '校徽', 65.00, 41);
-INSERT INTO `nkl_products_info` VALUES (5, '口红套装', 280.00, 41);
-INSERT INTO `nkl_products_info` VALUES (6, '保温杯', 80.00, 41);
-INSERT INTO `nkl_products_info` VALUES (7, '荷花木雕水杯垫', 18.00, 42);
-INSERT INTO `nkl_products_info` VALUES (8, '兔子玩偶', 115.00, 42);
+INSERT INTO `nkl_products_info` VALUES (1, '南开风景明信片', 14.00, 50);
+INSERT INTO `nkl_products_info` VALUES (2, '学位熊', 150.00, 50);
+INSERT INTO `nkl_products_info` VALUES (3, '阳阳与亮亮', 110.00, 50);
+INSERT INTO `nkl_products_info` VALUES (4, '校徽', 65.00, 50);
+INSERT INTO `nkl_products_info` VALUES (5, '口红套装', 280.00, 50);
+INSERT INTO `nkl_products_info` VALUES (6, '保温杯', 80.00, 50);
+INSERT INTO `nkl_products_info` VALUES (7, '荷花木雕水杯垫', 18.00, 50);
+INSERT INTO `nkl_products_info` VALUES (8, '兔子玩偶', 115.00, 50);
 COMMIT;
 
 -- ----------------------------
@@ -254,60 +257,10 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `nkl_purchase_record`;
 CREATE TABLE `nkl_purchase_record` (
-  `user_id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `user_id` varchar(255) NOT NULL,
   `product_id` int(11) NOT NULL,
   `purchase_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- ----------------------------
--- Records of nkl_purchase_record
--- ----------------------------
-BEGIN;
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 1711200, '2019-07-23 15:49:43');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 1711202, '2019-07-23 04:06:32');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 1711202, '2019-07-23 04:06:45');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 1, '2019-07-23 16:09:25');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 2, '2019-07-23 16:24:45');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 2, '2019-07-23 16:39:18');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 2, '2019-07-23 16:39:25');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 3, '2019-07-23 16:42:03');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 3, '2019-07-23 16:43:00');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 3, '2019-07-23 16:43:41');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 3, '2019-07-23 16:44:00');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 3, '2019-07-23 16:44:04');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 2, '2019-07-23 16:44:49');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 2, '2019-07-23 16:44:57');
-INSERT INTO `nkl_purchase_record` VALUES ('rudolph', 2, '2019-07-23 17:03:49');
-INSERT INTO `nkl_purchase_record` VALUES ('rudolph', 1, '2019-07-23 17:03:59');
-INSERT INTO `nkl_purchase_record` VALUES ('rudolph', 1, '2019-07-23 17:04:09');
-INSERT INTO `nkl_purchase_record` VALUES ('rudolph', 2, '2019-07-23 17:47:06');
-INSERT INTO `nkl_purchase_record` VALUES ('finally', 1, '2019-07-24 04:13:27');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 10:17:08');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 10:18:03');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 10:24:56');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 10:27:07');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 2, '2019-07-24 10:32:26');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 2, '2019-07-24 10:43:25');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 2, '2019-07-24 11:51:43');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 2, '2019-07-24 11:51:48');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 12:15:27');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 2, '2019-07-24 12:50:58');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:34:33');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:35:37');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:36:11');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:36:24');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:36:49');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:37:10');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:37:18');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 13:39:18');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf', 1, '2019-07-24 14:09:08');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 1, '2019-07-24 17:26:29');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 2, '2019-07-24 17:26:37');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 3, '2019-07-24 17:26:45');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 4, '2019-07-24 17:26:53');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 5, '2019-07-24 17:27:01');
-INSERT INTO `nkl_purchase_record` VALUES ('zcf1', 6, '2019-07-24 17:27:09');
-COMMIT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Table structure for nkl_user_login
@@ -319,7 +272,7 @@ CREATE TABLE `nkl_user_login` (
   `logintime` int(10) unsigned NOT NULL DEFAULT '0',
   `loginip` bigint(20) unsigned NOT NULL DEFAULT '0',
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nkl_user_login
@@ -327,7 +280,7 @@ CREATE TABLE `nkl_user_login` (
 BEGIN;
 INSERT INTO `nkl_user_login` VALUES ('8888', '21218cca77804d2ba1922c33e0151105', 0, 0);
 INSERT INTO `nkl_user_login` VALUES ('daisyy', 'root', 1563848546, 2130706433);
-INSERT INTO `nkl_user_login` VALUES ('finally', 'e10adc3949ba59abbe56e057f20f883e', 1563941539, 2130706433);
+INSERT INTO `nkl_user_login` VALUES ('finally', 'e10adc3949ba59abbe56e057f20f883e', 1564019261, 3546214325);
 INSERT INTO `nkl_user_login` VALUES ('finally1', 'e10adc3949ba59abbe56e057f20f883e', 0, 0);
 INSERT INTO `nkl_user_login` VALUES ('finally724', 'e10adc3949ba59abbe56e057f20f883e', 1563901263, 2130706433);
 INSERT INTO `nkl_user_login` VALUES ('inaank', 'root', 0, 0);
@@ -345,8 +298,7 @@ INSERT INTO `nkl_user_login` VALUES ('root56', 'e10adc3949ba59abbe56e057f20f883e
 INSERT INTO `nkl_user_login` VALUES ('rudolph', 'e10adc3949ba59abbe56e057f20f883e', 1563901419, 2130706433);
 INSERT INTO `nkl_user_login` VALUES ('succeed', 'root', 0, 0);
 INSERT INTO `nkl_user_login` VALUES ('yanzheng', 'e10adc3949ba59abbe56e057f20f883e', 0, 0);
-INSERT INTO `nkl_user_login` VALUES ('zcf', 'e10adc3949ba59abbe56e057f20f883e', 1563970140, 2130706433);
-INSERT INTO `nkl_user_login` VALUES ('zcf1', 'c33367701511b4f6020ec61ded352059', 1563981966, 2130706433);
+INSERT INTO `nkl_user_login` VALUES ('zcf', 'e10adc3949ba59abbe56e057f20f883e', 1564013258, 1973236829);
 INSERT INTO `nkl_user_login` VALUES ('zhuce', 'root', 0, 0);
 COMMIT;
 
@@ -356,20 +308,20 @@ COMMIT;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `auth_key` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password_hash` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `auth_key` text COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` text COLLATE utf8_unicode_ci NOT NULL,
+  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
-  `verification_token` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `verification_token` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `password_reset_token` (`password_reset_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of user
@@ -378,6 +330,7 @@ BEGIN;
 INSERT INTO `user` VALUES (2, 'Claire', 'JYQaRH8X4YOvhHui8quKfKuPUudrxigb', '$2y$13$lX3hTS24UXQqP4hfSpTWfu6OnnraxjhKPlTMU7lfX.X/wEZKFpthu', NULL, '546707347@qq.com', 10, 1563368518, 1563368518, 'J_uPbKUrteluzUN7ZhjNttPyJbaxDWQG_1563368518');
 INSERT INTO `user` VALUES (3, 'Liyu', 's8BtkIR1GaqUyTTt-ucM_O4_jl_VQziP', '$2y$13$SrxcwsfmjhUvwaO9x7wqD.GG4pgPY9xDJprM8rw1om4EfrqKdUvAC', NULL, 'liyu@liyu.com', 10, 1563789330, 1563789330, 'IRbwTOxgw17xz0-LETJ7sttwQibUFfyR_1563789330');
 INSERT INTO `user` VALUES (4, 'zcf', 'reX69CvdubkEHg2Rv8lTCpIj7gsNWNGy', '$2y$13$soBK5b1idgdILS2ZagaGE.rqMvWQtNaaJ.MkCC4Rr6LZv/FprJLGW', NULL, 'tiffanychou21@163.com', 10, 1563879941, 1563879941, 'U3W3Z9d26qSnhO-Q29IvGEnr-O23n3dD_1563879941');
+INSERT INTO `user` VALUES (5, 'liwei', 'DaTUj3njSWJYy4REe4pFcwJ8lf_VBUWW', '$2y$13$Aoh/zhtCYocTNG.PdEJwjefgdSsC9/bW5VS1OarmkRd3Ca1lMRwBe', NULL, 'admin@163.com', 10, 1563998826, 1563998826, 'Eg46wyEZSPZfIYghFNb2ewN3d-drjZY__1563998826');
 COMMIT;
 
 -- ----------------------------

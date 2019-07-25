@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 周辰霏 1712991 整体,李伟 1711350 提供倒计时JS支持
+ * This is the activities views for the frontend web.
+ */
 
 /* @var $this yii\web\View */
 
@@ -14,9 +19,12 @@ use  common\models\NklBbsInfo;
 	<div id="home" class="slider-area">
 		<div data-velocity=".2"></div>
 		<div class="col-md-12  col-md-offset-0 col-md-pull-0 col-md-push-0">
+		<!-- 倒计时嵌入 -->
 			<div class="carousel-indicators1">
 				<div id="counter"> </div>
 			</div>
+			<!-- 倒计时结束浮在跳马灯上 -->
+			<!-- 跳马灯 -->
 			<div id="slide-list" class="carousel-fade carousel slide" data-ride="carousel">
 				<div class="carousel-indicators2">距离<img src="statics/img/nku.png" style="width:160px;height:80px;">百年校庆还有</div>
 				<div class="carousel-inner" role="listbox">
@@ -77,6 +85,7 @@ use  common\models\NklBbsInfo;
 						</div>
 					</div>
 				</div>
+				<!-- 跳马灯指示器利用该CSS生成1和2使得文字和倒计时可以显示在上面 -->
 				<ol class="carousel-indicators">
 					<li data-target="#slide-list" data-slide-to="0" class="active"></li>
 					<li data-target="#slide-list" data-slide-to="1"></li>
@@ -87,9 +96,11 @@ use  common\models\NklBbsInfo;
 					<li data-target="#slide-list" data-slide-to="6"></li>
 				</ol>
 			</div>
+			<!-- 跳马灯结束 -->
 		</div>
 	</div>
 </div>
+<!-- 新闻列表 -->
 <div class="body-content">
 	<div class="row1">
 		<div class="col-md-9" frag="面板6">
@@ -112,7 +123,8 @@ use  common\models\NklBbsInfo;
 				</div>
 			</div>
 		</div>
-
+		<!-- 新闻结束 -->
+		<!-- 留言列表 -->
 		<div class="timeline" style="margin-bottom:0px;margin-top:70px;" frag="面板111">
 			<div class="timeline-left" frag="窗口11101">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wp_article_list_table">
@@ -131,10 +143,10 @@ use  common\models\NklBbsInfo;
 				</table>
 			</div>
 		</div>
+		<!-- 留言结束 -->
 	</div>
 </div>
-<!-- </div> -->
-<!-- 复制模板相关Js设置 -->
+<!-- 以下JS from 李伟 -->
 <script>
 	$(document).ready(function() {
 		$('#horizontalTab').easyResponsiveTabs({

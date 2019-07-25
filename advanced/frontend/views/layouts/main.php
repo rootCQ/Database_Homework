@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 周辰霏 1712991
+ * This is the main layout views for all the frontend web.
+ */
+
 /* @var $this \yii\web\View*/
 /* @var $content string */
 
@@ -12,7 +18,6 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use  yii\web\Response;
 use yii\helpers\Url;
-// use  yii\base\Controller;
 
 AppAsset::register($this);
 ?>
@@ -28,10 +33,10 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <?= Html::csrfMetaTags() ?>
+    <!-- 导航图标 -->
     <link rel="icon" href="statics/img/N.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"> -->
     <title>NKL</title>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -47,24 +52,24 @@ AppAsset::register($this);
                     <div id="logo">
                         <a href="<?php echo Url::to(['site/index']); ?>"><img src="statics/img/100nk.png" height="70px" width="220px" alt="" title="" /></a>
                     </div>
-                    <!-- #nav-menu-container -->
+                    <!-- 导航栏跳转 -->
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
-                        <li><a href="<?php echo Url::to(['site/index']);?>"><img src="statics/img/home.ico" height="25" width="25" alt="">Home</a></li>
-                            <li><a href="<?php echo Url::to(['site/news']);?>"><img src="statics/img/news.ico" height="20" width="20" alt="">News</a></li>
+                            <li><a href="<?php echo Url::to(['site/index']); ?>"><img src="statics/img/home.ico" height="25" width="25" alt="">Home</a></li>
+                            <li><a href="<?php echo Url::to(['site/news']); ?>"><img src="statics/img/news.ico" height="20" width="20" alt="">News</a></li>
                             <li><a href="<?php echo Url::to(['site/activities']); ?>"><img src="statics/img/activities.ico" height="20" width="20" alt="">Activities</a></li>
                             <li><a href="<?php echo Url::to(['site/shop']); ?>"><img src="statics/img/bag.ico" height="17" width="17" alt="">Souvenirs</a></li>
                             <li><a href="<?php echo Url::to(['site/bbs']); ?>"><img src="statics/img/about.ico" height="20" width="20" alt="">BBS</a></li>
                             <li><a href="<?php echo Url::to(['site/history']); ?>"><img src="statics/img/history.ico" height="20" width="20" alt="">History</a></li>
                             <li><a href="<?php echo Url::to(['site/statistics']); ?>"><img src="statics/img/statics.ico" height="20" width="20" alt=""></a></li>
                             <li><a href="../../backend/web/index.php"><img src="statics/img/user.svg" height="20" width="20" alt=""></a></li>
-
                         </ul>
                     </nav>
                 </div>
             </div>
-        </header><!-- #header -->
-
+        </header>
+        <!-- #header -->
+        <!-- 其他各site本身的view部分 -->
         <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -73,6 +78,7 @@ AppAsset::register($this);
             <?= $content ?>
         </div>
     </div>
+    <!-- 页脚 -->
     <footer class="footer-area section-gap" style="float:inline-end;margin-top:50px;">
         <div class="container">
             <div class="row">
@@ -102,16 +108,8 @@ AppAsset::register($this);
             </div>
         </div>
     </footer>
-    <!-- <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer> -->
     <?php $this->endBody() ?>
 </body>
 
 </html>
 <?php $this->endPage() ?>
-

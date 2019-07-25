@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 
+ * Views for error alert for backend.
+ */
+
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */

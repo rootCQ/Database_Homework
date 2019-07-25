@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Views for unsolved BBS overview on the backend.
+ */
 
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -8,10 +13,6 @@ $this->title = 'Search BBS Selection Record';
 <div class="nkl-bbs-select-record-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

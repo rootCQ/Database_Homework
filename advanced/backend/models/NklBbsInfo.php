@@ -5,8 +5,12 @@ namespace backend\models;
 use Yii;
 
 /**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
  * This is the model class for table "nkl_bbs_info".
- *
+ */
+
+/**
  * @property int $bbs_id
  * @property string $bbs_time
  * @property string $bbs_userNickname

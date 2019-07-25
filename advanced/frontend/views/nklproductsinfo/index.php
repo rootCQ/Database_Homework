@@ -1,3 +1,10 @@
+<?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the shop index view.
+ */
+?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -25,15 +32,6 @@
 	<link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="scripts/html5shiv.js"></script>
-      <script src="scripts/respond.min.js"></script>
-    <![endif]-->
-    
-    <!--headerIncludes-->
     
 </head>
 <body data-spy="scroll" data-target=".navMenuCollapse">

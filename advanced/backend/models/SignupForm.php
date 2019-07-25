@@ -6,8 +6,11 @@ use yii\base\Model;
 use common\models\User;
 
 /**
- * Signup form
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Signup form model for the backend web.
  */
+
 class SignupForm extends Model
 {
     public $username;

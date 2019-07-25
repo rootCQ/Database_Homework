@@ -1,6 +1,11 @@
 <?php
     use yii\bootstrap\ActiveForm;
     use yii\helpers\Html;
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the login view for the frontend shop.
+ */
 ?>
 <!DOCTYPE html>
 <html class="login-bg">
@@ -26,10 +31,6 @@
     <link rel="stylesheet" href="assets/admin/css/compiled/signin.css" type="text/css" media="screen" />
 
     <!-- open sans font -->
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 

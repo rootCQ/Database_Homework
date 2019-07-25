@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Views for sign up on the backend.
+ */
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -8,7 +13,6 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Signup';
-//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
     <h1><?= Html::encode($this->title) ?></h1>

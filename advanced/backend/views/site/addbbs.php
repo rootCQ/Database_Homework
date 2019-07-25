@@ -3,13 +3,16 @@
 use yii\helpers\Html;
 use backend\models\NklBbsInfo;
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 
+ * Views for BBS checked for backend.
+ */
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\NklBbsSelectRecord */
 
 $this->title = 'Select BBS';
-//$this->params['breadcrumbs'][] = ['label' => 'Nkl Bbs Select Records', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="nkl-bbs-select-record-create">

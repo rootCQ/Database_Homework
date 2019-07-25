@@ -2,6 +2,11 @@
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use  yii\db\ActiveRecord;
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the transaction view for NKL shop.
+ */
 ?>
 <!DOCTYPE html>
 <html>

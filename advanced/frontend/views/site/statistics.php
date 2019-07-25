@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 李力铤 1711345
+ * This is the statistics views for the frontend web using e-charts to present our db info dynamically.
+ */
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use yii\data\ActiveDataProvider;

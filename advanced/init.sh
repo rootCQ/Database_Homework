@@ -9,7 +9,6 @@ if ! [ -x "$(command -v mysql)" ]; then
   exit 1
 fi
 
-#本来想加个密码转化为星号的但总是报错TwT
 #给变量二次赋值的时候不用写$
 user=root
 read -p "Please input your MySQL user name:" name
@@ -21,7 +20,10 @@ else
 fi
 
 password="12345678"
-read -p "Please input your MySQL password:" psd
+#密码转为*想的太复杂了，只要取消屏幕回显就可以了
+stty -echo
+read -p "请输入使用者密码:" psd
+stty echo
 if [ ! -n "$psd" ] ;then
   echo "Using the empty password."
 else

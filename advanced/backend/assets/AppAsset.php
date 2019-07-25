@@ -1,12 +1,14 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Main backend application asset bundle.
+ */
 
 namespace backend\assets;
 
 use yii\web\AssetBundle;
 
-/**
- * Main backend application asset bundle.
- */
 class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';

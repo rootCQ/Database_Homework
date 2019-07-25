@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: @NKL,NKU
+ * Coding by 李伟 1711350
+ * This is the BBS views for the frontend web.
+ */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\NklBbsInfo;

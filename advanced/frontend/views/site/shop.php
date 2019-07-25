@@ -1,5 +1,10 @@
 <?php
 use yii\helpers\Html;
+/**
+ * Team: @NKL,NKU
+ * Coding by 李伟 1711350
+ * 未使用，来源于朱心怡的shop view
+ */
 ?>
 <!DOCTYPE html>
 <html id="home" class="slider-area">
@@ -29,16 +34,6 @@ use yii\helpers\Html;
 	<link rel="apple-touch-icon" href="statics/img/products/favicons/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="statics/img/products/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="statics/img/products/favicons/apple-touch-icon-114x114.png">
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="scripts/html5shiv.js"></script>
-      <script src="scripts/respond.min.js"></script>
-    <![endif]-->
-    
-    <!--headerIncludes-->
-    
 </head>
 <body data-spy="scroll" data-target=".navMenuCollapse">
     

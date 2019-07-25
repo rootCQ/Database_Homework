@@ -1,6 +1,10 @@
 <?php
 namespace frontend\controllers;
-
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * login controller for shop.
+ */
 use yii\web\Controller;
 use frontend\models\Login;
 use Yii;

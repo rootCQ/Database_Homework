@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * Views for our team info presentation on the backend.
+ */
 
 /* @var $this yii\web\View */
 

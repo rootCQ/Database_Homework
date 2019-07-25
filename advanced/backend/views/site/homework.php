@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 框架, 周辰霏1712991 样式修改，路径下载样式规范
+ * Views for our team homework presentation on the backend.
+ */
+
 /* @var $this yii\web\View */
 
 $this->title = 'Homework';
@@ -11,11 +17,12 @@ use  yii\db\ActiveRecord;
 
     <div class="jumbotron">
         <h1 style="color:#7e0c6e">团队作业</h1>
-        <p><a href="data\team\w3logo.gif" download="NKL_实现文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
-        <p><a href="data\team\w3logo.gif" download="NKL_用户手册(1711350_1711295_1712991_1711345_1711304)">用户手册</a></p>
-        <p><a href="data\team\w3logo.gif" download="NKL_项目展示PPT(1711350_1711295_1712991_1711345_1711304)">项目展示PPT</a></p>
-        <p><a href="data\team\w3logo.gif" download="NKL_部署文档(1711350_1711295_1712991_1711345_1711304)">部署文档</a></p>
-        <p><a href="data\team\w3logo.gif" download="NKL_设计文档(1711350_1711295_1712991_1711345_1711304)">设计文档</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_需求文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_实现文档(1711350_1711295_1712991_1711345_1711304)">实现文档</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_用户手册(1711350_1711295_1712991_1711345_1711304)">用户手册</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_项目展示PPT(1711350_1711295_1712991_1711345_1711304)">项目展示PPT</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_部署文档(1711350_1711295_1712991_1711345_1711304)">部署文档</a></p>
+        <p><a href="../../data/team/w3logo.gif" download="NKL_设计文档(1711350_1711295_1712991_1711345_1711304)">设计文档</a></p>
     </div>
 
     <div class="jumbotron">

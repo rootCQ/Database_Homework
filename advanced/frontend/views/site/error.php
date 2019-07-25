@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Team: @NKL,NKL
+ * This is the error views generated  by  yii.
+ */
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */

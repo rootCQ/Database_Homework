@@ -3,10 +3,12 @@
 namespace frontend\assets;
 
 use yii\web\AssetBundle;
-
 /**
- * Main frontend application asset bundle.
+ * Team: @NKL,NKU
+ * Coding by 周辰霏 1712991
+ * Main frontend application asset bundle used by zcf.
  */
+
 class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';

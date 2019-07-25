@@ -3,6 +3,11 @@
 use yii\helpers\Html;
 use yii\data\ActiveDataProvider;
 use frontend\models\NklHistoryInfo;
+/**
+ * Team: @NKL,NKU
+ * Coding by 李力铤1711345
+ * This is the history views for the frontend web.
+ */
 ?>
 <!doctype html>
 <html lang="en-us" id="home" class="slider-area">
@@ -15,12 +20,8 @@ use frontend\models\NklHistoryInfo;
 </head>
 
 <body>
-    <!-- hiswrapper -->
     <div id="hiswrapper">
-
-        <!-- Banner -->
         <section id="hisintro" class="hismain">
-            <!-- <span class="icon fa-diamond major"></span> -->
             <h4>
                 <font size=15 color='#7E0C6E' face="Times">
                     Review History</font>

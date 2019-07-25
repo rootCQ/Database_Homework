@@ -7,8 +7,12 @@ use yii\data\ActiveDataProvider;
 use backend\models\NklActivityInfo;
 
 /**
- * NklActivityInfoSearch represents the model behind the search form of `backend\models\NklActivityInfo`.
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
+ * NklActivityInfoSearch represents the model behind the search form of 'backend\models\NklActivityInfo'.
  */
+
+
 class NklActivityInfoSearch extends NklActivityInfo
 {
     /**
@@ -51,8 +55,6 @@ class NklActivityInfoSearch extends NklActivityInfo
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 

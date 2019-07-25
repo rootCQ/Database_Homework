@@ -3,7 +3,11 @@
 namespace frontend\models;
 use yii\db\ActiveRecord;
 use Yii;
-
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * Login model for frontend shop.
+ */
 class Login extends ActiveRecord
 {
     public $rememberMe = true;
@@ -50,7 +54,6 @@ class Login extends ActiveRecord
     {
         $this->scenario = "login";
         if ($this->load($data) && $this->validate()) {
-            //做点有意义的事
 
             $lifetime = $this->rememberMe ? 24*3600 : 0;
 

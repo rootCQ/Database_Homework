@@ -7,8 +7,11 @@ use yii\data\ActiveDataProvider;
 use backend\models\NklNewsInfo;
 
 /**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295
  * NklNewsInfoSearch represents the model behind the search form of `backend\models\NklNewsInfo`.
  */
+
 class NklNewsInfoSearch extends NklNewsInfo
 {
     /**
@@ -51,8 +54,6 @@ class NklNewsInfoSearch extends NklNewsInfo
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 

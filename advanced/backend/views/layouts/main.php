@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: @NKL,NKU
+ * Coding by 乔静欣 1711295 主体框架部分,周辰霏 1712991 提供模板以及CSS样式支持
+ * Main Layout for the backend web site.
+ */
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -47,13 +53,11 @@ AppAsset::register($this);
             <?php
     NavBar::begin([
         'brandLabel' => 'NKL',
-       // 'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-       // ['label' => 'Home', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -151,36 +155,6 @@ AppAsset::register($this);
         <!-- End: Sidebar Left Content -->
 
     </aside>
-
-    <!--?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?-->
 
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper">

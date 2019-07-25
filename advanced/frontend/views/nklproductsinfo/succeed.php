@@ -1,3 +1,10 @@
+<?php 
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the transaction succeess view for NKL shop.
+ */
+?>
 <!DOCTYPE html>
 <html style="height:100%;">
 
@@ -288,15 +295,6 @@
 			text-align: center
 		}
 	</style>
-
-
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-	<!--[if lt IE 9]>
-      <script src="scripts/html5shiv.js"></script>
-      <script src="scripts/respond.min.js"></script>
-    <![endif]-->
-
-	<!--headerIncludes-->
 
 </head>
 

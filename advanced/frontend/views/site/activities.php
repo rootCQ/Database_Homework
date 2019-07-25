@@ -3,12 +3,16 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\NklActivityInfo;
 use yii\data\ActiveDataProvider;
+/**
+ * Team: @NKL,NKU
+ * Coding by 李伟 1711350
+ * This is the activities views for the frontend web.
+ */
 ?>
 
 <!DOCTYPE html>
 
 <html id="home" class="slider-area">
-<!--<![endif]-->
 
 <!-- <head> -->
     <meta charset="utf-8" />
@@ -19,15 +23,6 @@ use yii\data\ActiveDataProvider;
     <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
-
-    <!-- <link type="text/css" href="css/system.css" rel="stylesheet" />
-    <link type="text/css" href="css/6.css" rel="stylesheet" />
-    <link type="text/css" href="css/146.css" rel="stylesheet" /> -->
-   <!-- <link type="text/css" href="statics/css/simplenews.css" rel="stylesheet" />
-    <link type="text/css" href="statics/css/sudyNav.css" rel="stylesheet" />
-    <link href="statics/css/bootstrapmin.css" rel="stylesheet" type="text/css" />
-    <link href="statics/css/activities/style2.css" rel="stylesheet" />  -->
-
     <style type="text/css">
         #filters {
             padding-left: 25px;

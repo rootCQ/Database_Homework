@@ -1,4 +1,9 @@
 <?PHP
+/**
+ * Team: @NKL,NKU
+ * Coding by 朱心怡 1711304
+ * This is the login .
+ */
   header("Content-Type: text/html; charset=utf8");
   
   if(!isset($_POST["submit"])){
